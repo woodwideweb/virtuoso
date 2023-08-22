@@ -18,7 +18,21 @@ module.exports = {
       '2xl': `1600px`,
     },
     extend: {
-      fontFamily: {},
+      colors: {
+        primary: {
+          50: `#F8FFFB`,
+          100: `#EEFFF5`,
+          200: `#DEF6EA`,
+          300: `#CCEADC`,
+          400: `#B7D7C7`,
+          500: `#A0C2B0`,
+          600: `#8AAE9A`,
+          700: `#739A84`,
+          800: `#5C8670`,
+          900: `#46725A`,
+          950: `#2D5741`,
+        },
+      },
       spacing: {
         112: `28rem`,
         128: `32rem`,
