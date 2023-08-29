@@ -15,7 +15,7 @@ type Props = {
 
 const Button: React.FC<Props> = (props) => {
   const classes = cx(
-    `text-xl font-semibold tracking-wider flex items-center border-2 border-primary-700 transition-[color,background-color,border-color,transform] duration-300 active:scale-95`,
+    `text-xl font-semibold tracking-wider flex justify-center items-center border-2 border-primary-700 transition-[color,background-color,border-color,transform] duration-300 active:scale-95`,
     props.color === `primary`
       ? `bg-primary-700 text-white hover:bg-primary-800 hover:border-primary-800 active:bg-primary-900 active:border-primary-900`
       : `text-primary-800 hover:bg-primary-200 active:bg-primary-300`,

@@ -5,7 +5,8 @@ import cx from 'classnames';
 import Button from './Button';
 import { IconArrowRight, IconLayoutGrid } from '@tabler/icons-react';
 import { josefin } from '@/lib/fonts';
-import BgImage from '../public/mountains-1.png';
+import Illustration from '../public/hero-illustration.svg';
+import Image from 'next/image';
 
 const Hero: React.FC = () => {
   const [showHeading, setShowHeading] = React.useState(false);
@@ -27,8 +28,9 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex pt-12 relative z-10">
-      <div className="p-28 pb-32">
+    <div className="flex py-20 relative z-10">
+      <div className="absolute w-1/2 h-64 bg-amber-100 right-0 bottom-0 rounded-tl-[80px]" />
+      <div className="px-28 self-center relative">
         <h1
           className={cx(
             josefin,
@@ -76,10 +78,9 @@ const Hero: React.FC = () => {
           </Button>
         </div>
       </div>
-      <div
-        className="flex-grow bg-center bg-cover rounded-l-[80px]"
-        style={{ backgroundImage: `url(${BgImage.src})` }}
-      />
+      <div className="w-152 h-152 flex justify-center items-center shrink-0 relative">
+        <Image src={Illustration} alt="potted plant" />
+      </div>
     </div>
   );
 };
