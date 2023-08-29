@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import { josefin } from '@/lib/fonts';
+import { montserrat } from '@/lib/fonts';
 
 interface Props {
   className?: string;
@@ -293,7 +293,7 @@ const Logo: React.FC<Props> = ({ className }) => {
         </g>
       </svg>
       <div className={cx('flex flex-col justify-center items-start')}>
-        <span className={cx('text-4xl font-bold text-primary-800', josefin)}>
+        <span className={cx('text-4xl font-bold text-primary-800', montserrat)}>
           virtuoso
         </span>
         <span className="text-sm -mt-1 text-black/90 uppercase">landscaping</span>

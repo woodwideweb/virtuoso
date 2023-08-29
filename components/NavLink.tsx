@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import cx from 'classnames';
-import { josefin } from '@/lib/fonts';
+import { montserrat } from '@/lib/fonts';
 
 interface NavLinkProps {
   children: React.ReactNode;

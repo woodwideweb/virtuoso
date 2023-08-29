@@ -1,20 +1,32 @@
 import { useEffect, useRef, useState } from 'react';
 
-export function useIntersectionObserver(options: IntersectionObserverInit): {
+export function useIntersectionObserver(
+  options: IntersectionObserverInit,
+  stick?: boolean,
+): {
   intersected: boolean;
   ref: React.MutableRefObject<null>;
 } {
   const ref = useRef(null);
   const [intersected, setIntersected] = useState(false);
+  let hasIntersected = false;
   const { root, rootMargin, threshold } = options;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries, observer) => {
+      (entries) => {
         entries.forEach((entry) => {
-          setIntersected(entry.isIntersecting);
-          if (entry.isIntersecting) {
-            observer.unobserve(entry.target);
+          const coords = entry.target.getBoundingClientRect();
+          console.log(stick);
+          if (stick && hasIntersected) {
+            console.log('in here!! sticky!!');
+            return;
+          }
+          if (entry.isIntersecting || coords.y < 0) {
+            setIntersected(true);
+            hasIntersected = true;
+          } else {
+            setIntersected(false);
           }
         });
       },

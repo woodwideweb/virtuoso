@@ -15,8 +15,8 @@ const BadgesBlock: React.FC = () => {
         />
         <Image
           src={AngiesListLogo}
-          alt="National Association of Landscape Professionals member"
-          className="shrink-0 brightness-[1500%] h-40 w-48"
+          alt="Angie's List Super Service Award 2022"
+          className="shrink-0 [filter:grayscale()_brightness(100)] h-40 w-48"
         />
         <Image
           src={GBBLogo}

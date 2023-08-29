@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import cx from 'classnames';
-import { josefin } from '@/lib/fonts';
+import { montserrat } from '@/lib/fonts';
 import { IconCactus, IconHammer, IconSeeding, IconWall } from '@tabler/icons-react';
 import { useIntersectionObserver } from '@/lib/hooks';
 import Hartville1 from '@/public/hartville-1.jpg';
@@ -12,10 +12,13 @@ import Hartville3 from '@/public/hartville-3.jpg';
 import { TablerIcon } from '@/lib/types';
 
 const SubHero: React.FC = () => {
-  const { ref, intersected } = useIntersectionObserver({
-    threshold: 1,
-    rootMargin: '0px',
-  });
+  const { ref, intersected } = useIntersectionObserver(
+    {
+      threshold: 1,
+      rootMargin: '0px',
+    },
+    true,
+  );
 
   const [showHeading, setShowHeading] = React.useState(false);
   const [showSubheading, setShowSubheading] = React.useState(false);
@@ -35,7 +38,7 @@ const SubHero: React.FC = () => {
   return (
     <div className="relative bg-primary-300 overflow-x-clip">
       <SubHeroBackground intersected={intersected} />
-      <div className="relative top-24 w-full pt-32 pb-20 px-16 flex gap-28">
+      <div className="relative top-24 w-full pt-32 pb-20 px-16 flex gap-28 justify-between">
         <div className="flex flex-col gap-4 relative -top-20">
           <div className="pl-20">
             <FeaturedImage
@@ -60,10 +63,10 @@ const SubHero: React.FC = () => {
             />
           </div>
         </div>
-        <div className="self-start">
+        <div className="self-start pr-8">
           <h2
             className={cx(
-              josefin,
+              montserrat,
               `text-5xl font-bold leading-[1.3em] transition-[transform,opacity] delay-300 duration-[700ms]`,
               !showHeading && `translate-y-4 opacity-0`,
             )}

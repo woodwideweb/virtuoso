@@ -4,7 +4,7 @@ import React from 'react';
 import cx from 'classnames';
 import Button from './Button';
 import { IconArrowRight, IconLayoutGrid } from '@tabler/icons-react';
-import { josefin } from '@/lib/fonts';
+import { montserrat } from '@/lib/fonts';
 import Illustration from '../public/hero-illustration.svg';
 import Image from 'next/image';
 
@@ -33,12 +33,12 @@ const Hero: React.FC = () => {
       <div className="px-28 self-center relative">
         <h1
           className={cx(
-            josefin,
+            montserrat,
             'text-6xl font-bold leading-[1.25em] max-w-3xl transition-[transform,opacity] duration-[700ms]',
             !showHeading && `opacity-0 translate-y-4`,
           )}
         >
-          Building beautiful outdoor living spaces
+          Creating beautiful outdoor living spaces
         </h1>
         <h3
           className={cx(

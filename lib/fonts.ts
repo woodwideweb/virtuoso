@@ -1,7 +1,6 @@
-import { Josefin_Sans } from 'next/font/google';
-
-const josefinFont = Josefin_Sans({
+import { Montserrat } from 'next/font/google';
+const montserratFont = Montserrat({
   subsets: ['latin'],
 });
 
-export const josefin = josefinFont.className;
+export const montserrat = montserratFont.className;
