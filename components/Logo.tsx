@@ -294,7 +294,7 @@ const Logo: React.FC<Props> = ({ className }) => {
       </svg>
       <div className={cx('flex flex-col justify-center items-start')}>
         <span className={cx('text-4xl font-bold text-primary-800', montserrat)}>
-          virtuoso
+          Virtuoso
         </span>
         <span className="text-sm -mt-1 text-black/90 uppercase">landscaping</span>
       </div>

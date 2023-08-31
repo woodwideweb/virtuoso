@@ -1,10 +1,11 @@
 import React from 'react';
 import cx from 'classnames';
-import { IconMapPinFilled } from '@tabler/icons-react';
+import { IconMapPinFilled, IconSend } from '@tabler/icons-react';
 import MapImage from '@/public/wadsworth-map.png';
 import AmberWave from '@/public/amber-wave.svg';
 import { montserrat } from '@/lib/fonts';
 import { useIntersectionObserver } from '@/lib/hooks';
+import Button from './Button';
 
 interface Props {}
 
@@ -84,13 +85,13 @@ const MapBlock: React.FC<Props> = ({}) => {
           className={cx(
             'rounded-[100%] transition-all duration-1000 absolute',
             showRegion
-              ? `w-[calc(100%-80px)] h-[calc(100%-80px)] bg-blue-500/10 border-blue-500/40 border-4`
-              : `w-0 h-0 bg-blue-500/70 border-blue-500`,
+              ? `w-[calc(100%-80px)] h-[calc(100%-80px)] bg-primary-500/10 border-primary-500/80 border-4`
+              : `w-0 h-0 bg-primary-500/70 border-primary-500`,
           )}
         />
         <IconMapPinFilled
           className={cx(
-            `text-blue-600 transition-all duration-300 relative ease-in`,
+            `text-primary-700 transition-all duration-300 relative ease-in`,
             showPin ? `opacity-100 -top-8` : `opacity-0 -top-[calc((100vh-96px)/2)]`,
           )}
           size={80}
@@ -158,6 +159,18 @@ const MapBlock: React.FC<Props> = ({}) => {
               placeholder="me@example.com"
               rows={6}
             />
+          </div>
+          <div className="flex justify-end w-176">
+            <Button
+              type="button"
+              onClick={() => {}}
+              color="primary"
+              icon={IconSend}
+              size="lg"
+              className="w-52"
+            >
+              Send
+            </Button>
           </div>
         </div>
       </div>

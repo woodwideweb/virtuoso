@@ -25,6 +25,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </nav>
         </header>
         <div>{children}</div>
+        <footer className="mx-12 p-10 mt-12 bg-amber-100 rounded-t-[80px] flex justify-center items-center">
+          <Logo />
+        </footer>
       </body>
     </html>
   );
