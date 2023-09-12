@@ -6,6 +6,7 @@ import AmberWave from '@/public/amber-wave.svg';
 import { montserrat } from '@/lib/fonts';
 import { useIntersectionObserver } from '@/lib/hooks';
 import Button from './Button';
+import TextInput from './TextInput';
 
 interface Props {}
 
@@ -24,8 +25,8 @@ const MapBlock: React.FC<Props> = ({}) => {
   });
 
   return (
-    <div className="p-12 pt-0 flex gap-20">
-      <div className="pl-12 flex flex-col gap-152 pt-[calc(100vh)] pb-[calc(50vh-160px)] relative">
+    <div className="pb-12 pl-12 lg:pr-12 pt-0 flex gap-12 xl:gap-20">
+      <div className="xl:pl-12 flex flex-col gap-152 pt-[calc(100vh)] pb-[calc(50vh-160px)] relative">
         <div
           ref={pinRef}
           className={cx(
@@ -33,8 +34,10 @@ const MapBlock: React.FC<Props> = ({}) => {
             !showPin && `opacity-0`,
           )}
         >
-          <h3 className={cx(montserrat, `text-4xl font-bold`)}>Based in Wadsworth, OH</h3>
-          <p className="text-xl text-black/60 max-w-xl mt-8">
+          <h3 className={cx(montserrat, `text-3xl xl:text-4xl font-bold`)}>
+            Based in Wadsworth, OH
+          </h3>
+          <p className="text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat eaque
             corrupti nemo, voluptates voluptatem soluta rerum quidem optio dolore nisi
             eligendi dignissimos autem assumenda consequatur neque sed quae et illum?
@@ -47,10 +50,10 @@ const MapBlock: React.FC<Props> = ({}) => {
             !showRegion && `opacity-0`,
           )}
         >
-          <h3 className={cx(montserrat, `text-4xl font-bold`)}>
+          <h3 className={cx(montserrat, `text-3xl xl:text-4xl font-bold`)}>
             Serving the surrounding area
           </h3>
-          <p className="text-xl text-black/60 max-w-xl mt-8">
+          <p className="text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat eaque
             corrupti nemo, voluptates voluptatem soluta rerum quidem optio dolore nisi
             eligendi dignissimos autem assumenda consequatur neque sed quae et illum?
@@ -63,10 +66,10 @@ const MapBlock: React.FC<Props> = ({}) => {
             !showContact && `opacity-0`,
           )}
         >
-          <h3 className={cx(montserrat, `text-4xl font-bold`)}>
+          <h3 className={cx(montserrat, `text-3xl xl:text-4xl font-bold`)}>
             Reach out today to get a free quote for your project
           </h3>
-          <p className="text-xl text-black/60 max-w-xl mt-8">
+          <p className="text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat eaque
             corrupti nemo, voluptates voluptatem soluta rerum quidem optio dolore nisi
             eligendi dignissimos autem assumenda consequatur neque sed quae et illum?
@@ -74,7 +77,7 @@ const MapBlock: React.FC<Props> = ({}) => {
         </div>
       </div>
       <div
-        className="p-20 flex justify-center items-center rounded-[80px] overflow-hidden aspect-square h-[calc(100vh-96px)] sticky top-12 shrink-0"
+        className="p-20 flex justify-center items-center rounded-l-[80px] lg:rounded-r-[80px] overflow-hidden w-3/5 lg+:w-auto lg+:aspect-square h-176 2xl:h-[calc(100vh-96px)] sticky top-[calc(50%-(176px*2))] 2xl:top-12 shrink-0"
         style={{
           backgroundImage: `radial-gradient(transparent, #fef3c7), url(${MapImage.src})`,
           backgroundSize: `cover`,
@@ -85,7 +88,7 @@ const MapBlock: React.FC<Props> = ({}) => {
           className={cx(
             'rounded-[100%] transition-all duration-1000 absolute',
             showRegion
-              ? `w-[calc(100%-80px)] h-[calc(100%-80px)] bg-primary-500/10 border-primary-500/80 border-4`
+              ? `h-[calc(100%-80px)] aspect-square bg-primary-500/10 border-primary-500/80 border-4`
               : `w-0 h-0 bg-primary-500/70 border-primary-500`,
           )}
         />
@@ -98,7 +101,7 @@ const MapBlock: React.FC<Props> = ({}) => {
         />
         <div
           className={cx(
-            `absolute w-full h-full left-0 top-0 transition-opacity duration-700 bg-amber-100 flex flex-col justify-center items-center gap-8`,
+            `absolute w-full h-full left-0 top-0 transition-opacity duration-700 bg-amber-100 flex flex-col justify-center items-center gap-4 lg+:gap-8 p-12 rounded-l-[80px] lg:rounded-r-[80px]`,
             showContact
               ? `opacity-100 pointer-events-auto`
               : `opacity-0 pointer-events-none`,
@@ -110,57 +113,42 @@ const MapBlock: React.FC<Props> = ({}) => {
             backgroundAttachment: `fixed`,
           }}
         >
-          <div className="flex gap-4 w-176">
-            <div className="flex flex-col gap-2 flex-grow">
-              <label htmlFor="name" className="ml-8 text-xl font-medium text-black/60">
-                Name
-              </label>
-              <input
-                className="py-4 px-8 text-xl rounded-3xl bg-white/50 hover:bg-white/70 transition-colors duration-200 outline-none border-2 border-transparent focus:border-primary-600 focus:bg-white backdrop-blur-md placeholder:text-black/10"
-                type="name"
-                name="name"
-                id="name"
-                placeholder="John Doe"
-              />
-            </div>
-            <div className="flex flex-col gap-2 flex-grow">
-              <label htmlFor="city" className="ml-8 text-xl font-medium text-black/60">
-                City
-              </label>
-              <input
-                className="py-4 px-8 text-xl rounded-3xl bg-white/50 hover:bg-white/70 transition-colors duration-200 outline-none border-2 border-transparent focus:border-primary-600 focus:bg-white backdrop-blur-md placeholder:text-black/10"
-                type="city"
-                name="city"
-                id="city"
-                placeholder="Wadsworth"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col gap-2 w-176">
-            <label htmlFor="email" className="ml-8 text-xl font-medium text-black/60">
-              Email
-            </label>
-            <input
-              className="py-4 px-8 text-xl rounded-3xl bg-white/50 hover:bg-white/70 transition-colors duration-200 outline-none border-2 border-transparent focus:border-primary-600 focus:bg-white backdrop-blur-md placeholder:text-black/10"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="me@example.com"
+          <div className="flex flex-col lg+:flex-row gap-4 w-full 2xl:w-176">
+            <TextInput
+              type="text"
+              name="name"
+              placeholder="John Doe"
+              label="Name"
+              required
+              className="flex-grow"
+            />
+            <TextInput
+              type="text"
+              name="city"
+              placeholder="Wadsworth"
+              label="City"
+              required
+              className="flex-grow"
             />
           </div>
-          <div className="flex flex-col gap-2 w-176">
-            <label htmlFor="message" className="ml-8 text-xl font-medium text-black/60">
-              Message
-            </label>
-            <textarea
-              className="py-4 px-8 text-xl rounded-3xl bg-white/50 hover:bg-white/70 transition-colors duration-200 outline-none border-2 border-transparent focus:border-primary-600 focus:bg-white backdrop-blur-md placeholder:text-black/10"
-              name="message"
-              id="message"
-              placeholder="me@example.com"
-              rows={6}
-            />
-          </div>
-          <div className="flex justify-end w-176">
+          <TextInput
+            type="email"
+            name="email"
+            placeholder="me@example.com"
+            label="Email"
+            required
+            className="w-full 2xl:w-176"
+          />
+          <TextInput
+            type="textarea"
+            rows={6}
+            name="message"
+            placeholder="Hey, wanted to reach out about..."
+            label="Message"
+            required
+            className="w-full 2xl:w-176"
+          />
+          <div className="flex justify-end w-full 2xl:w-176">
             <Button
               type="button"
               onClick={() => {}}

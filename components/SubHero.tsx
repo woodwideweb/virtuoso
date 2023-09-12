@@ -6,9 +6,9 @@ import cx from 'classnames';
 import { montserrat } from '@/lib/fonts';
 import { IconCactus, IconHammer, IconSeeding, IconWall } from '@tabler/icons-react';
 import { useIntersectionObserver } from '@/lib/hooks';
-import Hartville1 from '@/public/hartville-1.jpg';
-import Hartville2 from '@/public/hartville-2.jpg';
-import Hartville3 from '@/public/hartville-3.jpg';
+import Hartville1 from '@/public/featured-projects/hartville/finished-1.jpg';
+import Hartville2 from '@/public/featured-projects/hartville/finished-2.jpg';
+import Hartville3 from '@/public/featured-projects/hartville/finished-3.jpg';
 import { TablerIcon } from '@/lib/types';
 
 const SubHero: React.FC = () => {

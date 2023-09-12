@@ -9,7 +9,7 @@ export function useIntersectionObserver(
 } {
   const ref = useRef(null);
   const [intersected, setIntersected] = useState(false);
-  let hasIntersected = false;
+  let hasIntersected = useRef(false);
   const { root, rootMargin, threshold } = options;
 
   useEffect(() => {
@@ -17,14 +17,12 @@ export function useIntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const coords = entry.target.getBoundingClientRect();
-          console.log(stick);
-          if (stick && hasIntersected) {
-            console.log('in here!! sticky!!');
+          if (stick && hasIntersected.current) {
             return;
           }
           if (entry.isIntersecting || coords.y < 0) {
             setIntersected(true);
-            hasIntersected = true;
+            hasIntersected.current = true;
           } else {
             setIntersected(false);
           }
@@ -40,7 +38,7 @@ export function useIntersectionObserver(
     return () => {
       if (cur) observer.unobserve(cur);
     };
-  }, [ref, root, rootMargin, threshold]);
+  }, [ref, root, rootMargin, threshold, stick]);
 
   return { intersected, ref };
 }
