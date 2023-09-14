@@ -56,3 +56,34 @@ export function useScrollY(): number {
 
   return scrollY;
 }
+
+export function useWindowDimensions(): { width: number; height: number } {
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const debouncedHandler = debounce(
+      () => setDimensions({ width: window.innerWidth, height: window.innerHeight }),
+      250,
+    );
+    window.addEventListener(`resize`, debouncedHandler);
+    return () => window.removeEventListener(`resize`, debouncedHandler);
+  }, []);
+
+  return dimensions;
+}
+
+function debounce(fn: () => unknown, ms: number): () => void {
+  let timer: ReturnType<typeof setTimeout> | undefined = undefined;
+  return () => {
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => {
+      timer = undefined;
+      fn();
+    }, ms);
+  };
+}
