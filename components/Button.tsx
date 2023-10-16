@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import React from 'react';
-import cx from 'classnames';
-import { TablerIcon } from '@/lib/types';
-import Link from 'next/link';
+import React from "react";
+import cx from "classnames";
+import Link from "next/link";
+import type { TablerIcon } from "@/lib/types";
 
 type Props = {
-  color: 'primary' | 'secondary';
-  size?: 'lg' | 'md' | 'sm';
+  color: "primary" | "secondary";
+  size?: "lg" | "md" | "sm";
   icon?: TablerIcon;
   className?: string;
   children?: React.ReactNode;
-} & ({ type: 'button'; onClick(): void } | { type: 'link'; to: string });
+} & ({ type: "button"; onClick(): void } | { type: "link"; to: string });
 
 const Button: React.FC<Props> = (props) => {
   const classes = cx(
@@ -26,12 +26,14 @@ const Button: React.FC<Props> = (props) => {
       : `text-lg gap-1.5 px-6 py-3 rounded-[20px]`,
     props.className,
   );
-  if (props.type === 'button') {
+  if (props.type === `button`) {
     return (
       <button onClick={props.onClick} className={cx(classes)}>
         <span>{props.children}</span>
         {props.icon && (
-          <props.icon size={props.size === `lg` ? 24 : props.size === `sm` ? 20 : 22} />
+          <props.icon
+            size={props.size === `lg` ? 24 : props.size === `sm` ? 20 : 22}
+          />
         )}
       </button>
     );
@@ -40,7 +42,9 @@ const Button: React.FC<Props> = (props) => {
     <Link href={props.to} className={cx(classes, props.className)}>
       <span>{props.children}</span>
       {props.icon && (
-        <props.icon size={props.size === `lg` ? 24 : props.size === `sm` ? 20 : 22} />
+        <props.icon
+          size={props.size === `lg` ? 24 : props.size === `sm` ? 20 : 22}
+        />
       )}
     </Link>
   );

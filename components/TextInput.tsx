@@ -1,5 +1,5 @@
-import React from 'react';
-import cx from 'classnames';
+import React from "react";
+import cx from "classnames";
 
 type Props = {
   name: string;
@@ -7,11 +7,10 @@ type Props = {
   placeholder?: string;
   label?: string;
   className?: string;
-} & ({ type: 'email' | 'text' } | { type: 'textarea'; rows: number });
+} & ({ type: "email" | "text" } | { type: "textarea"; rows: number });
 
-const TextInput: React.FC<Props> = (props) => {
-  return (
-    <div className={cx('flex flex-col gap-1 lg+:gap-2', props.className)}>
+const TextInput: React.FC<Props> = (props) => (
+    <div className={cx(`flex flex-col gap-1 lg+:gap-2`, props.className)}>
       {props.label && (
         <label
           htmlFor={props.name}
@@ -20,7 +19,7 @@ const TextInput: React.FC<Props> = (props) => {
           {props.label}
         </label>
       )}
-      {props.type === 'textarea' ? (
+      {props.type === `textarea` ? (
         <textarea
           rows={props.rows}
           required={props.required}
@@ -41,6 +40,5 @@ const TextInput: React.FC<Props> = (props) => {
       )}
     </div>
   );
-};
 
 export default TextInput;

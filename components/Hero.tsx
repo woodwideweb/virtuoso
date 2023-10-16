@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import React from 'react';
-import cx from 'classnames';
-import Button from './Button';
-import { IconArrowRight, IconLayoutGrid } from '@tabler/icons-react';
-import { montserrat } from '@/lib/fonts';
-import Illustration from '../public/hero-illustration.svg';
-import Image from 'next/image';
+import React from "react";
+import cx from "classnames";
+import { IconArrowRight, IconLayoutGrid } from "@tabler/icons-react";
+import Image from "next/image";
+import Illustration from "../public/hero-illustration.svg";
+import Button from "./Button";
+import { montserrat } from "@/lib/fonts";
 
 const Hero: React.FC = () => {
   const [showHeading, setShowHeading] = React.useState(false);
@@ -17,8 +17,14 @@ const Hero: React.FC = () => {
   React.useEffect(() => {
     const headingTimeout = setTimeout(() => setShowHeading(true), 100);
     const subheadingTimeout = setTimeout(() => setShowSubheading(true), 300);
-    const primaryButtonTimeout = setTimeout(() => setShowPrimaryButton(true), 700);
-    const secondaryButtonTimeout = setTimeout(() => setShowSecondaryButton(true), 900);
+    const primaryButtonTimeout = setTimeout(
+      () => setShowPrimaryButton(true),
+      700,
+    );
+    const secondaryButtonTimeout = setTimeout(
+      () => setShowSecondaryButton(true),
+      900,
+    );
     return () => {
       clearTimeout(headingTimeout);
       clearTimeout(subheadingTimeout);
@@ -34,7 +40,7 @@ const Hero: React.FC = () => {
         <h1
           className={cx(
             montserrat,
-            'text-3xl xs:text-4xl sm:text-5xl 2xl:text-6xl font-bold leading-[1.25em] sm:leading-[1.25em] max-w-3xl transition-[transform,opacity] duration-[700ms] text-center lg:text-left',
+            `text-3xl xs:text-4xl sm:text-5xl 2xl:text-6xl font-bold leading-[1.25em] sm:leading-[1.25em] max-w-3xl transition-[transform,opacity] duration-[700ms] text-center lg:text-left`,
             !showHeading && `opacity-0 translate-y-4`,
           )}
         >
@@ -42,12 +48,13 @@ const Hero: React.FC = () => {
         </h1>
         <h3
           className={cx(
-            'text-lg xs:text-xl xl:text-2xl mt-4 xs:mt-6 text-black/50 max-w-2xl transition-[transform,opacity] duration-[700ms] text-center lg:text-left',
+            `text-lg xs:text-xl xl:text-2xl mt-4 xs:mt-6 text-black/50 max-w-2xl transition-[transform,opacity] duration-[700ms] text-center lg:text-left`,
             !showSubheading && `opacity-0 translate-y-4`,
           )}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit, necessitatibus, beatae
-          dolorem. Voluptate maxime at velit illo quae modi?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit,
+          necessitatibus, beatae dolorem. Voluptate maxime at velit illo quae
+          modi?
         </h3>
         <div className="mt-6 xs:mt-12 xl:mt-20 flex gap-4 flex-col min-[516px]:flex-row self-stretch min-[516px]:self-center lg:self-start">
           <Button

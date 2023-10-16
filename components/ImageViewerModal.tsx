@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { Fragment, useState } from 'react';
-import { Dialog, Transition } from '@headlessui/react';
-import Image from 'next/image';
-import { useImageViewerState } from '@/state/image-viewer/hooks';
-import { IconHeart, IconHeartFilled, IconX } from '@tabler/icons-react';
+import { Fragment } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import Image from "next/image";
+import { IconX } from "@tabler/icons-react";
+import { useImageViewerState } from "@/state/image-viewer/hooks";
 
 const ImageViewerModal: React.FC = () => {
   const { state, dispatch } = useImageViewerState();
@@ -14,7 +14,9 @@ const ImageViewerModal: React.FC = () => {
       <Dialog
         as="div"
         className="relative z-50"
-        onClose={() => dispatch({ type: `toggleImageViewerOpen`, payload: false })}
+        onClose={() =>
+          dispatch({ type: `toggleImageViewerOpen`, payload: false })
+        }
       >
         <Transition.Child
           as={Fragment}
@@ -50,7 +52,10 @@ const ImageViewerModal: React.FC = () => {
                 <div className="bg-amber-50 p-4 shrink-0 flex flex-col justify-between">
                   <button
                     onClick={() =>
-                      dispatch({ type: `toggleImageViewerOpen`, payload: false })
+                      dispatch({
+                        type: `toggleImageViewerOpen`,
+                        payload: false,
+                      })
                     }
                     className="w-12 h-12 hover:bg-amber-100 rounded-full flex justify-center items-center transiton-[color,background-color,transform] active:scale-90 active:bg-amber-200/70 duration-200"
                   >

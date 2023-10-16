@@ -1,6 +1,6 @@
-import React from 'react';
-import { Action, State } from './reducer';
-import { ImageViewerStateContext } from './Provider';
+import React from "react";
+import type { Action, State } from "./reducer";
+import { ImageViewerStateContext } from "./Provider";
 
 export function useImageViewerState(): {
   state: State;

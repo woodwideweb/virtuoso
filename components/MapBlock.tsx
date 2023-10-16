@@ -1,16 +1,14 @@
-import React from 'react';
-import cx from 'classnames';
-import { IconMapPinFilled, IconSend } from '@tabler/icons-react';
-import MapImage from '@/public/wadsworth-map.png';
-import AmberWave from '@/public/amber-wave.svg';
-import { montserrat } from '@/lib/fonts';
-import { useIntersectionObserver } from '@/lib/hooks';
-import Button from './Button';
-import TextInput from './TextInput';
+import React from "react";
+import cx from "classnames";
+import { IconMapPinFilled, IconSend } from "@tabler/icons-react";
+import Button from "./Button";
+import TextInput from "./TextInput";
+import MapImage from "@/public/wadsworth-map.png";
+import AmberWave from "@/public/amber-wave.svg";
+import { montserrat } from "@/lib/fonts";
+import { useIntersectionObserver } from "@/lib/hooks";
 
-interface Props {}
-
-const MapBlock: React.FC<Props> = ({}) => {
+const MapBlock: React.FC = () => {
   const { ref: pinRef, intersected: showPin } = useIntersectionObserver({
     threshold: 1,
     rootMargin: `0px`,
@@ -19,10 +17,12 @@ const MapBlock: React.FC<Props> = ({}) => {
     threshold: 1,
     rootMargin: `0px`,
   });
-  const { ref: contactRef, intersected: showContact } = useIntersectionObserver({
-    threshold: 1,
-    rootMargin: `0px`,
-  });
+  const { ref: contactRef, intersected: showContact } = useIntersectionObserver(
+    {
+      threshold: 1,
+      rootMargin: `0px`,
+    },
+  );
 
   return (
     <div className="pb-12 pl-12 lg:pr-12 pt-0 flex gap-12 xl:gap-20">
@@ -30,7 +30,7 @@ const MapBlock: React.FC<Props> = ({}) => {
         <div
           ref={pinRef}
           className={cx(
-            'relative bg-amber-50 transition-opacity duration-300',
+            `relative bg-amber-50 transition-opacity duration-300`,
             !showPin && `opacity-0`,
           )}
         >
@@ -38,15 +38,16 @@ const MapBlock: React.FC<Props> = ({}) => {
             Based in Wadsworth, OH
           </h3>
           <p className="text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat eaque
-            corrupti nemo, voluptates voluptatem soluta rerum quidem optio dolore nisi
-            eligendi dignissimos autem assumenda consequatur neque sed quae et illum?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
+            eaque corrupti nemo, voluptates voluptatem soluta rerum quidem optio
+            dolore nisi eligendi dignissimos autem assumenda consequatur neque
+            sed quae et illum?
           </p>
         </div>
         <div
           ref={regionRef}
           className={cx(
-            'relative bg-amber-50 transition-opacity duration-300',
+            `relative bg-amber-50 transition-opacity duration-300`,
             !showRegion && `opacity-0`,
           )}
         >
@@ -54,15 +55,16 @@ const MapBlock: React.FC<Props> = ({}) => {
             Serving the surrounding area
           </h3>
           <p className="text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat eaque
-            corrupti nemo, voluptates voluptatem soluta rerum quidem optio dolore nisi
-            eligendi dignissimos autem assumenda consequatur neque sed quae et illum?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
+            eaque corrupti nemo, voluptates voluptatem soluta rerum quidem optio
+            dolore nisi eligendi dignissimos autem assumenda consequatur neque
+            sed quae et illum?
           </p>
         </div>
         <div
           ref={contactRef}
           className={cx(
-            'relative bg-amber-50 transition-opacity duration-300',
+            `relative bg-amber-50 transition-opacity duration-300`,
             !showContact && `opacity-0`,
           )}
         >
@@ -70,9 +72,10 @@ const MapBlock: React.FC<Props> = ({}) => {
             Reach out today to get a free quote for your project
           </h3>
           <p className="text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat eaque
-            corrupti nemo, voluptates voluptatem soluta rerum quidem optio dolore nisi
-            eligendi dignissimos autem assumenda consequatur neque sed quae et illum?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
+            eaque corrupti nemo, voluptates voluptatem soluta rerum quidem optio
+            dolore nisi eligendi dignissimos autem assumenda consequatur neque
+            sed quae et illum?
           </p>
         </div>
       </div>
@@ -86,7 +89,7 @@ const MapBlock: React.FC<Props> = ({}) => {
       >
         <div
           className={cx(
-            'rounded-[100%] transition-all duration-1000 absolute',
+            `rounded-[100%] transition-all duration-1000 absolute`,
             showRegion
               ? `h-[calc(100%-80px)] aspect-square bg-primary-500/10 border-primary-500/80 border-4`
               : `w-0 h-0 bg-primary-500/70 border-primary-500`,
@@ -95,7 +98,9 @@ const MapBlock: React.FC<Props> = ({}) => {
         <IconMapPinFilled
           className={cx(
             `text-primary-700 transition-all duration-300 relative ease-in`,
-            showPin ? `opacity-100 -top-8` : `opacity-0 -top-[calc((100vh-96px)/2)]`,
+            showPin
+              ? `opacity-100 -top-8`
+              : `opacity-0 -top-[calc((100vh-96px)/2)]`,
           )}
           size={80}
         />

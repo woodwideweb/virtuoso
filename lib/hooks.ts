@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 export function useIntersectionObserver(
   options: IntersectionObserverInit,
@@ -9,7 +9,7 @@ export function useIntersectionObserver(
 } {
   const ref = useRef(null);
   const [intersected, setIntersected] = useState(false);
-  let hasIntersected = useRef(false);
+  const hasIntersected = useRef(false);
   const { root, rootMargin, threshold } = options;
 
   useEffect(() => {
@@ -47,11 +47,11 @@ export function useScrollY(): number {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (): void => {
       setScrollY(window.scrollY);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener(`scroll`, handleScroll);
+    return () => window.removeEventListener(`scroll`, handleScroll);
   }, [scrollY]);
 
   return scrollY;
@@ -65,7 +65,8 @@ export function useWindowDimensions(): { width: number; height: number } {
 
   useEffect(() => {
     const debouncedHandler = debounce(
-      () => setDimensions({ width: window.innerWidth, height: window.innerHeight }),
+      () =>
+        setDimensions({ width: window.innerWidth, height: window.innerHeight }),
       250,
     );
     window.addEventListener(`resize`, debouncedHandler);

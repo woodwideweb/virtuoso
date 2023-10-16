@@ -1,19 +1,24 @@
-'use client';
+"use client";
 
-import React, { useEffect, useState } from 'react';
-import Image, { StaticImageData } from 'next/image';
-import cx from 'classnames';
-import PrimaryWave from '@/public/primary-wave.svg';
-import { useIntersectionObserver, useScrollY, useWindowDimensions } from '@/lib/hooks';
-import { montserrat } from '@/lib/fonts';
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import cx from "classnames";
 import {
   IconArrowRight,
   IconCalendar,
   IconCurrencyDollar,
   IconMapPin,
-} from '@tabler/icons-react';
-import { TablerIcon } from '@/lib/types';
-import Button from '@/components/Button';
+} from "@tabler/icons-react";
+import type { StaticImageData } from "next/image";
+import type { TablerIcon } from "@/lib/types";
+import PrimaryWave from "@/public/primary-wave.svg";
+import {
+  useIntersectionObserver,
+  useScrollY,
+  useWindowDimensions,
+} from "@/lib/hooks";
+import { montserrat } from "@/lib/fonts";
+import Button from "@/components/Button";
 
 interface Props {
   mainSplashPicture: StaticImageData;
@@ -67,10 +72,12 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
   const scrollY = useScrollY();
   const [shownLetters, setShownLetters] = useState(0);
   const { width } = useWindowDimensions();
-  const { intersected: overBgImage, ref: bgImageRef } = useIntersectionObserver({
-    threshold: 1,
-    rootMargin: `0px`,
-  });
+  const { intersected: overBgImage, ref: bgImageRef } = useIntersectionObserver(
+    {
+      threshold: 1,
+      rootMargin: `0px`,
+    },
+  );
   const { intersected: intersectedSecondCaption, ref: secondCaptionRef } =
     useIntersectionObserver({
       threshold: 1,
@@ -95,7 +102,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
   return (
     <div
       className={cx(
-        'px-4 xs:px-8 sm:px-12 xl:px-20 py-12 transition-colors duration-700',
+        `px-4 xs:px-8 sm:px-12 xl:px-20 py-12 transition-colors duration-700`,
         bgGreen ? `bg-primary-800` : `bg-amber-50`,
       )}
     >
@@ -106,7 +113,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
             alt={projectTitle}
             priority
             className={cx(
-              'w-11/12 max-w-7xl object-center object-cover fixed sepia-[30%] rounded-[60px] sm:rounded-[80px]',
+              `w-11/12 max-w-7xl object-center object-cover fixed sepia-[30%] rounded-[60px] sm:rounded-[80px]`,
             )}
             style={{
               height: `${(width >= 1080 ? 608 : 400) - scrollY / 4}px`,
@@ -118,14 +125,14 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
         <div className="mt-[420px] min-[1080px]:mt-[650px] relative max-w-7xl w-full">
           <h1
             className={cx(
-              'text-3xl xs:text-4xl sm:text-5xl 2xl:text-6xl font-bold text-center lg:text-left relative w-fit transition-colors duration-700 !leading-tight',
+              `text-3xl xs:text-4xl sm:text-5xl 2xl:text-6xl font-bold text-center lg:text-left relative w-fit transition-colors duration-700 !leading-tight`,
               bgGreen ? `text-white` : `text-black`,
               montserrat,
             )}
           >
             <span className="relative">
               {width > 1024
-                ? projectTitle.split('').map((letter, index) => (
+                ? projectTitle.split(``).map((letter, index) => (
                     <span
                       key={index}
                       className={cx(
@@ -135,14 +142,18 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                           : `opacity-0 scale-75 translate-y-4`,
                       )}
                     >
-                      {letter.replace(' ', '\u00a0')}
+                      {letter.replace(` `, `\u00a0`)}
                     </span>
                   ))
                 : projectTitle}
             </span>
           </h1>
           <div className="flex justify-center lg:justify-start mt-8 gap-4 flex-wrap">
-            <PillBadge bgGreen={bgGreen} show={shownLetters > 10} Icon={IconMapPin}>
+            <PillBadge
+              bgGreen={bgGreen}
+              show={shownLetters > 10}
+              Icon={IconMapPin}
+            >
               {location}
             </PillBadge>
             <PillBadge
@@ -152,7 +163,11 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
             >
               ${actualCost.toLocaleString()}
             </PillBadge>
-            <PillBadge bgGreen={bgGreen} show={shownLetters > 30} Icon={IconCalendar}>
+            <PillBadge
+              bgGreen={bgGreen}
+              show={shownLetters > 30}
+              Icon={IconCalendar}
+            >
               {when}
             </PillBadge>
           </div>
@@ -187,7 +202,9 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                   </span>
                 </div>
               </div>
-              <h2 className={cx('text-3xl font-bold', montserrat)}>Project scope</h2>
+              <h2 className={cx(`text-3xl font-bold`, montserrat)}>
+                Project scope
+              </h2>
               <ul className="flex flex-col mt-6 sm:text-lg md:ml-2 gap-5">
                 {scope.map((item) => (
                   <ProjectScopeStep key={item.title} Icon={item.Icon}>
@@ -231,7 +248,9 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                   >
                     Plan and design
                   </h2>
-                  <p className={cx('max-w-2xl sm:text-xl text-primary-100 mt-8')}>
+                  <p
+                    className={cx(`max-w-2xl sm:text-xl text-primary-100 mt-8`)}
+                  >
                     {planParagraph}
                   </p>
                 </div>
@@ -270,7 +289,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
             <div
               ref={bgImageRef}
               className={cx(
-                'flex justify-center items-center h-screen transition-[width,border-radius] duration-700 relative overflow-hidden',
+                `flex justify-center items-center h-screen transition-[width,border-radius] duration-700 relative overflow-hidden`,
                 overBgImage
                   ? `w-screen rounded-none`
                   : `w-[1280px] rounded-[40px] sm:rounded-[80px] md:rounded-[120px]`,
@@ -286,24 +305,30 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                 }
                 alt="Hartville project"
                 className={cx(
-                  'w-full h-full absolute left-0 top-0 object-center object-cover transition-[filter] duration-700',
+                  `w-full h-full absolute left-0 top-0 object-center object-cover transition-[filter] duration-700`,
                   overBgImage ? `sepia-[50%]` : `sepia-[20%]`,
                 )}
               />
               <div
                 className={cx(
-                  'w-full h-full bg-gradient-to-r from-black/80 via-black/70 to-black/40 lg:to-transparent absolute left-0 top-0 transition-[border-radius,opacity] duration-700',
-                  overBgImage ? `rounded-none opacity-100` : `rounded-[120px] opacity-0`,
+                  `w-full h-full bg-gradient-to-r from-black/80 via-black/70 to-black/40 lg:to-transparent absolute left-0 top-0 transition-[border-radius,opacity] duration-700`,
+                  overBgImage
+                    ? `rounded-none opacity-100`
+                    : `rounded-[120px] opacity-0`,
                 )}
               ></div>
             </div>
           </div>
-          <div className={cx('flex justify-start relative px-8 sm:px-12 lg:px-20 mt-20')}>
+          <div
+            className={cx(
+              `flex justify-start relative px-8 sm:px-12 lg:px-20 mt-20`,
+            )}
+          >
             <div className="max-w-3xl flex flex-col gap-[calc(100vh-160px)]">
               <div>
                 <h3
                   className={cx(
-                    'text-3xl xs:text-4xl lg:text-5xl text-white font-semibold',
+                    `text-3xl xs:text-4xl lg:text-5xl text-white font-semibold`,
                     montserrat,
                   )}
                 >
@@ -316,7 +341,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
               <div ref={secondCaptionRef}>
                 <h3
                   className={cx(
-                    'text-3xl xs:text-4xl lg:text-5xl text-white font-semibold',
+                    `text-3xl xs:text-4xl lg:text-5xl text-white font-semibold`,
                     montserrat,
                   )}
                 >
@@ -329,7 +354,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
               <div className="mb-[calc(100vh-500px)] " ref={thirdCaptionRef}>
                 <h3
                   className={cx(
-                    'text-3xl xs:text-4xl lg:text-5xl text-white font-semibold',
+                    `text-3xl xs:text-4xl lg:text-5xl text-white font-semibold`,
                     montserrat,
                   )}
                 >
@@ -385,44 +410,48 @@ const PillBadge: React.FC<PillBadgeProps> = ({
   className,
   show,
   bgGreen,
-}) => {
-  return (
-    <div
+}) => (
+  <div
+    className={cx(
+      `flex items-center gap-2 backdrop-blur-md px-4 py-2 rounded-full transition-[opacity,transform,background-color] duration-700`,
+      !show && `translate-y-4 opacity-0`,
+      bgGreen ? `bg-primary-700` : `bg-amber-200/40`,
+      className,
+    )}
+  >
+    <Icon
       className={cx(
-        'flex items-center gap-2 backdrop-blur-md px-4 py-2 rounded-full transition-[opacity,transform,background-color] duration-700',
-        !show && `translate-y-4 opacity-0`,
-        bgGreen ? `bg-primary-700` : `bg-amber-200/40`,
-        className,
+        bgGreen ? `text-primary-100` : `text-amber-700`,
+        `transition-colors duration-700`,
+      )}
+    />
+    <span
+      className={cx(
+        bgGreen ? `text-primary-200` : `text-amber-700/60`,
+        `font-medium transition-colors duration-700`,
       )}
     >
-      <Icon
-        className={cx(
-          bgGreen ? `text-primary-100` : `text-amber-700`,
-          `transition-colors duration-700`,
-        )}
-      />
-      <span
-        className={cx(
-          bgGreen ? `text-primary-200` : `text-amber-700/60`,
-          `font-medium transition-colors duration-700`,
-        )}
-      >
-        {children}
-      </span>
-    </div>
-  );
-};
+      {children}
+    </span>
+  </div>
+);
 
 interface ProjectscopeStepProps {
   children: React.ReactNode;
   Icon: TablerIcon;
 }
 
-const ProjectScopeStep: React.FC<ProjectscopeStepProps> = ({ children, Icon }) => {
+const ProjectScopeStep: React.FC<ProjectscopeStepProps> = ({
+  children,
+  Icon,
+}) => {
   const { width } = useWindowDimensions();
   return (
     <li className="font-medium flex gap-3">
-      <Icon className="text-primary-700 shrink-0" size={width > 1000 ? 28 : 24} />
+      <Icon
+        className="text-primary-700 shrink-0"
+        size={width > 1000 ? 28 : 24}
+      />
       <span className="text-primary-black/80">{children}</span>
     </li>
   );
@@ -445,17 +474,22 @@ const PlanStep: React.FC<PlanStepProps> = ({ index, title, description }) => {
   return (
     <li
       className={cx(
-        'flex gap-4 transition-[opacity,transform] duration-500',
+        `flex gap-4 transition-[opacity,transform] duration-500`,
         !intersected && `translate-y-4 opacity-0`,
       )}
       ref={ref}
     >
       <div className="bg-primary-800 w-8 lg:w-10 h-8 lg:h-10 rounded-full flex justify-center items-center shrink-0">
-        <span className="font-mono text-lg lg:text-xl text-primary-300">{index}</span>
+        <span className="font-mono text-lg lg:text-xl text-primary-300">
+          {index}
+        </span>
       </div>
       <div className="lg:mt-1">
         <h4
-          className={cx('text-lg lg:text-xl font-semibold text-primary-200', montserrat)}
+          className={cx(
+            `text-lg lg:text-xl font-semibold text-primary-200`,
+            montserrat,
+          )}
         >
           {title}
         </h4>
