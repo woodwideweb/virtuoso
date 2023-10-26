@@ -1,5 +1,6 @@
 import React from "react";
 import cx from "classnames";
+import Link from "next/link";
 import { montserrat } from "@/lib/fonts";
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
 }
 
 const Logo: React.FC<Props> = ({ className }) => (
-  <div className={cx(`flex gap-2`, className)}>
+  <Link href="/" className={cx(`flex gap-2`, className)}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -297,7 +298,7 @@ const Logo: React.FC<Props> = ({ className }) => (
       </span>
       <span className="text-sm -mt-1 text-black/90 uppercase">landscaping</span>
     </div>
-  </div>
+  </Link>
 );
 
 export default Logo;

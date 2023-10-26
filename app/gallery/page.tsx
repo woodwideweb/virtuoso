@@ -11,8 +11,8 @@ import ImageViewerModal from "@/components/ImageViewerModal";
 import Wadsworth2021_0 from "@/public/gallery/2021-wadsworth-0.jpg";
 import Wadsworth2022_0 from "@/public/gallery/2022-wadsworth-0.jpg";
 import Wadsworth2022_1 from "@/public/gallery/2022-wadsworth-1.jpg";
-import Brecksville2022_0 from "@/public/gallery/2022-brecksville-0.jpg";
-import Brecksville2022_1 from "@/public/gallery/2022-brecksville-1.jpg";
+import Brecksville2021_0 from "@/public/gallery/2021-brecksville-0.jpg";
+import Brecksville2021_1 from "@/public/gallery/2021-brecksville-1.jpg";
 import Medina2022_0 from "@/public/gallery/2022-medina-0.jpg";
 import Medina2022_1 from "@/public/gallery/2022-medina-1.jpg";
 import Hartville2022_0 from "@/public/gallery/2022-hartville-0.jpg";
@@ -54,11 +54,11 @@ const Gallery: React.FC = () => (
         />
         <GalleryImage src={Wadsworth2022_1} city="Wadsworth" year={2022} />
         <MediumImageVertical
-          src={Brecksville2022_0}
+          src={Brecksville2021_0}
           city="Brecksville"
-          year={2022}
+          year={2021}
         />
-        <GalleryImage src={Brecksville2022_1} city="Brecksville" year={2022} />
+        <GalleryImage src={Brecksville2021_1} city="Brecksville" year={2021} />
         <BigImage src={Medina2022_0} city="Medina" year={2022} />
         <GalleryImage src={Medina2022_1} city="Medina" year={2022} />
         <GalleryImage src={Hartville2022_0} city="Hartville" year={2022} />

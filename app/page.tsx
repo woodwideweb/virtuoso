@@ -7,6 +7,7 @@ import SubHero from "@/components/SubHero";
 import BadgesBlock from "@/components/BadgesBlock";
 import AboutBlock from "@/components/AboutBlock";
 import MapBlock from "@/components/MapBlock";
+import TestimonialsBlock from "@/components/TestimonialsBlock";
 
 const Home: React.FC = () => (
   <div>
@@ -16,6 +17,7 @@ const Home: React.FC = () => (
     <Hero />
     <SubHero />
     <BadgesBlock />
+    <TestimonialsBlock />
     <AboutBlock />
     <MapBlock />
   </div>

@@ -58,12 +58,14 @@ export function useScrollY(): number {
 }
 
 export function useWindowDimensions(): { width: number; height: number } {
+  // TODO: somehow initialize width and height correctly...
   const [dimensions, setDimensions] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: 4000,
+    height: 0,
   });
 
   useEffect(() => {
+    setDimensions({ width: window.innerWidth, height: window.innerHeight });
     const debouncedHandler = debounce(
       () =>
         setDimensions({ width: window.innerWidth, height: window.innerHeight }),

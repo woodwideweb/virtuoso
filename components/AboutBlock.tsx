@@ -96,7 +96,13 @@ const FeaturedProject: React.FC<Props> = ({ src, title, href }) => (
     <div className="w-full h-full left-0 top-0 2xl:bg-gradient-to-b min-[1400px]:bg-gradient-to-bl bg-gradient-to-b from-transparent via-transparent to-primary-400/95 absolute" />
     <div className="bg-amber-50 rounded-3xl p-4 relative min-[1400px]:mt-20 2xl:mt-0 w-auto min-[1400px]:w-72 2xl:w-auto">
       <h4 className={cx(`font-bold text-2xl mb-3 text-center`)}>{title}</h4>
-      <Button type="link" to="" color="primary" icon={IconArrowRight} size="sm">
+      <Button
+        type="link"
+        to={href}
+        color="primary"
+        icon={IconArrowRight}
+        size="sm"
+      >
         View project
       </Button>
     </div>
