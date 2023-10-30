@@ -51,10 +51,10 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             </button>
           </header>
           <div className="flex-grow">{children}</div>
-          <footer className="lg:mx-12 pt-10 px-16 lg:px-28 mt-12 bg-amber-100 rounded-t-[40px] lg:rounded-t-[80px] flex flex-col">
-            <div className="flex justify-between items-start">
+          <footer className="lg:mx-12 pt-10 px-8 md:px-16 lg:px-28 mt-12 bg-amber-100 rounded-t-[40px] lg:rounded-t-[80px] flex flex-col">
+            <div className="flex flex-col sm:flex-row gap-8 justify-between items-start">
               <Logo />
-              <div className="flex gap-20">
+              <div className="flex gap-20 self-center sm:self-start">
                 <ul className="gap-1 flex flex-col">
                   <FooterLink to="/">Home</FooterLink>
                   <FooterLink to="/about">About</FooterLink>
@@ -77,7 +77,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 </ul>
               </div>
             </div>
-            <div className="flex justify-center items-center pt-12 pb-4 gap-4">
+            <div className="flex justify-center items-center pt-12 pb-4 gap-4 text-sm md:text-base">
               <span className="text-black/50 tracking-widest">
                 © {new Date().getFullYear()} Virtuoso Landscaping, LLC{` `}
               </span>
