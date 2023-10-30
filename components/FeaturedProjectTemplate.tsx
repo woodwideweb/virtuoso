@@ -8,6 +8,7 @@ import {
   IconCalendar,
   IconCurrencyDollar,
   IconMapPin,
+  IconQuote,
 } from "@tabler/icons-react";
 import type { StaticImageData } from "next/image";
 import type { TablerIcon } from "@/lib/types";
@@ -283,6 +284,32 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
               </div>
             </div>
           </div>
+        </div>
+        <div className="max-w-7xl mt-16 flex flex-col items-center sm:bg-primary-700/50 w-full rounded-[80px] sm:p-12 lg:p-20 relative">
+          <IconQuote
+            className="hidden lg:block absolute text-white/5 -left-40 -top-28 rotate-180"
+            size={400}
+          />
+          <IconQuote
+            className="hidden lg:block absolute text-white/5 -right-40 -bottom-28"
+            size={400}
+          />
+          <p className="text-center text-lg sm:text-xl md:text-2xl max-w-4xl text-white/80 italic leading-7 sm:leading-8 md:leading-9">
+            Lorem ipsum dolor sit amet, officia excepteur ex fugiat
+            reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit
+            ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
+            Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
+            voluptate dolor minim nulla est proident. Nostrud officia pariatur
+            ut officia. Sit irure elit esse ea nulla sunt ex occaecat
+            reprehenderit commodo officia dolor Lorem duis laboris cupidatat
+            officia voluptate. Culpa proident adipisicing id nulla nisi laboris
+            ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo
+            ex non excepteur duis sunt velit enim. Voluptate laboris sint
+            cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+          </p>
+          <span className="mt-8 font-medium text-xl md:text-2xl text-white">
+            - The Homeowner
+          </span>
         </div>
         <div className="w-screen">
           <div className="flex justify-center sticky top-0 mt-16">
