@@ -28,14 +28,24 @@ const AboutBlock: React.FC = () => (
         Dedicated to quality
       </h2>
       <p className="text-lg md:text-xl text-black/60 mt-4 md:mt-6">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. In, dicta.
-        Beatae incidunt aliquid necessitatibus quos odit inventore accusantium
-        quas numquam, sapiente laborum cumque! Autem, pariatur dolores possimus
-        accusamus necessitatibus soluta!
+        We live in a time when quality of work is often sacrificed for the sake
+        of time and money. Our commitment is to work within your budget and be
+        faithful stewards of the time and task we are given without making that
+        compromise. We count it a privilege to earn your trust as a customer,
+        and we endeavor to keep it by ensuring we exceed industry standards with
+        our finished product, not matter how big or small the job.
       </p>
       <div className="flex flex-col md:flex-row min-[1400px]:flex-col 2xl:flex-row mt-8 md:mt-12 gap-6 md:gap-8 2xl:gap-12">
-        <FeaturedProject href="#" src={Finished2} title={`Gigantic walls`} />
-        <FeaturedProject href="#" src={Finished1} title={`Cute walkway`} />
+        <FeaturedProject
+          href="#"
+          src={Finished2}
+          title={`Multi-level retaining wall`}
+        />
+        <FeaturedProject
+          href="#"
+          src={Finished1}
+          title={`Unique walkway design`}
+        />
       </div>
     </div>
     <div className="flex-grow flex flex-col gap-6 md:gap-8 2xl:gap-12">
@@ -56,10 +66,16 @@ const AboutBlock: React.FC = () => (
           Leaders in <span className="text-primary-800">green</span>
         </h2>
         <p className="text-black/60 text-lg md:text-xl mt-4 md:mt-6">
-          Paragraph about our all-electric mowers, weed-eaters, and other
-          equipment with picutures below. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Adipisci nostrum, tempora perferendis, quibusdam
-          quae praesentium aut dicta architecto vel!
+          If you see us around town, you'll quickly notice that green is not
+          just our primary logo color. We began switching over all of our lawn
+          care equipment to battery power in 2020. We were one of the first
+          companies in the area (if not the very first) to make this change. Our
+          crews can be daily seen operating battery-powered weed eaters,
+          blowers, chain saws, hedge trimmers, push mowers, and commercial
+          zero-turn fully electric mowers. We have made it a top priority to
+          stay "ahead of the game" in environmental awareness in order to reduce
+          our carbon footprint and minimize both the noise and the smell of
+          gas-powered engines while on your property.
         </p>
       </div>
       <div className="flex gap-6 md:gap-8 2xl:gap-12 min-[1400px]:flex-grow h-52 xs:h-64 sm:h-80 min-[1400px]:h-auto">
@@ -86,6 +102,7 @@ interface Props {
   href: string;
 }
 
+// TODO: get good pictures here
 const FeaturedProject: React.FC<Props> = ({ src, title, href }) => (
   <div className="flex flex-grow bg-top bg-cover rounded-3xl flex-col min-[1400px]:flex-row 2xl:flex-col 2xl:justify-end p-3 pt-52 md:pt-64 min-[1400px]:pt-0 2xl:pt-64 relative overflow-hidden">
     <Image

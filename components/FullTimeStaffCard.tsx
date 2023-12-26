@@ -29,7 +29,7 @@ const FullTimeStaffCard: React.FC<FullTimeStaffCardProps> = ({
     <div
       ref={ref}
       className={cx(
-        `flex items-center gap-8 bg-primary-700/10 rounded-full p-8 pr-20 transition-[opacity,transform] duration-500`,
+        `flex flex-col md:flex-row items-center md:items-start lg:items-center gap-8 bg-primary-700/10 rounded-3xl sm:rounded-[40px] lg:rounded-full p-6 sm:p-8 lg:pr-20 transition-[opacity,transform] duration-500`,
         !intersected && `opacity-0 translate-y-4`,
       )}
     >
@@ -37,12 +37,14 @@ const FullTimeStaffCard: React.FC<FullTimeStaffCardProps> = ({
         src={photo}
         alt={name}
         className={cx(
-          `w-64 h-64 rounded-full object-cover shrink-0`,
+          `w-40 lg:w-64 h-40 lg:h-64 rounded-full md:rounded-3xl lg:rounded-full object-cover shrink-0`,
           imagePosition,
         )}
       />
       <div>
-        <h3 className={cx(`text-3xl font-semibold`, montserrat)}>{name}</h3>
+        <h3 className={cx(`text-2xl sm:text-3xl font-semibold`, montserrat)}>
+          {name}
+        </h3>
         <h4 className="text-lg font-medium text-primary-800">{title}</h4>
         <p className="mt-2 text-lg text-black/60">{description}</p>
       </div>

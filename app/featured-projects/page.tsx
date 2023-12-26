@@ -10,16 +10,16 @@ import FeaturedProgramPreview from "@/components/FeaturedProgramPreview";
 const FeaturedProjects: React.FC = () => (
   <div className="px-4 sm:px-8 lg:px-12 2xl:px-16 py-8 lg:py-16 flex flex-col xl+:flex-row justify-center gap-8 2xl:gap-12">
     <FeaturedProgramPreview
-      title={`Large-scale residential walls`}
-      slug="hartville"
-      description={`Lorem ipsum dolor sit amet consectetur adipisicing elit, adipisci veniam nulla magnam.`}
+      title="Modern, tiered retaining wall"
+      slug="modern-tiered-retaining-wall"
+      description={`Completed in the summer of 2022, this upscale retaining wall is built with the U-Cara retaining wall system.`}
       images={[Hartville2, Hartville1, Hartville3]}
       when={`July-August 2022`}
     />
     <FeaturedProgramPreview
-      title={`Residential patio and deck construction`}
-      slug="tye-browns"
-      description={`Lorem ipsum dolor sit amet consectetur adipisicing elit, adipisci veniam nulla magnam lorem ip.`}
+      title={`Multi-faceted outdoor living space`}
+      slug="multi-faceted-outdoor-living-space"
+      description={`Check out this construction project completed in the fall of 2023, featuring a unique blend of natural stone hardscaping, quality woodwork and custom cedar accents.`}
       images={[TyeBrown1, TyeBrown2, TyeBrown3]}
       when={`August-September 2023`}
     />

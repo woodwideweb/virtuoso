@@ -36,18 +36,11 @@ const About: NextPage = () => (
           Why we're different
         </h2>
         <p className="text-lg lg:text-xl text-black/60 sm:text-justify">
-          Well for one no other landscaping company has such a modern website.
-          Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-          enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
-          exercitation amet. Nisi anim cupidatat excepteur officia.
-          Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
-          voluptate dolor minim nulla est proident. Nostrud officia pariatur ut
-          officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
-          commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
-          Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis
-          officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis
-          sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea
-          consectetur et est culpa et culpa duis.
+          Virtuoso Landscaping has over 20 years of experience in landscape
+          design, construction, and maintenance. Since the inception, our goal
+          has remained the same: honor the Lord in all we do by seeking to offer
+          fair prices, maintain honest and clear communication, and provide
+          high-quality work to all of our customers.
         </p>
       </div>
     </div>
@@ -62,12 +55,8 @@ const About: NextPage = () => (
           Our team
         </h2>
         <p className="mt-4 md:text-lg text-black/60 text-center">
-          Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-          enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
-          exercitation amet. Nisi anim cupidatat excepteur officia.
-          Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
-          voluptate dolor minim nulla est proident. Nostrud officia pariatur ut
-          officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit.
+          None of what we do would be possible without a dedicated and
+          consistent crew who share the same desire.
         </p>
       </div>
     </div>
@@ -76,15 +65,15 @@ const About: NextPage = () => (
       <div className="flex flex-col gap-8 mt-16">
         <FullTimeStaffCard
           name="Rod Costa"
-          title="Gran jefe"
-          description="Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia."
+          title="Owner"
+          description="Rod has no interest in growing a business or making money, he just enjoys working with people he loves."
           photo={RodPhoto}
-          imagePosition="object-[0px,-40px]"
+          imagePosition="object-[0px,-20px] lg:object-[0px,-40px]"
         />
         <FullTimeStaffCard
           name="Kristi Ensminger"
-          title="Chief"
-          description="Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia."
+          title="General manager"
+          description="Kristi wears several hats for Virtuoso in the field and in the office, but her favorite is the winter hat she wears while plowing snow each winter."
           photo={KristiPhoto}
           imagePosition="object-[0px,-20px]"
         />
@@ -98,29 +87,36 @@ const About: NextPage = () => (
         <FullTimeStaffCard
           name="Boaz Costa"
           title="Construction manager"
-          description="Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia."
+          description="A diligent worker and kind leader, Bo often has to be coerced to leave the jobsite when the sun goes down."
           photo={BoPhoto}
           imagePosition="object-[0px,-20px]"
         />
         <FullTimeStaffCard
-          name="Amy Horan"
-          title="Office manager"
-          description="Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia."
-          photo={AmyPhoto}
+          name="Austin Schlabach (needs photo)"
+          title="Landscape maintenance manager"
+          description="Austin is the kind of loyal and do-it-right employee that most landscaping companies only dream of having; striping lawns is his first love."
+          photo={BoPhoto}
+          imagePosition="object-[0px,-20px]"
+        />
+        <FullTimeStaffCard
+          name="Vivian Appleton"
+          title="Landscape enhancement specialist"
+          description="Vivian started working with Virtuoso at 14 years old; good luck finding a gal around that works harder than her!"
+          photo={VivianPhoto}
           imagePosition="object-[0px,-20px]"
         />
         <FullTimeStaffCard
           name="Jasen Sargent"
-          title="Project foreman"
-          description="Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia."
+          title="Landscape construction specialist"
+          description="Born and raised in New York, you'll recognize Jasen on the jobsite by his patient attention to detail... and his backwards cap."
           photo={JasenPhoto}
           imagePosition="object-[0px,0px]"
         />
         <FullTimeStaffCard
-          name="Vivian Appleton"
-          title="Project foreman"
-          description="Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia."
-          photo={VivianPhoto}
+          name="Amy Horan"
+          title="Administrative assistant"
+          description="Amy's gentle spirit and willingness to do anything needed for the crew and our customers make her a tremendous asset both in the office and beyond."
+          photo={AmyPhoto}
           imagePosition="object-[0px,-20px]"
         />
       </div>

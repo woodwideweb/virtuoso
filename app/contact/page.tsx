@@ -14,16 +14,14 @@ const Contact: React.FC = () => (
       <h1
         className={cx(
           montserrat,
-          `text-3xl xs:text-4xl xl:text-5xl font-bold text-center lg:text-left`,
+          `text-3xl xs:text-4xl xl:text-5xl font-bold text-center lg:text-left max-w-2xl`,
         )}
       >
-        Want a free quote?
+        Want to discuss a project or meet with us?
       </h1>
-      <p className="sm:text-lg xl:text-xl text-black/60 max-w-4xl mt-4 xl:mt-6 text-center lg:text-left">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
-        quisquam accusantium vero explicabo. Molestias excepturi explicabo
-        consectetur ipsam distinctio vero nisi architecto rem, mollitia quae
-        ullam voluptate blanditiis! Labore, sit?
+      <p className="sm:text-lg xl:text-xl text-black/60 max-w-2xl mt-4 xl:mt-6 text-center lg:text-left">
+        Simply fill out the contact form, click send, and one of our team
+        members will reach out to you within 24 hours.
       </p>
     </div>
     <form
@@ -53,12 +51,17 @@ const Contact: React.FC = () => (
         />
       </div>
       <TextInput
+        type="tel"
+        name="phone-number"
+        placeholder="(XXX) XXX-XXXX"
+        label="Phone number"
+      />
+      <TextInput
         type="email"
         name="email"
         placeholder="me@example.com"
         label="Email"
         required
-        className=""
       />
       <TextInput
         type="textarea"

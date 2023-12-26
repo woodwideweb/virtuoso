@@ -6,7 +6,6 @@ import cx from "classnames";
 import {
   IconArrowRight,
   IconCalendar,
-  IconCurrencyDollar,
   IconMapPin,
   IconQuote,
 } from "@tabler/icons-react";
@@ -25,8 +24,6 @@ interface Props {
   mainSplashPicture: StaticImageData;
   projectTitle: string;
   location: string;
-  estimatedCost: number;
-  actualCost: number;
   when: string;
   scope: Array<{
     Icon: TablerIcon;
@@ -61,8 +58,6 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
   mainSplashPicture,
   projectTitle,
   location,
-  estimatedCost,
-  actualCost,
   when,
   scope,
   planParagraph,
@@ -160,13 +155,6 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
             <PillBadge
               bgGreen={bgGreen}
               show={shownLetters > 20}
-              Icon={IconCurrencyDollar}
-            >
-              ${actualCost.toLocaleString()}
-            </PillBadge>
-            <PillBadge
-              bgGreen={bgGreen}
-              show={shownLetters > 30}
               Icon={IconCalendar}
             >
               {when}
@@ -179,32 +167,8 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                 backgroundImage: `url(${PrimaryWave.src})`,
               }}
             >
-              <div className="absolute bottom-8 right-12 flex flex-col gap-6 items-end">
-                <div className="flex-col items-end hidden xl:flex">
-                  <span className="text-sm text-primary-900 font-medium">
-                    Initial estimate
-                  </span>
-                  <span className="text-4xl font-black text-primary-800">
-                    <span className="text-2xl font-bold text-primary-900 align-top">
-                      $
-                    </span>
-                    {estimatedCost.toLocaleString()}
-                  </span>
-                </div>
-                <div className="hidden xl:flex flex-col items-end">
-                  <span className="text-base text-primary-900 font-medium">
-                    Actual price
-                  </span>
-                  <span className="text-6xl font-black text-primary-950">
-                    <span className="text-4xl font-bold text-primary-950 align-top">
-                      $
-                    </span>
-                    {actualCost.toLocaleString()}
-                  </span>
-                </div>
-              </div>
               <h2 className={cx(`text-3xl font-bold`, montserrat)}>
-                Project scope
+                Scope of work
               </h2>
               <ul className="flex flex-col mt-6 sm:text-lg md:ml-2 gap-5">
                 {scope.map((item) => (
@@ -213,30 +177,6 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                   </ProjectScopeStep>
                 ))}
               </ul>
-              <div className="mt-10 xl:hidden flex flex-col xs:flex-row justify-end items-center xs:items-end gap-6 xs:gap-12 lg:gap-16 xs:-mb-4 lg:-mb-8">
-                <div className="flex flex-col items-center xs:items-end">
-                  <span className="text-base text-primary-900 font-medium">
-                    Initial estimate
-                  </span>
-                  <span className="text-4xl md:text-5xl lg:text-6xl font-black text-primary-700">
-                    <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-700 align-top">
-                      $
-                    </span>
-                    {estimatedCost.toLocaleString()}
-                  </span>
-                </div>
-                <div className="flex flex-col items-center xs:items-end">
-                  <span className="text-base text-primary-900 font-medium">
-                    Actual price
-                  </span>
-                  <span className="text-4xl md:text-5xl lg:text-6xl font-black text-primary-950">
-                    <span className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary-950 align-top">
-                      $
-                    </span>
-                    {actualCost.toLocaleString()}
-                  </span>
-                </div>
-              </div>
             </div>
             <div className="flex flex-col lg+:flex-row items-start mt-16 lg+:mt-28 gap-16 relative">
               <div className="lg+:sticky top-20 flex-grow flex flex-col md+:flex-row lg+:block md+:items-center gap-12 w-full lg+:w-auto">
@@ -247,7 +187,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                       `text-4xl sm:text-5xl lg+:text-6xl font-bold text-white`,
                     )}
                   >
-                    Plan and design
+                    Design and construction
                   </h2>
                   <p
                     className={cx(`max-w-2xl sm:text-xl text-primary-100 mt-8`)}
@@ -285,31 +225,34 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
             </div>
           </div>
         </div>
-        <div className="max-w-7xl mt-16 flex flex-col items-center sm:bg-primary-700/50 w-full rounded-[80px] sm:p-12 lg:p-20 relative">
-          <IconQuote
-            className="hidden lg:block absolute text-white/5 -left-40 -top-28 rotate-180"
-            size={400}
-          />
-          <IconQuote
-            className="hidden lg:block absolute text-white/5 -right-40 -bottom-28"
-            size={400}
-          />
-          <p className="text-center text-lg sm:text-xl md:text-2xl max-w-4xl text-white/80 italic leading-7 sm:leading-8 md:leading-9">
-            Lorem ipsum dolor sit amet, officia excepteur ex fugiat
-            reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit
-            ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
-            Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
-            voluptate dolor minim nulla est proident. Nostrud officia pariatur
-            ut officia. Sit irure elit esse ea nulla sunt ex occaecat
-            reprehenderit commodo officia dolor Lorem duis laboris cupidatat
-            officia voluptate. Culpa proident adipisicing id nulla nisi laboris
-            ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo
-            ex non excepteur duis sunt velit enim. Voluptate laboris sint
-            cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
-          </p>
-          <span className="mt-8 font-medium text-xl md:text-2xl text-white">
-            - The Homeowner
-          </span>
+        <div className="px-4 xs:px-8 sm:px-12 xl:px-20 -mx-4 xs:-mx-8 sm:-mx-12 xl:-mx-20 flex w-screen justify-center overflow-hidden lg:pb-8">
+          <div className="max-w-7xl mt-16 flex flex-col items-center sm:bg-primary-700/50 w-full rounded-[80px] sm:p-12 lg:p-20 relative flex-grow">
+            <IconQuote
+              className="hidden lg:block absolute text-white/5 -left-40 -top-28 rotate-180"
+              size={400}
+            />
+            <IconQuote
+              className="hidden lg:block absolute text-white/5 -right-40 -bottom-28"
+              size={400}
+            />
+            <p className="text-center text-lg sm:text-xl md:text-2xl max-w-4xl text-white/80 italic leading-7 sm:leading-8 md:leading-9">
+              Lorem ipsum dolor sit amet, officia excepteur ex fugiat
+              reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit
+              ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
+              Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet
+              voluptate voluptate dolor minim nulla est proident. Nostrud
+              officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex
+              occaecat reprehenderit commodo officia dolor Lorem duis laboris
+              cupidatat officia voluptate. Culpa proident adipisicing id nulla
+              nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua
+              reprehenderit commodo ex non excepteur duis sunt velit enim.
+              Voluptate laboris sint cupidatat ullamco ut ea consectetur et est
+              culpa et culpa duis.
+            </p>
+            <span className="mt-8 font-medium text-xl md:text-2xl text-white">
+              - The Homeowner
+            </span>
+          </div>
         </div>
         <div className="w-screen">
           <div className="flex justify-center sticky top-0 mt-16">
@@ -327,8 +270,8 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                   intersectedThirdCaption
                     ? finishedProject.third.image
                     : intersectedSecondCaption
-                    ? finishedProject.second.image
-                    : finishedProject.first.image
+                      ? finishedProject.second.image
+                      : finishedProject.first.image
                 }
                 alt="Hartville project"
                 className={cx(

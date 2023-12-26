@@ -24,7 +24,7 @@ const FeaturedProgramPreview: React.FC<Props> = ({
   when,
 }) => (
   <div className="flex-grow rounded-[60px] flex flex-col md:flex-row xs:bg-amber-100 xs:p-4 gap-3 xs:gap-4">
-    <div className="p-6 p-8 sm:p-10 rounded-xl bg-primary-700/20 rounded-t-3xl xs:rounded-t-[50px] md:rounded-tr-xl md:rounded-l-[50px] flex flex-col justify-between flex-grow">
+    <div className="p-6 xs:p-8 sm:p-10 rounded-xl bg-primary-700/20 rounded-t-3xl xs:rounded-t-[50px] md:rounded-tr-xl md:rounded-l-[50px] flex flex-col justify-between flex-grow min-w-[340px]">
       <div className="mb-8">
         <h3 className="font-medium text-black/50 mb-1">{when}</h3>
         <h2 className={cx(`text-2xl font-bold`, montserrat)}>{title}</h2>

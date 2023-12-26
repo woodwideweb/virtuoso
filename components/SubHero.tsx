@@ -4,11 +4,12 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import cx from "classnames";
 import {
-  IconCactus,
   IconHammer,
   IconSeeding,
-  IconWall,
+  IconShovel,
+  IconSnowflakeOff,
 } from "@tabler/icons-react";
+import Link from "next/link";
 import type { StaticImageData } from "next/image";
 import type { TablerIcon } from "@/lib/types";
 import { montserrat } from "@/lib/fonts";
@@ -77,9 +78,7 @@ const SubHero: React.FC = () => {
               !showHeading && `translate-y-4 opacity-0`,
             )}
           >
-            Your dream landscape,
-            <br />
-            <span className="text-primary-900">made real</span>
+            What we do
           </h2>
           <p
             className={cx(
@@ -88,40 +87,128 @@ const SubHero: React.FC = () => {
             )}
             ref={ref}
           >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique
-            a temporibus vero velit ab, quisquam, amet dignissimos, aspernatur
-            tempore nam repudiandae totam minima! Pariatur vel, ullam assumenda
-            quod porro delectus?
+            With over 20 years of experience building, maintaining, and
+            recreating beautiful properties, our team has handled projects in a
+            wide variety of settings and under a diversity of challengin
+            circumstances. Our experienced crew members recognize the importance
+            of planning, organization, and attention to detail, enabling us to
+            carry out our work proficiently and to the satisfaction of our
+            customers. Formost, our team prioritizes safety and efficiency on
+            the job site. We genuinely enjoy what we do and take our jobs very
+            seriously.
           </p>
-          <div className="mt-8 grid grid-cols-1 min-[400px]:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 gap-2 sm:gap-4 xl:max-w-2xl -mx-6 xs:mx-0">
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 gap-2 sm:gap-4 xl:max-w-2xl -mx-6 xs:mx-0">
             <ProjectTypeFeature
               delay={800}
               intersected={intersected}
-              title={`Hardscaping`}
-              description={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque rerum nobis nesciunt, deleniti.`}
-              Icon={IconWall}
-            />
+              title={`Grounds maintenance`}
+              Icon={IconShovel}
+            >
+              <div className="flex gap-2 text-sm mt-3 text-primary-900/90 font-medium">
+                <ul className="list-disc ml-4">
+                  <li>Mowing</li>
+                  <li>Weeding</li>
+                  <li>Trimming</li>
+                  <li>Mulching</li>
+                  <li>Fertilization</li>
+                </ul>
+                <ul className="list-disc ml-4">
+                  <li>Arboriculture</li>
+                  <li>Weed control</li>
+                  <li>Spring cleanup</li>
+                  <li>Leaf removal</li>
+                  <li>Snow removal</li>
+                </ul>
+              </div>
+            </ProjectTypeFeature>
             <ProjectTypeFeature
               delay={1000}
               intersected={intersected}
-              title={`Construction`}
-              description={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque rerum nobis nesciunt, deleniti.`}
+              title={`Landscape construction`}
               Icon={IconHammer}
-            />
+            >
+              <div className="flex gap-2 text-sm mt-3 text-primary-900/90 font-medium">
+                <ul className="list-disc ml-4">
+                  <li>Walkways</li>
+                  <li>Stairways</li>
+                  <li>Paver patios</li>
+                  <li>Retaining walls</li>
+                  <li>Courtyards</li>
+                  <li>Pergolas</li>
+                  <li>Decks</li>
+                  <li>Arbors</li>
+                </ul>
+                <ul className="list-disc ml-4">
+                  <li>Fountains</li>
+                  <li>Ponds</li>
+                  <li>Waterfalls</li>
+                  <li>Creek systems</li>
+                  <li>Outdoor kitchens</li>
+                  <li>Outdoor living spaces</li>
+                  <li>Fire features</li>
+                  <li>Outdoor lighting</li>
+                </ul>
+              </div>
+            </ProjectTypeFeature>
             <ProjectTypeFeature
               delay={1200}
               intersected={intersected}
-              title={`Lawn care`}
-              description={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque rerum nobis nesciunt, deleniti.`}
+              title={`Lanscape enhancement`}
               Icon={IconSeeding}
-            />
+            >
+              <div className="flex gap-2 text-sm mt-3 text-primary-900/90 font-medium">
+                <ul className="list-disc ml-4">
+                  <li>Perennial gardens</li>
+                  <li>Raised gardens</li>
+                  <li>Landscape lighting</li>
+                  <li>Landscape design</li>
+                  <li>Terrain improvement</li>
+                  <li>Mulch installation</li>
+                </ul>
+                <ul className="list-disc ml-4">
+                  <li>Gravel installation</li>
+                  <li>Aeration</li>
+                  <li>Fertilization</li>
+                  <li>Planting</li>
+                  <li>Drainage solutions</li>
+                  <li>Erosion control</li>
+                  <li>Lawn installation</li>
+                </ul>
+              </div>
+            </ProjectTypeFeature>
             <ProjectTypeFeature
               delay={1400}
               intersected={intersected}
-              title={`Something else`}
-              description={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque rerum nobis nesciunt, deleniti.`}
-              Icon={IconCactus}
-            />
+              title={`Commercial snow removal`}
+              href="https://akronsnowmen.com"
+              Icon={IconSnowflakeOff}
+            >
+              <div className="flex gap-2 text-sm mt-3 text-primary-900/90 font-medium">
+                <ul className="list-disc ml-4">
+                  <li>Plowing</li>
+                  <li>Walkway clearing</li>
+                  <li>Deicing</li>
+                </ul>
+                <ul className="list-disc ml-4">
+                  <li>Salting</li>
+                  <li>Brine treatment*</li>
+                </ul>
+              </div>
+            </ProjectTypeFeature>
+          </div>
+          <div
+            className={cx(
+              `flex justify-center items-center mt-4 duration-500 delay-[1.8s] transition-opacity`,
+              !intersected && `opacity-0`,
+            )}
+          >
+            <span className="max-w-xl text-center text-sm text-primary-800">
+              * Environmentally friendly alternative that uses 1/3 the amount of
+              salt and includes a non-corrosive additive product.{` `}
+              <Link href="https://akronsnowmen.com" className="underline">
+                Find out more.
+              </Link>
+            </span>
           </div>
         </div>
       </div>
@@ -239,17 +326,19 @@ const FeaturedImage: React.FC<FeaturedImageProps> = ({
 
 interface ProjectTypeFeatureProps {
   title: string;
-  description: string;
+  children?: React.ReactNode;
   intersected: boolean;
   delay: number;
+  href?: string;
   Icon: TablerIcon;
 }
 
 const ProjectTypeFeature: React.FC<ProjectTypeFeatureProps> = ({
   title,
-  description,
+  children,
   intersected,
   delay,
+  href,
   Icon,
 }) => (
   <div
@@ -260,11 +349,18 @@ const ProjectTypeFeature: React.FC<ProjectTypeFeatureProps> = ({
     style={{ transitionDelay: `${delay}ms` }}
   >
     <Icon className="text-primary-400 -ml-2 -mt-2" stroke={1.5} size={40} />
-    <h4 className="text-lg xs:text-xl font-bold text-primary-950 mt-1 xs:mt-2">
-      {title}
-    </h4>
-    <p className="text-xs xs:text-sm mt-1 xs:mt-2 text-black/60">
-      {description}
-    </p>
+    {href ? (
+      <Link
+        href={href}
+        className="text-lg xs:text-xl font-bold text-primary-950 mt-1 xs:mt-2 underline"
+      >
+        {title}
+      </Link>
+    ) : (
+      <h4 className="text-lg xs:text-xl font-bold text-primary-950 mt-1 xs:mt-2">
+        {title}
+      </h4>
+    )}
+    <div>{children}</div>
   </div>
 );
