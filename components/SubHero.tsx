@@ -97,7 +97,7 @@ const SubHero: React.FC = () => {
             the job site. We genuinely enjoy what we do and take our jobs very
             seriously.
           </p>
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 gap-2 sm:gap-4 xl:max-w-2xl -mx-6 xs:mx-0">
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-4 xl:max-w-2xl -mx-6 xs:mx-0">
             <ProjectTypeFeature
               delay={800}
               intersected={intersected}

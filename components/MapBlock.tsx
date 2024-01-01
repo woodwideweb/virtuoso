@@ -25,8 +25,8 @@ const MapBlock: React.FC = () => {
   );
 
   return (
-    <div className="pb-12 pl-12 lg:pr-12 pt-0 flex gap-12 xl:gap-20">
-      <div className="xl:pl-12 flex flex-col gap-152 pt-[calc(100vh)] pb-[calc(50vh-160px)] relative">
+    <div className="pb-12 pl-8 sm:pl-12 pr-8 sm:pr-12 md:pr-0 lg:pr-12 pt-0 flex gap-12 xl:gap-20">
+      <div className="xl:pl-12 flex flex-col gap-16 md:gap-152 pt-16 md:pt-[calc(100vh)] pb-12 md:pb-[calc(50vh-160px)] relative">
         <div
           ref={pinRef}
           className={cx(
@@ -34,10 +34,15 @@ const MapBlock: React.FC = () => {
             !showPin && `opacity-0`,
           )}
         >
-          <h3 className={cx(montserrat, `text-3xl xl:text-4xl font-bold`)}>
+          <h3
+            className={cx(
+              montserrat,
+              `text-2xl xs:text-3xl xl:text-4xl font-bold`,
+            )}
+          >
             Based in Wadsworth, OH
           </h3>
-          <p className="text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
+          <p className="text-base xs:text-lg md:text-base lg:text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
             eaque corrupti nemo, voluptates voluptatem soluta rerum quidem optio
             dolore nisi eligendi dignissimos autem assumenda consequatur neque
@@ -51,10 +56,15 @@ const MapBlock: React.FC = () => {
             !showRegion && `opacity-0`,
           )}
         >
-          <h3 className={cx(montserrat, `text-3xl xl:text-4xl font-bold`)}>
+          <h3
+            className={cx(
+              montserrat,
+              `text-2xl xs:ttext-3xl xl:text-4xl font-bold`,
+            )}
+          >
             Serving the surrounding area
           </h3>
-          <p className="text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
+          <p className="text-base xs:text-lg md:text-base lg:text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
             eaque corrupti nemo, voluptates voluptatem soluta rerum quidem optio
             dolore nisi eligendi dignissimos autem assumenda consequatur neque
@@ -68,19 +78,32 @@ const MapBlock: React.FC = () => {
             !showContact && `opacity-0`,
           )}
         >
-          <h3 className={cx(montserrat, `text-3xl xl:text-4xl font-bold`)}>
+          <h3
+            className={cx(
+              montserrat,
+              `text-2xl xs:ttext-3xl xl:text-4xl font-bold`,
+            )}
+          >
             Reach out today to get a free quote for your project
           </h3>
-          <p className="text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
+          <p className="text-base xs:text-lg md:text-base lg:text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
             eaque corrupti nemo, voluptates voluptatem soluta rerum quidem optio
             dolore nisi eligendi dignissimos autem assumenda consequatur neque
             sed quae et illum?
           </p>
+          <Button
+            type="link"
+            to="/contact"
+            color="secondary"
+            className="mt-8 w-full sm:w-80 md:hidden"
+          >
+            Contact us
+          </Button>
         </div>
       </div>
       <div
-        className="p-20 flex justify-center items-center rounded-l-[80px] lg:rounded-r-[80px] overflow-hidden w-3/5 lg+:w-auto lg+:aspect-square h-176 2xl:h-[calc(100vh-96px)] sticky top-[calc(50%-(176px*2))] 2xl:top-12 shrink-0"
+        className="p-20 justify-center items-center rounded-l-[80px] lg:rounded-r-[80px] overflow-hidden w-3/5 lg+:w-auto lg+:aspect-square h-176 2xl:h-[calc(100vh-96px)] sticky top-[calc(50%-(176px*2))] 2xl:top-12 shrink-0 hidden md:flex"
         style={{
           backgroundImage: `radial-gradient(transparent, #fef3c7), url(${MapImage.src})`,
           backgroundSize: `cover`,
