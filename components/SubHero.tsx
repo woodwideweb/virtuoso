@@ -46,7 +46,7 @@ const SubHero: React.FC = () => {
     <div className="relative bg-primary-300 overflow-x-clip">
       <SubHeroBackground intersected={intersected} />
       <div className="relative pt-8 md:pt-24 w-full px-8 md:px-12 lg:px-16 flex flex-col xl:flex-row gap-20 min-[1500px]:gap-28 justify-between">
-        <div className="xl:flex-col xl:gap-4 relative flex-grow hidden xs:flex">
+        <div className="xl:flex-col xl:max-w-3xl xl:gap-4 relative flex-grow hidden xs:flex border-4 border-black">
           <div className="min-[1500px]:pl-20 flex-grow-[1] xl:flex-grow-0 flex xl:block">
             <FeaturedImage
               delay={900}

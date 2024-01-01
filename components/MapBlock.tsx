@@ -26,7 +26,7 @@ const MapBlock: React.FC = () => {
 
   return (
     <div className="pb-12 pl-8 sm:pl-12 pr-8 sm:pr-12 md:pr-0 lg:pr-12 pt-0 flex gap-12 xl:gap-20">
-      <div className="xl:pl-12 flex flex-col gap-16 md:gap-152 pt-16 md:pt-[calc(100vh)] pb-12 md:pb-[calc(50vh-160px)] relative">
+      <div className="xl:pl-12 flex flex-col gap-16 md:gap-152 pt-16 md:pt-[calc(60vh)] pb-12 md:pb-[calc(50vh-160px)] relative">
         <div
           ref={pinRef}
           className={cx(
