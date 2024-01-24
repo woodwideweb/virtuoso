@@ -40,11 +40,13 @@ const Hero: React.FC = () => {
         <h1
           className={cx(
             montserrat,
-            `text-3xl xs:text-4xl sm:text-5xl 2xl:text-6xl font-bold leading-[1.25em] sm:leading-[1.25em] max-w-3xl transition-[transform,opacity] duration-[700ms] text-center lg:text-left`,
+            `text-3xl xs:text-4xl sm:text-5xl 2xl:text-6xl font-bold !leading-[1.25em] sm:!leading-[1.25em] max-w-3xl transition-[transform,opacity] duration-[700ms] text-center lg:text-left`,
             !showHeading && `opacity-0 translate-y-4`,
           )}
         >
-          Creative by nature
+          Landscaping the way
+          <br />
+          it should be.
         </h1>
         <h3
           className={cx(
@@ -52,11 +54,10 @@ const Hero: React.FC = () => {
             !showSubheading && `opacity-0 translate-y-4`,
           )}
         >
-          Virtuoso Landscaping is a team of family and friends who value
-          communication, honesty, efficiency, and attention to detail. A local
-          company who will prioritize your budget and can customize a plan to
-          fit any of your needs, we believe you will find us to be refreshingly
-          different from start to finish.
+          We are a team of family and friends who value honesty, communication
+          and attention to detail. If you are in need of a proficient grounds
+          maintenance or landscape construction company that you can trust, you
+          will find us to be refreshingly different in every way.
         </h3>
         <div className="mt-6 xs:mt-12 xl:mt-20 flex gap-4 flex-col min-[516px]:flex-row self-stretch min-[516px]:self-center lg:self-start">
           <Button

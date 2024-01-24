@@ -12,7 +12,7 @@ const GroupPhoto: React.FC = () => {
   return (
     <div
       ref={ref}
-      className="h-72 xs:h-96 sm:h-112 md:h-128 lg:h-152 xl:h-176 relative rounded-3xl md:rounded-[60px] overflow-hidden"
+      className="h-72 xs:h-96 sm:h-112 md:h-128 lg:h-152 xl:h-176 relative rounded-3xl md:rounded-[60px] overflow-hidden my-20"
     >
       <Image
         src={GroupImg}

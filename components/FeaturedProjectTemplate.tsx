@@ -9,6 +9,7 @@ import {
   IconMapPin,
   IconQuote,
 } from "@tabler/icons-react";
+import NextBgImage from "next-bg-image";
 import type { StaticImageData } from "next/image";
 import type { TablerIcon } from "@/lib/types";
 import PrimaryWave from "@/public/primary-wave.svg";
@@ -30,11 +31,8 @@ interface Props {
     title: string;
   }>;
   planParagraph: string;
-  planSteps: Array<{
-    title: string;
-    description: string;
-  }>;
-  planImages: StaticImageData[];
+  planImage: StaticImageData;
+  inProgressImages: StaticImageData[];
   finishedProject: {
     first: {
       caption: string;
@@ -61,8 +59,8 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
   when,
   scope,
   planParagraph,
-  planSteps,
-  planImages,
+  planImage,
+  inProgressImages,
   finishedProject,
 }) => {
   const scrollY = useScrollY();
@@ -161,16 +159,18 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
             </PillBadge>
           </div>
           <div className="mt-20">
-            <div
-              className="p-8 md:p-12 lg:p-16 rounded-[40px] lg:rounded-[80px] bg-cover bg-center relative"
-              style={{
-                backgroundImage: `url(${PrimaryWave.src})`,
-              }}
-            >
-              <h2 className={cx(`text-3xl font-bold`, montserrat)}>
+            <div className="p-8 md:p-12 lg:p-16 rounded-[40px] lg:rounded-[80px] bg-cover bg-center relative overflow-hidden bg-primary-300">
+              <NextBgImage
+                src={[
+                  `linear-gradient(to right, #CCEADC, transparent)`,
+                  planImage,
+                ]}
+                className="absolute w-2/5 h-full right-0 top-0"
+              />
+              <h2 className={cx(`text-3xl font-bold relative`, montserrat)}>
                 Scope of work
               </h2>
-              <ul className="flex flex-col mt-6 sm:text-lg md:ml-2 gap-5">
+              <ul className="flex flex-col mt-6 sm:text-lg md:ml-2 gap-5 relative">
                 {scope.map((item) => (
                   <ProjectScopeStep key={item.title} Icon={item.Icon}>
                     {item.title}
@@ -195,22 +195,10 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                     {planParagraph}
                   </p>
                 </div>
-                <div className="bg-primary-900/50 rounded-3xl lg+:mt-12 p-8">
-                  <ul className="flex flex-col gap-6 lg:gap-8">
-                    {planSteps.map((step, index) => (
-                      <PlanStep
-                        key={step.title}
-                        index={index + 1}
-                        title={step.title}
-                        description={step.description}
-                      />
-                    ))}
-                  </ul>
-                </div>
               </div>
               <div className="relative">
                 <div className="flex lg+:flex-col gap-8 flex-grow items-end overflow-scroll relative">
-                  {planImages.map((image) => (
+                  {inProgressImages.map((image) => (
                     <Image
                       key={image.src}
                       src={image}
@@ -422,7 +410,7 @@ const ProjectScopeStep: React.FC<ProjectscopeStepProps> = ({
         className="text-primary-700 shrink-0"
         size={width > 1000 ? 28 : 24}
       />
-      <span className="text-primary-black/80">{children}</span>
+      <span className="text-primary-950">{children}</span>
     </li>
   );
 };

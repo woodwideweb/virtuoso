@@ -13,14 +13,17 @@ import Finished1 from "@/public/featured-projects/hartville/finished-1.jpg";
 import Finished2 from "@/public/featured-projects/hartville/finished-2.jpg";
 import Finished3 from "@/public/featured-projects/hartville/finished-3.jpg";
 import Design1 from "@/public/featured-projects/hartville/design-1.jpg";
-import Design2 from "@/public/featured-projects/hartville/design-2.jpg";
-import Design3 from "@/public/featured-projects/hartville/design-3.jpg";
+import Progress1 from "@/public/featured-projects/hartville/progress-1.jpg";
+import Progress2 from "@/public/featured-projects/hartville/progress-2.jpg";
+import Progress3 from "@/public/featured-projects/hartville/progress-3.jpg";
+import Progress4 from "@/public/featured-projects/hartville/progress-4.jpg";
+import Progress5 from "@/public/featured-projects/hartville/progress-5.jpg";
 import FeaturedProjectTemplate from "@/components/FeaturedProjectTemplate";
 
 const HartvilleProject: React.FC = () => (
   <FeaturedProjectTemplate
     mainSplashPicture={Finished2}
-    projectTitle="Modern tiered retainig wall"
+    projectTitle="Modern tiered retaining wall"
     location="Hartville, OH"
     when="June-July, 2022"
     scope={[
@@ -50,29 +53,8 @@ const HartvilleProject: React.FC = () => (
       },
     ]}
     planParagraph={`Creating an effective plan for the landscaping and erosion control needs for this newly-built custom home presented our crew with a variety of challenges. The foremost concern was how to construct a highly functional retaining wall to address the severe slope along the front of the house while simultaneously complimenting the beautiful modern architecture. Our design team put their heads together to create a stunning yet simple tiered retaining wall system that incorporates both the color and style of the house. Here's how we put our ideas into motion over the course of three months.`}
-    planSteps={[
-      {
-        title: `Order, position, and plant deciduous and evergreen trees in front and back yards`,
-        description: `Approximately 30 trees planted.`,
-      },
-      {
-        title: `Prepare grade for wall installation`,
-        description: `Re-grade slope to form two tiers of new lawn area and dig trenches using excavator for wall foundations.`,
-      },
-      {
-        title: `Build series of retaining walls at varying angles and levels`,
-        description: `Approximately 600 face feet of U-Cara retaining wall block.`,
-      },
-      {
-        title: `Referencing premade design, create the flower beds surrounding the home, plant boxwood shrubs, and install decorative gravel`,
-        description: `Approximately 25 tons of Black Frost decorative gravel and 30 boxwoods planted.`,
-      },
-      {
-        title: `Installed 2 acres of lawn`,
-        description: `Approximately 60 tons of topsoil brought in.`,
-      },
-    ]}
-    planImages={[Design1, Design2, Design3]}
+    planImage={Design1}
+    inProgressImages={[Progress1, Progress2, Progress3, Progress4, Progress5]}
     finishedProject={{
       first: {
         caption: `Clean, modern look`,

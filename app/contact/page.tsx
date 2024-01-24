@@ -11,13 +11,14 @@ import Button from "@/components/Button";
 const Contact: React.FC = () => (
   <div className="flex flex-col lg:flex-row items-center justify-center gap-16 py-16 xl:py-20 pl-4 xs:pl-8 sm:pl-16 xl:pl-20 pr-4 xs:pr-8 sm:pr-16 lg:pr-0 xl:pr-20">
     <div className="px-4 xs:px-0">
+      <h1>TODO: PICTURE</h1>
       <h1
         className={cx(
           montserrat,
           `text-3xl xs:text-4xl xl:text-5xl font-bold text-center lg:text-left max-w-2xl`,
         )}
       >
-        Want to discuss a project or meet with us?
+        Want to discuss your project or meet with us?
       </h1>
       <p className="sm:text-lg xl:text-xl text-black/60 max-w-2xl mt-4 xl:mt-6 text-center lg:text-left">
         Simply fill out the contact form, click send, and one of our team
@@ -68,7 +69,7 @@ const Contact: React.FC = () => (
         rows={6}
         name="message"
         placeholder="Hey, wanted to reach out about..."
-        label="Message"
+        label="Description of work"
         required
       />
       <div className="flex justify-end mt-4 xl:mt-0">

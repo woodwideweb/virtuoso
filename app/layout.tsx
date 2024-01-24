@@ -39,9 +39,9 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <nav className="hidden lg:flex gap-1">
               <NavLink to="/">Home</NavLink>
               <NavLink to="/about">About</NavLink>
-              <NavLink to="/contact">Contact</NavLink>
               <NavLink to="/featured-projects">Featured projects</NavLink>
               <NavLink to="/gallery">Gallery</NavLink>
+              <NavLink to="/contact">Contact</NavLink>
             </nav>
             <button
               className="lg:hidden flex justify-center items-center bg-amber-100 w-12 h-12 rounded-full text-black/50 hover:bg-amber-200 active:bg-amber-300 active:scale-95 transition-[background-color,transform] duration-300"
@@ -66,13 +66,13 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                     href="/featured-projects"
                     className="text-lg font-bold text-black/70 transition-[color,transform] hover:text-black"
                   >
-                    Featued projects
+                    Featured projects
                   </Link>
                   <FooterLink to="/featured-projects/hartville">
-                    Hartville
+                    Modern landscaping
                   </FooterLink>
                   <FooterLink to="/featured-projects/tye-browns">
-                    Tye Brown
+                    Classic landscaping
                   </FooterLink>
                 </ul>
               </div>

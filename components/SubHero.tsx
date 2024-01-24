@@ -46,7 +46,7 @@ const SubHero: React.FC = () => {
     <div className="relative bg-primary-300 overflow-x-clip">
       <SubHeroBackground intersected={intersected} />
       <div className="relative pt-8 md:pt-24 w-full px-8 md:px-12 lg:px-16 flex flex-col xl:flex-row gap-20 min-[1500px]:gap-28 justify-between">
-        <div className="xl:flex-col xl:max-w-3xl xl:gap-4 relative flex-grow hidden xs:flex border-4 border-black">
+        <div className="xl:flex-col xl:max-w-3xl xl:gap-4 relative flex-grow hidden xs:flex">
           <div className="min-[1500px]:pl-20 flex-grow-[1] xl:flex-grow-0 flex xl:block">
             <FeaturedImage
               delay={900}
@@ -88,20 +88,17 @@ const SubHero: React.FC = () => {
             ref={ref}
           >
             With over 20 years of experience building, maintaining, and
-            recreating beautiful properties, our team has handled projects in a
-            wide variety of settings and under a diversity of challengin
-            circumstances. Our experienced crew members recognize the importance
-            of planning, organization, and attention to detail, enabling us to
-            carry out our work proficiently and to the satisfaction of our
-            customers. Formost, our team prioritizes safety and efficiency on
-            the job site. We genuinely enjoy what we do and take our jobs very
-            seriously.
+            recreating beautiful landscapes, our team has handled projects of
+            many kinds under a diversity of challenging circumstances. Our
+            experienced crew members recognize the importance of planning,
+            organization, and attention to detail, enabling us to carry out our
+            work efficiently and to the satisfaction of our customers.
           </p>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-4 xl:max-w-2xl -mx-6 xs:mx-0">
             <ProjectTypeFeature
               delay={800}
               intersected={intersected}
-              title={`Grounds maintenance`}
+              title={`Grounds Maintenance`}
               Icon={IconShovel}
             >
               <div className="flex gap-2 text-sm mt-3 text-primary-900/90 font-medium">
@@ -113,9 +110,6 @@ const SubHero: React.FC = () => {
                   <li>Fertilization</li>
                 </ul>
                 <ul className="list-disc ml-4">
-                  <li>Arboriculture</li>
-                  <li>Weed control</li>
-                  <li>Spring cleanup</li>
                   <li>Leaf removal</li>
                   <li>Snow removal</li>
                 </ul>
@@ -124,27 +118,20 @@ const SubHero: React.FC = () => {
             <ProjectTypeFeature
               delay={1000}
               intersected={intersected}
-              title={`Landscape construction`}
+              title={`Landscape Construction`}
               Icon={IconHammer}
             >
               <div className="flex gap-2 text-sm mt-3 text-primary-900/90 font-medium">
                 <ul className="list-disc ml-4">
                   <li>Walkways</li>
-                  <li>Stairways</li>
                   <li>Paver patios</li>
                   <li>Retaining walls</li>
-                  <li>Courtyards</li>
                   <li>Pergolas</li>
                   <li>Decks</li>
-                  <li>Arbors</li>
                 </ul>
                 <ul className="list-disc ml-4">
-                  <li>Fountains</li>
-                  <li>Ponds</li>
-                  <li>Waterfalls</li>
-                  <li>Creek systems</li>
+                  <li>Water features</li>
                   <li>Outdoor kitchens</li>
-                  <li>Outdoor living spaces</li>
                   <li>Fire features</li>
                   <li>Outdoor lighting</li>
                 </ul>
@@ -153,25 +140,22 @@ const SubHero: React.FC = () => {
             <ProjectTypeFeature
               delay={1200}
               intersected={intersected}
-              title={`Lanscape enhancement`}
+              title={`Landscape Enhancement`}
               Icon={IconSeeding}
             >
               <div className="flex gap-2 text-sm mt-3 text-primary-900/90 font-medium">
                 <ul className="list-disc ml-4">
-                  <li>Perennial gardens</li>
-                  <li>Raised gardens</li>
-                  <li>Landscape lighting</li>
                   <li>Landscape design</li>
+                  <li>Perennial gardens</li>
                   <li>Terrain improvement</li>
                   <li>Mulch installation</li>
+                  <li>Aeration</li>
                 </ul>
                 <ul className="list-disc ml-4">
-                  <li>Gravel installation</li>
-                  <li>Aeration</li>
+                  <li>Decorative gravel</li>
                   <li>Fertilization</li>
-                  <li>Planting</li>
-                  <li>Drainage solutions</li>
-                  <li>Erosion control</li>
+                  <li>Tree/shrub planting</li>
+                  <li>Drainage and erosion solutions</li>
                   <li>Lawn installation</li>
                 </ul>
               </div>
@@ -179,36 +163,34 @@ const SubHero: React.FC = () => {
             <ProjectTypeFeature
               delay={1400}
               intersected={intersected}
-              title={`Commercial snow removal`}
+              title={`Commercial Snow Removal`}
               href="https://akronsnowmen.com"
               Icon={IconSnowflakeOff}
             >
-              <div className="flex gap-2 text-sm mt-3 text-primary-900/90 font-medium">
+              <div className="flex flex-col justify-between h-full flex-grow gap-2 text-sm mt-3 text-primary-900/90 font-medium">
                 <ul className="list-disc ml-4">
                   <li>Plowing</li>
-                  <li>Walkway clearing</li>
                   <li>Deicing</li>
+                  <li>Salt and brine* solutions</li>
                 </ul>
-                <ul className="list-disc ml-4">
-                  <li>Salting</li>
-                  <li>Brine treatment*</li>
-                </ul>
+                <div
+                  className={cx(
+                    `flex justify-center items-center`,
+                    !intersected && `opacity-0`,
+                  )}
+                >
+                  <span className="max-w-xl text-center text-sm text-primary-800/70">
+                    * Environmentally friendly alternative that uses 1/3 the
+                    amount of salt and includes a non-corrosive additive
+                    product.
+                    {` `}
+                    <Link href="https://akronsnowmen.com" className="underline">
+                      Find out more.
+                    </Link>
+                  </span>
+                </div>
               </div>
             </ProjectTypeFeature>
-          </div>
-          <div
-            className={cx(
-              `flex justify-center items-center mt-4 duration-500 delay-[1.8s] transition-opacity`,
-              !intersected && `opacity-0`,
-            )}
-          >
-            <span className="max-w-xl text-center text-sm text-primary-800">
-              * Environmentally friendly alternative that uses 1/3 the amount of
-              salt and includes a non-corrosive additive product.{` `}
-              <Link href="https://akronsnowmen.com" className="underline">
-                Find out more.
-              </Link>
-            </span>
           </div>
         </div>
       </div>
@@ -343,7 +325,7 @@ const ProjectTypeFeature: React.FC<ProjectTypeFeatureProps> = ({
 }) => (
   <div
     className={cx(
-      `bg-primary-50/60 p-6 sm:p-8 rounded-3xl overflow-hidden transition-[transform,opacity] duration-700 backdrop-blur-lg border-[0.5px] xl:border-none border-primary-300`,
+      `bg-primary-50/60 p-6 sm:p-8 rounded-3xl overflow-hidden transition-[transform,opacity] duration-700 backdrop-blur-lg border-[0.5px] xl:border-none border-primary-300 flex flex-col`,
       !intersected && `translate-y-4 opacity-0`,
     )}
     style={{ transitionDelay: `${delay}ms` }}
@@ -361,6 +343,6 @@ const ProjectTypeFeature: React.FC<ProjectTypeFeatureProps> = ({
         {title}
       </h4>
     )}
-    <div>{children}</div>
+    <div className="flex-grow">{children}</div>
   </div>
 );

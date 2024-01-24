@@ -26,7 +26,7 @@ const MapBlock: React.FC = () => {
 
   return (
     <div className="pb-12 pl-8 sm:pl-12 pr-8 sm:pr-12 md:pr-0 lg:pr-12 pt-0 flex gap-12 xl:gap-20">
-      <div className="xl:pl-12 flex flex-col gap-16 md:gap-152 pt-16 md:pt-[calc(60vh)] pb-12 md:pb-[calc(50vh-160px)] relative">
+      <div className="xl:pl-12 flex flex-col gap-16 md:gap-152 pt-16 md:pt-[calc(40vh)] pb-12 md:pb-[calc(50vh-160px)] relative">
         <div
           ref={pinRef}
           className={cx(
@@ -43,10 +43,7 @@ const MapBlock: React.FC = () => {
             Based in Wadsworth, OH
           </h3>
           <p className="text-base xs:text-lg md:text-base lg:text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
-            eaque corrupti nemo, voluptates voluptatem soluta rerum quidem optio
-            dolore nisi eligendi dignissimos autem assumenda consequatur neque
-            sed quae et illum?
+            We moved our operation to Wadsworth in 2019; it's good to be home!
           </p>
         </div>
         <div
@@ -65,10 +62,8 @@ const MapBlock: React.FC = () => {
             Serving the surrounding area
           </h3>
           <p className="text-base xs:text-lg md:text-base lg:text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
-            eaque corrupti nemo, voluptates voluptatem soluta rerum quidem optio
-            dolore nisi eligendi dignissimos autem assumenda consequatur neque
-            sed quae et illum?
+            Not from Wadsworth? No problem! We maintain properties and beautify
+            landscapes in many cities throughout the area.
           </p>
         </div>
         <div
@@ -87,10 +82,8 @@ const MapBlock: React.FC = () => {
             Reach out today to get a free quote for your project
           </h3>
           <p className="text-base xs:text-lg md:text-base lg:text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
-            eaque corrupti nemo, voluptates voluptatem soluta rerum quidem optio
-            dolore nisi eligendi dignissimos autem assumenda consequatur neque
-            sed quae et illum?
+            Simply fill out the contact form, click send, and one of our team
+            members will reach out to you within 24 hours.
           </p>
           <Button
             type="link"

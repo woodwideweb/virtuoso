@@ -42,33 +42,7 @@ const TyeBrownProject: React.FC = () => (
       },
     ]}
     planParagraph={`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt earum quam excepturi labore consequatur praesentium possimus hic, voluptatum aliquid rerum, nobis reiciendis voluptatem temporibus, magni iure consequuntur corporis harum fugiat.`}
-    planSteps={[
-      {
-        title: `Excavate holes and trenches for patio and deck`,
-        description: `Led by head of excavation, Bo.`,
-      },
-      {
-        title: `Install posts for deck`,
-        description: `Led by head of post installation, Bo.`,
-      },
-      {
-        title: `Create deck and railing`,
-        description: `Led by head of deck construction, Bo.`,
-      },
-      {
-        title: `Build patios`,
-        description: `Led by head of patio construction, Bo.`,
-      },
-      {
-        title: `Construct beds around house and patio`,
-        description: `Led by head of bed creation, Bo.`,
-      },
-      {
-        title: `Plant shrubs and trees in beds`,
-        description: `Led by head of planting, Bo.`,
-      },
-    ]}
-    planImages={[InProgress1, InProgress2, InProgress3]}
+    planImage={InProgress1}
     finishedProject={{
       first: {
         caption: `Clean, modern look`,
@@ -86,6 +60,7 @@ const TyeBrownProject: React.FC = () => (
         image: Finished3,
       },
     }}
+    inProgressImages={[InProgress1, InProgress2, InProgress3]}
   />
 );
 

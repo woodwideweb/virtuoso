@@ -6,7 +6,7 @@ const testimonials: Array<{
 }> = [
   {
     customer: `Bud Graske`,
-    testimonial: `We were tremendously impressed with Virtuoso Landscaping starting with their first visit. They offered <b>excellent advice</b> on how to accomplish the project, but only after they asked enough questions to find out exactly what we wanted. ... My wife and I were tremendously ipressed with the <b>energy and skill of the crew</b>. ... We would give them six stars if we could.`,
+    testimonial: `We were tremendously impressed with Virtuoso Landscaping starting with their first visit. They offered <b>excellent advice</b> on how to accomplish the project, but only after they asked enough questions to find out exactly what we wanted. ... My wife and I were tremendously impressed with the <b>energy and skill of the crew</b>. ... We would give them six stars if we could.`,
     stars: 5,
     date: `June, 2023`,
   },

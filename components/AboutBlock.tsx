@@ -28,23 +28,22 @@ const AboutBlock: React.FC = () => (
         Dedicated to quality
       </h2>
       <p className="text-lg md:text-xl text-black/60 mt-4 md:mt-6">
-        We live in a time when quality of work is often sacrificed for the sake
-        of time and money. Our commitment is to work within your budget and be
-        faithful stewards of the time and task we are given without making that
-        compromise. We count it a privilege to earn your trust as a customer,
-        and we endeavor to keep it by ensuring we exceed industry standards with
-        our finished product, not matter how big or small the job.
+        In a time when quality of work is often sacrificed for the sake of time
+        and money, our commitment is to work within your budget without making
+        that compromise. We count it a privilege to earn your trust as a
+        customer, and we endeavor to keep it by ensuring we exceed industry
+        standards with our finished product, no matter how big or small the job.
       </p>
       <div className="flex flex-col md:flex-row min-[1400px]:flex-col 2xl:flex-row mt-8 md:mt-12 gap-6 md:gap-8 2xl:gap-12">
         <FeaturedProject
           href="#"
           src={Finished2}
-          title={`Multi-level retaining wall`}
+          title={`Modern landscaping`}
         />
         <FeaturedProject
           href="#"
           src={Finished1}
-          title={`Unique walkway design`}
+          title={`Classic landscaping`}
         />
       </div>
     </div>
@@ -104,7 +103,7 @@ interface Props {
 
 // TODO: get good pictures here
 const FeaturedProject: React.FC<Props> = ({ src, title, href }) => (
-  <div className="flex flex-grow bg-top bg-cover rounded-3xl flex-col min-[1400px]:flex-row 2xl:flex-col 2xl:justify-end p-3 pt-52 md:pt-64 min-[1400px]:pt-0 2xl:pt-64 relative overflow-hidden">
+  <div className="flex flex-grow bg-top bg-cover rounded-3xl flex-col min-[1400px]:flex-row 2xl:flex-col 2xl:justify-end p-3 pt-52 md:pt-64 min-[1400px]:pt-0 2xl:pt-64 relative overflow-hidden min-w-[300px] -mx-4 xs:mx-0">
     <Image
       src={src}
       alt={title}

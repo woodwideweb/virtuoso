@@ -37,12 +37,6 @@ const Gallery: React.FC = () => (
       >
         Check out our work
       </h1>
-      <p className="text-lg xs:text-xl sm:text-2xl text-black/60 max-w-6xl text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-        voluptatum magnam necessitatibus ullam accusamus consequatur cum, totam
-        dolore, vero itaque quam corporis explicabo officiis beatae doloribus at
-        cupiditate numquam maxime.
-      </p>
     </div>
     <div className="flex justify-center items-center p-8 sm:p-12 md:p-20 bg-gradient-to-b bg-amber-100 rounded-[80px] my-8 lg:mx-12">
       <div className="flex-grow max-w-[1200px] grid grid-cols-2 md+:grid-cols-4 gap-4 lg:gap-8">
