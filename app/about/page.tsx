@@ -158,78 +158,71 @@ const About: NextPage = () => {
           <IconChevronDown size={25} className="text-black/20 animate-bounce" />
         </div>
       </section>
-      <div className="mt-28">
-        <div className="h-screen w-screen flex justify-center items-center sticky top-0">
-          <NextBgImage
-            src={GroupPhoto}
-            className="w-screen aspect-video flex flex-col justify-center items-center overflow-hidden relative"
-          >
-            <div
-              className={cx(
-                `w-[4000px] h-[4000px] aspect-square [background:radial-gradient(transparent_0%,transparent_0.75%,#000000cc_0.75%)] sm:[background:radial-gradient(transparent_0%,transparent_1%,#000000cc_1%)] lg:[background:radial-gradient(transparent_0%,transparent_1.5%,#000000cc_1.5%)] xl:[background:radial-gradient(transparent_0%,transparent_2%,#000000cc_2%)] relative transition-[left,top,opacity] duration-500 shrink-0`,
-                !rodShown && `opacity-0 left-[-3%] top-[30%]`,
-                rodShown && !kristiShown && `left-[-3%] top-[10%]`,
-                kristiShown && !boShown && `left-[31.5%] top-[13%]`,
-                boShown && !jasenShown && `left-[-7%] top-[11%]`,
-                jasenShown && !vivianShown && `left-[-32%] top-[-4%]`,
-                vivianShown && !amyShown && `left-[-32%] top-[15%]`,
-                amyShown && `left-[27%] top-[-3%]`,
-              )}
-            >
-              <TeamMemberInfo
-                name="Rod Costa"
-                title="CEO and Founder"
-                description="Rod has no interest in growing a business or making money, he just enjoys working with people he loves."
-                show={rodShown && !kristiShown}
-                className="top-[48%] xs:top-[46%] md:top-[48.7%] left-[48.6%] xs:left-[46%] md:left-[51.3%] lg:left-[52%]"
-              />
-              <TeamMemberInfo
-                name="Kristi Ensminger"
-                title="General Manager"
-                description="Kristi wears several hats for Virtuoso in the field and in the office, but her favorite is the winter hat she wears while plowing snow."
-                show={kristiShown && !boShown}
-                className="top-[49.3%] xs:top-[46.3%] md:top-[48.3%] left-[44.5%] xs:left-[42.5%] md:left-[40.5%] lg:left-[36.8%]"
-                right
-              />
-              <TeamMemberInfo
-                name="Boaz Costa"
-                title="Landscape Construction Manager"
-                description="A diligent worker and kind leader, Bo often has to be coerced to leave the jobsite when the sun goes down."
-                show={boShown && !jasenShown}
-                className="top-[48%] xs:top-[46.5%] md:top-[48.7%] left-[47.4%] xs:left-[48.5%] md:left-[51.3%] lg:left-[52%]"
-              />
-              <TeamMemberInfo
-                name="Jasen Sargent"
-                title="Landscape Maintenance and Construction"
-                description="Born and raised in New York, you'll recognize Jasen on the jobsite by his patient attention to detail... and his backwards cap."
-                show={jasenShown && !vivianShown}
-                className="top-[50.5%] xs:top-[48.4%] left-[49.5%] xs:left-[51.3%] lg:left-[52%]"
-              />
-              <TeamMemberInfo
-                name="Vivian Appleton"
-                title="Landscape Maintenance and Enhancement"
-                description="Vivian started working with Virtuoso at 14 years old; good luck finding a gal around that works harder than her!"
-                show={vivianShown && !amyShown}
-                className="top-[48%] xs:top-[46.5%] md:top-[48.6%] left-[48.8%] xs:left-[48.8%] md:left-[51.3%] lg:left-[52%]"
-              />
-              <TeamMemberInfo
-                name="Amy Horan"
-                title="Administrative Assistant"
-                description="Amy's gentle spirit and willingness to do anything needed for the crew and our customers make her a tremendous asset both in the office and beyond."
-                show={amyShown}
-                className="top-[50%] xs:top-[48.3%] left-[45%] xs:left-[40.5%] lg:left-[36.8%]"
-                right
-              />
-            </div>
-          </NextBgImage>
-        </div>
-        <div className="relative z-10 flex flex-col gap-80 pb-80">
-          <i ref={showRodRef} />
-          <i ref={showKristiRef} />
-          <i ref={showBoRef} />
-          <i ref={showJasenRef} />
-          <i ref={showVivianRef} />
-          <i ref={showAmyRef} />
+      <div className="flex flex-col items-center m-20">
+        <h2 className={cx(`text-5xl font-semibold`, montserrat)}>
+          Administrative staff
+        </h2>
+        <p className="text-xl text-black/50 mt-4 text-center">
+          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+          cillum sint consectetur cupidatat.
+        </p>
+        <div className="grid grid-cols-2 gap-4 mt-12 w-full max-w-6xl">
+          <StaffCard
+            name="Rod Costa"
+            title="CEO and Founder"
+            blurb="Rod has no interest in growing a business or making money, he just enjoys working with people he loves."
+            src={RodPhoto}
+            imagePlacement="[object-position:0px_-20px]"
+          />
+          <StaffCard
+            name="Kristi Ensminger"
+            title="General Manager"
+            blurb="Kristi wears several hats for Virtuoso in the field and in the office, but her favorite is the winter hat she wears while plowing snow."
+            src={KristiPhoto}
+            imagePlacement="[object-position:0px_-10px]"
+          />
+          <StaffCard
+            name="Josué Rodriquez"
+            title="Procurement and Sales"
+            blurb="Josue is our go-to guy for everything from bid writing to budget analysis, and he  does it all from his sunny office in the mountains of Costa Rica."
+            src={JosuePhoto}
+            imagePlacement="[object-position:-20px_0px]"
+          />
+          <StaffCard
+            name="Boaz Costa"
+            title="Landscape Construction Manager"
+            blurb="A diligent worker and kind leader, Bo often has to be coerced to leave the jobsite when the sun goes down."
+            src={BoPhoto}
+            imagePlacement="[object-position:0px_-10px]"
+          />
+          <StaffCard
+            name="Austin Schlabach"
+            title="Landscape Maintenance Manager"
+            blurb="Austin is the kind of loyal and do-it-right employee that most landscaping companies only dream of having; striping lawns is his first love."
+            src={RodPhoto}
+            imagePlacement="[object-position:0px_0px]"
+          />
+          <StaffCard
+            name="Vivian Appleton"
+            title="Landscape Maintenance and Enhancement"
+            blurb="Vivian started working with Virtuoso at 14 years old; good luck finding a gal around that works harder than her!"
+            src={VivianPhoto}
+            imagePlacement="[object-position:0px_-10px]"
+          />
+          <StaffCard
+            name="Amy Horan"
+            title="Administrative Assistant"
+            blurb="Amy's gentle spirit and willingness to do anything needed for the crew and our customers make her a tremendous asset both in the office and beyond."
+            src={AmyPhoto}
+            imagePlacement="[object-position:0px_-10px]"
+          />
+          <StaffCard
+            name="John Weller"
+            title="Sales"
+            blurb="TODO"
+            src={RodPhoto}
+            imagePlacement="[object-position:0px_0px]"
+          />
         </div>
       </div>
     </div>
@@ -274,61 +267,34 @@ const FloatingProfilePicture: React.FC<FloatingProfilePictureProps> = ({
   );
 };
 
-interface TeamMemberInfoProps {
+interface StaffCardProps {
   name: string;
   title: string;
-  description: string;
-  show: boolean;
-  right?: boolean;
-  className: string;
+  blurb: string;
+  src: StaticImageData;
+  imagePlacement: string;
 }
 
-const TeamMemberInfo: React.FC<TeamMemberInfoProps> = ({
+const StaffCard: React.FC<StaffCardProps> = ({
   name,
   title,
-  description,
-  show,
-  right,
-  className,
+  blurb,
+  src,
+  imagePlacement,
 }) => (
-  <div
-    className={cx(
-      `absolute text-white flex flex-col items-center md:items-start`,
-      right && `md:items-end`,
-      className,
-    )}
-  >
-    <h2
+  <div className="bg-amber-100 p-4 rounded-3xl flex items-center gap-6">
+    <Image
+      src={src}
+      alt={`Photo of ${name}`}
       className={cx(
-        `font-semibold text-xl lg:text-2xl`,
-        montserrat,
-        show
-          ? `opacity-100 delay-500 transition-[opacity,transform] duration-500`
-          : `opacity-0 translate-y-4`,
+        `w-36 h-36 rounded-2xl shrink-0 object-cover`,
+        imagePlacement,
       )}
-    >
-      {name}
-    </h2>
-    <span
-      className={cx(
-        `text-primary-300 text-sm font-medium`,
-        show
-          ? `opacity-100 delay-[600ms] transition-[opacity,transform] duration-500`
-          : `opacity-0 translate-y-4`,
-      )}
-    >
-      {title}
-    </span>
-    <p
-      className={cx(
-        `w-[20rem] lg:w-[28rem] mt-1 text-sm lg:text-base text-center hidden xs:block`,
-        show
-          ? `opacity-80 delay-[700ms] transition-[opacity,transform] duration-500`
-          : `opacity-0 translate-y-4`,
-        right ? `md:text-right` : `md:text-left`,
-      )}
-    >
-      {description}
-    </p>
+    />
+    <div>
+      <h3 className={cx(`text-2xl font-semibold`, montserrat)}>{name}</h3>
+      <span className="font-medium text-primary-800">{title}</span>
+      <p className="mt-1 text-black/50">{blurb}</p>
+    </div>
   </div>
 );

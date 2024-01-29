@@ -19,8 +19,6 @@ const Logo: React.FC<Props> = ({ className }) => (
       xmlSpace="preserve"
       className="w-20 h-20 shrink-0"
     >
-      <desc>Created with Fabric.js 3.5.0</desc>
-      <defs></defs>
       <g transform="matrix(60.606 0 0 60.606 4999.995 4999.995)" id="803697">
         <g vectorEffect="non-scaling-stroke">
           <g transform="matrix(1 0 0 1 41.475 15.35)">
