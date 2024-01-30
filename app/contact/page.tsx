@@ -2,7 +2,7 @@
 
 import React from "react";
 import cx from "classnames";
-import { IconSend } from "@tabler/icons-react";
+import { IconPlant, IconSend } from "@tabler/icons-react";
 import { montserrat } from "@/lib/fonts";
 import TextInput from "@/components/TextInput";
 import AmberWave from "@/public/amber-wave.svg";
@@ -10,12 +10,14 @@ import Button from "@/components/Button";
 
 const Contact: React.FC = () => (
   <div className="flex flex-col lg:flex-row items-center justify-center gap-16 py-16 xl:py-20 pl-4 xs:pl-8 sm:pl-16 xl:pl-20 pr-4 xs:pr-8 sm:pr-16 lg:pr-0 xl:pr-20">
-    <div className="px-4 xs:px-0">
-      <h1>TODO: PICTURE</h1>
+    <div className="px-4 xs:px-0 lg:-mt-16 flex flex-col items-center lg:items-start">
+      <div className="w-16 h-16 bg-primary-300 rounded-full flex justify-center items-center">
+        <IconPlant size={30} className="text-primary-800" />
+      </div>
       <h1
         className={cx(
           montserrat,
-          `text-3xl xs:text-4xl xl:text-5xl font-bold text-center lg:text-left max-w-2xl`,
+          `text-3xl xs:text-4xl xl:text-5xl font-bold text-center lg:text-left max-w-2xl mt-8`,
         )}
       >
         Want to discuss your project or meet with us?

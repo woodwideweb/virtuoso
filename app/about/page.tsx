@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import cx from "classnames";
 import {
   IconArrowRight,
@@ -23,6 +23,8 @@ import TabithaPhoto from "@/public/team/tabitha.jpg";
 import IsabellaPhoto from "@/public/team/isabella.jpg";
 import HarrietPhoto from "@/public/team/harriet.jpg";
 import WinPhoto from "@/public/team/win.jpg";
+import RichPhoto from "@/public/team/rich.jpg";
+import AustinPhoto from "@/public/team/austin.jpg";
 import { useScrollY } from "@/lib/hooks";
 import Button from "@/components/Button";
 
@@ -31,98 +33,104 @@ const About: NextPage = () => {
 
   return (
     <div className="flex flex-col">
-      <section className="flex flex-col justify-center items-center p-36 relative h-[calc(100vh-128px)] overflow-hidden">
+      <section className="flex flex-col justify-center items-center p-8 xs:p-20 md:p-36 relative h-[calc(100vh-100px)] sm:h-[calc(100vh-128px)] overflow-hidden">
+        <FloatingProfilePicture
+          src={BoPhoto}
+          name="Boaz Costa"
+          size={80}
+          className="left-4 lg:left-12 top-10 lg:top-12 ![object-position:0px_-5px]"
+        />
         <FloatingProfilePicture
           src={RodPhoto}
           name="Rod Costa"
           size={220}
-          className="left-40 top-8 ![object-position:0px_-40px]"
+          className="left-20 lg:left-40 -top-4 lg:top-8 ![object-position:0px_-40px]"
         />
         <FloatingProfilePicture
           src={AmyPhoto}
           size={120}
           name="Amy Horan"
-          className="left-4 top-[160px] ![object-position:0px_-5px]"
+          className="left-2 lg:left-4 top-[110px] lg:top-[160px] ![object-position:0px_-5px]"
         />
         <FloatingProfilePicture
-          src={BoPhoto}
+          src={AustinPhoto}
           size={180}
-          name="Boaz Costa"
-          className="left-24 top-[270px] ![object-position:0px_-5px]"
+          name="Austin Schlabach"
+          className="left-2 lg:left-24 top-[200px] lg:top-[270px] ![object-position:0px_-25px]"
         />
         <FloatingProfilePicture
           src={IsabellaPhoto}
           name="Isabella Costa"
           size={100}
-          className="right-112 top-4 ![object-position:0px_-25px]"
+          className="right-32 lg:right-112 top-12 lg:top-4 ![object-position:0px_-25px]"
         />
         <FloatingProfilePicture
           src={VivianPhoto}
           name="Vivian Appleton"
           size={150}
-          className="right-16 top-4 ![object-position:0px_-15px]"
+          className="right-2 lg:right-16 -top-4 lg:top-4 ![object-position:0px_-15px]"
         />
         <FloatingProfilePicture
           src={KristiPhoto}
           name="Kristi Ensminger"
-          className="right-60 top-20 ![object-position:0px_-25px]"
+          className="right-0 lg:right-60 top-24 lg:top-20 ![object-position:0px_-25px]"
         />
         <FloatingProfilePicture
           src={JasenPhoto}
           name="Jasen Sargent"
           size={230}
-          className="right-2 top-52 ![object-position:0px_0px]"
+          className="-right-20 lg:right-2 top-[240px] lg:top-52 ![object-position:0px_0px]"
         />
         <FloatingProfilePicture
           src={HarrietPhoto}
           size={150}
           name="Harriet Henderson"
-          className="right-6 bottom-[190px]"
+          className="-right-8 lg:right-6 bottom-20 lg:bottom-[190px]"
         />
         <FloatingProfilePicture
           src={JosuePhoto}
           size={250}
           name="Josue Rodriguez"
-          className="right-44 bottom-4"
+          className="right-16 lg:right-44 -bottom-8 lg:bottom-4"
         />
         <FloatingProfilePicture
           src={WillowPhoto}
           size={100}
           name="Willow Henderson"
-          className="right-12 bottom-16"
+          className="right-0 lg:right-12 bottom-0 lg:bottom-16"
         />
         <FloatingProfilePicture
           src={TabithaPhoto}
           size={150}
           name="Tabitha Artinian"
-          className="left-6 bottom-[190px]"
+          className="-left-8 lg:left-6 bottom-20 lg:bottom-[190px]"
+        />
+        <FloatingProfilePicture
+          src={RichPhoto}
+          size={250}
+          name="Rich Coloumbe"
+          className="left-16 lg:left-44 -bottom-8 lg:bottom-4 ![object-position:0px_-40px]"
         />
         <FloatingProfilePicture
           src={WinPhoto}
-          size={250}
-          name="Winfield Henderson"
-          className="left-44 bottom-4 ![object-position:0px_0px]"
-        />
-        <FloatingProfilePicture
-          src={RodPhoto}
           size={100}
-          name="Rod Costa"
-          className="left-12 bottom-16"
+          name="Winfield Henderson"
+          className="left-0 lg:left-12 bottom-0 lg:bottom-16 ![object-position:0px_0px]"
         />
         <div className="flex flex-col items-center justify-center mb-[128px] relative">
-          <div className="absolute w-[200%] h-[200%] [background:radial-gradient(#FEFBED_0%,#FEFBEDEE_30%,transparent_70%)]" />
+          <div className="absolute w-[200%] h-[200%] [background:radial-gradient(#FEFBED_0%,#FEFBEDEE_30%,transparent_70%)] hidden sm:block" />
           <div className="bg-primary-300 w-20 h-20 rounded-full flex justify-center items-center relative">
             <IconPlant size={40} className="text-primary-800" />
           </div>
           <h1
             className={cx(
-              `text-6xl font-semibold mt-12 mb-8 relative`,
+              `text-5xl sm:text-6xl font-semibold mt-12 mb-8 relative`,
               montserrat,
             )}
           >
             About us
           </h1>
-          <p className="max-w-3xl text-2xl text-black/60 text-center relative">
+          <p className="max-w-3xl text-xl sm:text-2xl text-black/60 text-center relative">
             Since the beginning, our goal has remained the same: honor the Lord
             in all we do by seeking to offer fair prices, maintain honest and
             clear communication, and provide high-quality work to all of our
@@ -140,15 +148,20 @@ const About: NextPage = () => {
           <IconChevronDown size={25} className="text-black/20 animate-bounce" />
         </div>
       </section>
-      <div className="flex flex-col items-center m-20">
-        <h2 className={cx(`text-5xl font-semibold`, montserrat)}>
+      <div className="flex flex-col items-center m-4 xs:m-8 sm:m-12 lg:m-20">
+        <h2
+          className={cx(
+            `text-3xl xs:text-4xl md:text-5xl font-semibold text-center`,
+            montserrat,
+          )}
+        >
           Administrative staff
         </h2>
-        <p className="text-xl text-black/50 mt-4 text-center">
+        <p className="text-lg xs:text-xl text-black/50 mt-4 text-center">
           Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
           cillum sint consectetur cupidatat.
         </p>
-        <div className="grid grid-cols-2 gap-4 mt-12 w-full max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-12 w-full max-w-6xl">
           <StaffCard
             name="Rod Costa"
             title="CEO and Founder"
@@ -164,7 +177,7 @@ const About: NextPage = () => {
             imagePlacement="[object-position:0px_-10px]"
           />
           <StaffCard
-            name="Josué Rodriquez"
+            name="Josué Rodriguez"
             title="Procurement and Sales"
             blurb="Josue is our go-to guy for everything from bid writing to budget analysis, and he  does it all from his sunny office in the mountains of Costa Rica."
             src={JosuePhoto}
@@ -181,8 +194,8 @@ const About: NextPage = () => {
             name="Austin Schlabach"
             title="Landscape Maintenance Manager"
             blurb="Austin is the kind of loyal and do-it-right employee that most landscaping companies only dream of having; striping lawns is his first love."
-            src={RodPhoto}
-            imagePlacement="[object-position:0px_0px]"
+            src={AustinPhoto}
+            imagePlacement="[object-position:0px_-20px]"
           />
           <StaffCard
             name="Vivian Appleton"
@@ -249,7 +262,13 @@ const FloatingProfilePicture: React.FC<FloatingProfilePictureProps> = ({
   className,
 }) => {
   const scrollY = useScrollY();
+  const [windowWidth, setWindowWidth] = useState(1025);
   const direction = className.includes(`left`) ? `left` : `right`;
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
   return (
     <Image
       src={src}
@@ -258,13 +277,13 @@ const FloatingProfilePicture: React.FC<FloatingProfilePictureProps> = ({
         width: size,
         height: size,
         transform: `translateY(-${scrollY / 2}px) scale(${
-          1 - scrollY / 500
+          (1 - scrollY / 500) / (windowWidth >= 1024 ? 1 : 1.5)
         }) translateX(${direction === `left` ? scrollY / -2 : scrollY / 2}px)`,
-        opacity: 1 - scrollY / 300,
+        opacity: (1 - scrollY / 300) / (windowWidth >= 768 ? 1 : 2),
         filter: `blur(${scrollY / 10}px)`,
       }}
       className={cx(
-        `rounded-full absolute object-center object-cover border border-primary-400`,
+        `rounded-full absolute object-center object-cover border border-primary-400 hidden sm:block`,
         className,
       )}
     />
@@ -286,19 +305,21 @@ const StaffCard: React.FC<StaffCardProps> = ({
   src,
   imagePlacement,
 }) => (
-  <div className="bg-amber-100 p-4 rounded-3xl flex items-center gap-6">
+  <div className="bg-amber-100 p-4 rounded-3xl flex flex-col xs:flex-row items-center gap-4 xs:gap-6">
     <Image
       src={src}
       alt={`Photo of ${name}`}
       className={cx(
-        `w-36 h-36 rounded-2xl shrink-0 object-cover`,
+        `w-36 h-36 rounded-full xs:rounded-2xl shrink-0 object-cover`,
         imagePlacement,
       )}
     />
-    <div>
+    <div className="flex flex-col items-center xs:items-start">
       <h3 className={cx(`text-2xl font-semibold`, montserrat)}>{name}</h3>
-      <span className="font-medium text-primary-800">{title}</span>
-      <p className="mt-1 text-black/50">{blurb}</p>
+      <span className="font-medium text-primary-800 text-center xs:text-left">
+        {title}
+      </span>
+      <p className="mt-1 text-black/50 text-center xs:text-left">{blurb}</p>
     </div>
   </div>
 );
