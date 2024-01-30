@@ -8,22 +8,35 @@ import GalleryImage, {
 import { montserrat } from "@/lib/fonts";
 import ImageViewerModal from "@/components/ImageViewerModal";
 
-import Wadsworth2021_0 from "@/public/gallery/2021-wadsworth-0.jpg";
-import Wadsworth2022_0 from "@/public/gallery/2022-wadsworth-0.jpg";
-import Wadsworth2022_1 from "@/public/gallery/2022-wadsworth-1.jpg";
-import Brecksville2021_0 from "@/public/gallery/2021-brecksville-0.jpg";
-import Brecksville2021_1 from "@/public/gallery/2021-brecksville-1.jpg";
-import Medina2022_0 from "@/public/gallery/2022-medina-0.jpg";
-import Medina2022_1 from "@/public/gallery/2022-medina-1.jpg";
-import Hartville2022_0 from "@/public/gallery/2022-hartville-0.jpg";
-import Akron2023_0 from "@/public/gallery/2023-akron-0.jpg";
-import Akron2023_1 from "@/public/gallery/2023-akron-1.jpg";
-import Akron2023_2 from "@/public/gallery/2023-akron-2.jpg";
-import Akron2023_3 from "@/public/gallery/2023-akron-3.jpg";
-import Wadsworth2023_0 from "@/public/gallery/2023-wadsworth-0.jpg";
-import Wadsworth2023_1 from "@/public/gallery/2023-wadsworth-1.jpg";
-import Wadsworth2023_2 from "@/public/gallery/2023-wadsworth-2.jpg";
-import Wadsworth2023_3 from "@/public/gallery/2023-wadsworth-3.jpg";
+import PeanutePatioImg from "@/public/gallery/peanut-patio.jpg";
+import SlabStepsInGravel1Img from "@/public/gallery/slab-steps-in-gravel-1.jpg";
+import SlabStepsInGravel2Img from "@/public/gallery/slab-steps-in-gravel-2.jpg";
+import NaturalPaversWithFirepit1Img from "@/public/gallery/natural-pavers-with-firepit-1.jpg";
+import NaturalPaversWithFirepit2Img from "@/public/gallery/natural-pavers-with-firepit-2.jpg";
+import TieredWallByBarn1Img from "@/public/gallery/tiered-wall-by-barn-1.jpg";
+import TieredWallByBarn2Img from "@/public/gallery/tiered-wall-by-barn-2.jpg";
+import RockyOutcropByPoolImg from "@/public/gallery/rocky-outcrop-by-pool.jpg";
+import PatioInGravel1Img from "@/public/gallery/patio-in-gravel-1.jpg";
+import StepsThroughWallImg from "@/public/gallery/steps-through-wall.jpg";
+import PatioInGravel2Img from "@/public/gallery/patio-in-gravel-2.jpg";
+import PatioInGravel3Img from "@/public/gallery/patio-in-gravel-3.jpg";
+import RaisedRoundPatio1Img from "@/public/gallery/raised-round-patio-1.jpg";
+import RaisedRoundPatio2Img from "@/public/gallery/raised-round-patio-2.jpg";
+import RaisedRoundPatio3Img from "@/public/gallery/raised-round-patio-3.jpg";
+import RaisedRoundPatio4Img from "@/public/gallery/raised-round-patio-4.jpg";
+import FlowerBedsSAroundHouseImg from "@/public/gallery/flower-beds-around-house.jpg";
+import GiganticNaturalPaverPatioImg from "@/public/gallery/gigantic-natural-paver-patio.jpg";
+import GiganticPatioWithFurnitureImg from "@/public/gallery/gigantic-patio-with-furniture.jpg";
+import GravelStreamWithWaterfallImg from "@/public/gallery/gravel-stream-with-waterfall.jpg";
+import NaturalPatioWithRedChairsImg from "@/public/gallery/natural-patio-with-red-chairs.jpg";
+import RaisedBedWithBlackMulchImg from "@/public/gallery/raised-bed-with-black-mulch.jpg";
+import RaisedPatioWithInsetStairImg from "@/public/gallery/raised-patio-with-inset-stair.jpg";
+import RedChairsAroundFirepitImg from "@/public/gallery/red-chairs-around-firepit.jpg";
+import RedChairsSideAngleImg from "@/public/gallery/red-chairs-side-angle.jpg";
+import SlabStepsWithStrawImg from "@/public/gallery/slab-steps-with-straw.jpg";
+import StonePatioWithGrillImg from "@/public/gallery/stone-patio-with-grill.jpg";
+import WaterfallImg from "@/public/gallery/waterfall.jpg";
+import WoodenArchImg from "@/public/gallery/wooden-arch.jpg";
 
 const Gallery: React.FC = () => (
   <div className="flex flex-col">
@@ -40,30 +53,87 @@ const Gallery: React.FC = () => (
     </div>
     <div className="flex justify-center items-center p-8 sm:p-12 md:p-20 bg-gradient-to-b bg-amber-100 rounded-[80px] my-8 lg:mx-12">
       <div className="flex-grow max-w-[1200px] grid grid-cols-2 md+:grid-cols-4 gap-4 lg:gap-8">
-        <BigImage src={Wadsworth2021_0} city="Wadsworth" year={2021} />
+        <BigImage src={PeanutePatioImg} city="Wadsworth" year={2021} />
         <MediumImageHorizontal
-          src={Wadsworth2022_0}
+          src={SlabStepsInGravel1Img}
           city="Wadsworth"
           year={2022}
         />
-        <GalleryImage src={Wadsworth2022_1} city="Wadsworth" year={2022} />
+        <GalleryImage
+          src={SlabStepsInGravel2Img}
+          city="Wadsworth"
+          year={2022}
+        />
         <MediumImageVertical
-          src={Brecksville2021_0}
+          src={NaturalPaversWithFirepit1Img}
           city="Brecksville"
           year={2021}
         />
-        <GalleryImage src={Brecksville2021_1} city="Brecksville" year={2021} />
-        <BigImage src={Medina2022_0} city="Medina" year={2022} />
-        <GalleryImage src={Medina2022_1} city="Medina" year={2022} />
-        <GalleryImage src={Hartville2022_0} city="Hartville" year={2022} />
-        <BigImage src={Akron2023_0} city="Akron" year={2023} />
-        <MediumImageHorizontal src={Akron2023_1} city="Akron" year={2023} />
-        <GalleryImage src={Akron2023_2} city="Akron" year={2023} />
-        <MediumImageVertical src={Akron2023_3} city="Akron" year={2023} />
-        <GalleryImage src={Wadsworth2023_0} city="Wadsworth" year={2023} />
-        <BigImage src={Wadsworth2023_1} city="Wadsworth" year={2023} />
-        <GalleryImage src={Wadsworth2023_2} city="Wadsworth" year={2023} />
-        <GalleryImage src={Wadsworth2023_3} city="Wadsworth" year={2023} />
+        <GalleryImage
+          src={NaturalPaversWithFirepit2Img}
+          city="Brecksville"
+          year={2021}
+        />
+        <BigImage src={TieredWallByBarn1Img} city="Medina" year={2022} />
+        <GalleryImage src={TieredWallByBarn2Img} city="Medina" year={2022} />
+        <GalleryImage
+          src={RockyOutcropByPoolImg}
+          city="Hartville"
+          year={2022}
+        />
+        <BigImage src={PatioInGravel1Img} city="Akron" year={2023} />
+        <MediumImageHorizontal
+          src={StepsThroughWallImg}
+          city="Akron"
+          year={2023}
+        />
+        <GalleryImage src={PatioInGravel2Img} city="Akron" year={2023} />
+        <MediumImageVertical src={PatioInGravel3Img} city="Akron" year={2023} />
+        <GalleryImage src={RaisedRoundPatio1Img} city="Wadsworth" year={2023} />
+        <BigImage src={RaisedRoundPatio2Img} city="Wadsworth" year={2023} />
+        <GalleryImage src={RaisedRoundPatio3Img} city="Wadsworth" year={2023} />
+        <GalleryImage src={RaisedRoundPatio4Img} city="Wadsworth" year={2023} />
+        <BigImage src={FlowerBedsSAroundHouseImg} city="TODO" year={9999} />
+        <MediumImageHorizontal
+          src={GiganticNaturalPaverPatioImg}
+          city="TODO"
+          year={9999}
+        />
+        <GalleryImage
+          src={GiganticPatioWithFurnitureImg}
+          city="TODO"
+          year={9999}
+        />
+        <MediumImageVertical
+          src={GravelStreamWithWaterfallImg}
+          city="TODO"
+          year={9999}
+        />
+        <GalleryImage
+          src={NaturalPatioWithRedChairsImg}
+          city="TODO"
+          year={9999}
+        />
+        <BigImage src={RaisedBedWithBlackMulchImg} city="TODO" year={9999} />
+        <GalleryImage
+          src={RaisedPatioWithInsetStairImg}
+          city="TODO"
+          year={9999}
+        />
+        <GalleryImage src={RedChairsAroundFirepitImg} city="TODO" year={2023} />
+        <MediumImageHorizontal
+          src={RedChairsSideAngleImg}
+          city="TODO"
+          year={9999}
+        />
+        <MediumImageVertical
+          src={SlabStepsWithStrawImg}
+          city="TODO"
+          year={9999}
+        />
+        <GalleryImage src={StonePatioWithGrillImg} city="TODO" year={9999} />
+        <MediumImageVertical src={WaterfallImg} city="TODO" year={9999} />
+        <GalleryImage src={WoodenArchImg} city="TODO" year={9999} />
       </div>
     </div>
   </div>
