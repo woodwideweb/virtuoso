@@ -3,16 +3,10 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import cx from "classnames";
-import {
-  IconArrowRight,
-  IconCalendar,
-  IconMapPin,
-  IconQuote,
-} from "@tabler/icons-react";
+import { IconArrowRight, IconCalendar, IconMapPin } from "@tabler/icons-react";
 import NextBgImage from "next-bg-image";
 import type { StaticImageData } from "next/image";
 import type { TablerIcon } from "@/lib/types";
-import PrimaryWave from "@/public/primary-wave.svg";
 import {
   useIntersectionObserver,
   useScrollY,
@@ -23,6 +17,7 @@ import Button from "@/components/Button";
 
 interface Props {
   mainSplashPicture: StaticImageData;
+  mainSplashPictureAdjustments?: string;
   projectTitle: string;
   location: string;
   when: string;
@@ -54,6 +49,7 @@ interface Props {
 
 const FeaturedProjectTemplate: React.FC<Props> = ({
   mainSplashPicture,
+  mainSplashPictureAdjustments,
   projectTitle,
   location,
   when,
@@ -108,6 +104,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
             priority
             className={cx(
               `w-11/12 max-w-7xl object-center object-cover fixed sepia-[30%] rounded-[60px] sm:rounded-[80px]`,
+              mainSplashPictureAdjustments,
             )}
             style={{
               height: `${(width >= 1080 ? 608 : 400) - scrollY / 4}px`,
@@ -213,35 +210,6 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
             </div>
           </div>
         </div>
-        <div className="px-4 xs:px-8 sm:px-12 xl:px-20 -mx-4 xs:-mx-8 sm:-mx-12 xl:-mx-20 flex w-screen justify-center overflow-hidden lg:pb-8">
-          <div className="max-w-7xl mt-16 flex flex-col items-center sm:bg-primary-700/50 w-full rounded-[80px] sm:p-12 lg:p-20 relative flex-grow">
-            <IconQuote
-              className="hidden lg:block absolute text-white/5 -left-40 -top-28 rotate-180"
-              size={400}
-            />
-            <IconQuote
-              className="hidden lg:block absolute text-white/5 -right-40 -bottom-28"
-              size={400}
-            />
-            <p className="text-center text-lg sm:text-xl md:text-2xl max-w-4xl text-white/80 italic leading-7 sm:leading-8 md:leading-9">
-              Lorem ipsum dolor sit amet, officia excepteur ex fugiat
-              reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit
-              ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
-              Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet
-              voluptate voluptate dolor minim nulla est proident. Nostrud
-              officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex
-              occaecat reprehenderit commodo officia dolor Lorem duis laboris
-              cupidatat officia voluptate. Culpa proident adipisicing id nulla
-              nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua
-              reprehenderit commodo ex non excepteur duis sunt velit enim.
-              Voluptate laboris sint cupidatat ullamco ut ea consectetur et est
-              culpa et culpa duis.
-            </p>
-            <span className="mt-8 font-medium text-xl md:text-2xl text-white">
-              - The Homeowner
-            </span>
-          </div>
-        </div>
         <div className="w-screen">
           <div className="flex justify-center sticky top-0 mt-16">
             <div
@@ -261,7 +229,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                       ? finishedProject.second.image
                       : finishedProject.first.image
                 }
-                alt="Hartville project"
+                alt="Modern landscaping project"
                 className={cx(
                   `w-full h-full absolute left-0 top-0 object-center object-cover transition-[filter] duration-700`,
                   overBgImage ? `sepia-[50%]` : `sepia-[20%]`,
@@ -411,48 +379,6 @@ const ProjectScopeStep: React.FC<ProjectscopeStepProps> = ({
         size={width > 1000 ? 28 : 24}
       />
       <span className="text-primary-950">{children}</span>
-    </li>
-  );
-};
-
-interface PlanStepProps {
-  index: number;
-  title: string;
-  description: string;
-}
-
-const PlanStep: React.FC<PlanStepProps> = ({ index, title, description }) => {
-  const { intersected, ref } = useIntersectionObserver(
-    {
-      threshold: 1,
-      rootMargin: `-20px`,
-    },
-    true,
-  );
-  return (
-    <li
-      className={cx(
-        `flex gap-4 transition-[opacity,transform] duration-500`,
-        !intersected && `translate-y-4 opacity-0`,
-      )}
-      ref={ref}
-    >
-      <div className="bg-primary-800 w-8 lg:w-10 h-8 lg:h-10 rounded-full flex justify-center items-center shrink-0">
-        <span className="font-mono text-lg lg:text-xl text-primary-300">
-          {index}
-        </span>
-      </div>
-      <div className="lg:mt-1">
-        <h4
-          className={cx(
-            `text-lg lg:text-xl font-semibold text-primary-200`,
-            montserrat,
-          )}
-        >
-          {title}
-        </h4>
-        <p className="text-primary-400 lg:text-lg">{description}</p>
-      </div>
     </li>
   );
 };

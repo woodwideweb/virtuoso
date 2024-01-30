@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import NALPLogo from "@/public/badges/nalp.png";
-import GBBLogo from "@/public/badges/gbb-white.png";
+import GBBLogo from "@/public/badges/green-business-benchmark-2024.png";
 import AngiesListLogo from "@/public/badges/angies-list-award-2022-transparent.png";
 
 const BadgesBlock: React.FC = () => (
@@ -20,7 +20,7 @@ const BadgesBlock: React.FC = () => (
       <Image
         src={GBBLogo}
         alt="Green Business Bureau member"
-        className="shrink-0 xl:h-32 w-40 xl:w-72"
+        className="shrink-0 xl:h-36 w-40 xl:w-64"
       />
     </div>
   </div>

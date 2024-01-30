@@ -19,11 +19,11 @@ const Hero: React.FC = () => {
     const subheadingTimeout = setTimeout(() => setShowSubheading(true), 300);
     const primaryButtonTimeout = setTimeout(
       () => setShowPrimaryButton(true),
-      700,
+      600,
     );
     const secondaryButtonTimeout = setTimeout(
       () => setShowSecondaryButton(true),
-      900,
+      700,
     );
     return () => {
       clearTimeout(headingTimeout);

@@ -5,8 +5,8 @@ import { IconArrowRight } from "@tabler/icons-react";
 import type { StaticImageData } from "next/image";
 import Button from "./Button";
 import { montserrat } from "@/lib/fonts";
-import Finished1 from "@/public/featured-projects/hartville/finished-1.jpg";
-import Finished2 from "@/public/featured-projects/hartville/finished-2.jpg";
+import Finished1 from "@/public/featured-projects/modern-landscaping/finished-1.jpg";
+import Finished2 from "@/public/featured-projects/modern-landscaping/finished-2.jpg";
 import ElectricMower from "@/public/electric-mower.png";
 import ElectricTruck from "@/public/electric-truck.png";
 import PrimaryWave from "@/public/primary-wave.svg";
@@ -107,7 +107,7 @@ const FeaturedProject: React.FC<Props> = ({ src, title, href }) => (
     <Image
       src={src}
       alt={title}
-      className="absolute top-0 left-0 h-full w-full object-center object-cover sepia-[40%]"
+      className="absolute top-0 left-0 h-full w-full object-center object-cover"
     />
     <div className="w-full h-full left-0 top-0 2xl:bg-gradient-to-b min-[1400px]:bg-gradient-to-bl bg-gradient-to-b from-transparent via-transparent to-primary-400/95 absolute" />
     <div className="bg-amber-50 rounded-3xl p-4 relative min-[1400px]:mt-20 2xl:mt-0 w-auto min-[1400px]:w-72 2xl:w-auto">

@@ -4,7 +4,6 @@ import React from "react";
 import cx from "classnames";
 import { IconChevronDown, IconPlant } from "@tabler/icons-react";
 import Image from "next/image";
-import NextBgImage from "next-bg-image";
 import type { StaticImageData } from "next/image";
 import type { NextPage } from "next";
 import { montserrat } from "@/lib/fonts";
@@ -20,32 +19,10 @@ import TabithaPhoto from "@/public/team/tabitha.jpg";
 import IsabellaPhoto from "@/public/team/isabella.jpg";
 import HarrietPhoto from "@/public/team/harriet.jpg";
 import WinPhoto from "@/public/team/win.jpg";
-import GroupPhoto from "@/public/team/group.jpg";
-import { useIntersectionObserver, useScrollY } from "@/lib/hooks";
+import { useScrollY } from "@/lib/hooks";
 
 const About: NextPage = () => {
   const scrollY = useScrollY();
-  const { ref: showRodRef, intersected: rodShown } = useIntersectionObserver({
-    threshold: 1,
-  });
-  const { ref: showKristiRef, intersected: kristiShown } =
-    useIntersectionObserver({
-      threshold: 1,
-    });
-  const { ref: showBoRef, intersected: boShown } = useIntersectionObserver({
-    threshold: 1,
-  });
-  const { ref: showVivianRef, intersected: vivianShown } =
-    useIntersectionObserver({
-      threshold: 1,
-    });
-  const { ref: showAmyRef, intersected: amyShown } = useIntersectionObserver({
-    threshold: 1,
-  });
-  const { ref: showJasenRef, intersected: jasenShown } =
-    useIntersectionObserver({
-      threshold: 1,
-    });
 
   return (
     <div className="flex flex-col">

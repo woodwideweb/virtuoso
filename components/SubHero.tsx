@@ -14,9 +14,9 @@ import type { StaticImageData } from "next/image";
 import type { TablerIcon } from "@/lib/types";
 import { montserrat } from "@/lib/fonts";
 import { useIntersectionObserver } from "@/lib/hooks";
-import Hartville1 from "@/public/featured-projects/hartville/finished-1.jpg";
-import Hartville2 from "@/public/featured-projects/hartville/finished-2.jpg";
-import Hartville3 from "@/public/featured-projects/hartville/finished-3.jpg";
+import ModernLandscapingImage1 from "@/public/featured-projects/modern-landscaping/finished-1.jpg";
+import ModernLandscapingImage2 from "@/public/featured-projects/modern-landscaping/finished-2.jpg";
+import ModernLandscapingImage3 from "@/public/featured-projects/modern-landscaping/finished-3.jpg";
 
 const SubHero: React.FC = () => {
   const { ref, intersected } = useIntersectionObserver(
@@ -51,7 +51,7 @@ const SubHero: React.FC = () => {
             <FeaturedImage
               delay={900}
               intersected={intersected}
-              src={Hartville2}
+              src={ModernLandscapingImage2}
               className="flex-grow xl:flex-grow-0 w-0 xl:w-4/5 min-[1500px]:w-96 2xl:w-128 h-52 sm:h-64 xl:h-72 min-[1500px]:h-64 2xl:h-72"
             />
           </div>
@@ -59,13 +59,13 @@ const SubHero: React.FC = () => {
             <FeaturedImage
               delay={1100}
               intersected={intersected}
-              src={Hartville1}
+              src={ModernLandscapingImage1}
               className="self-end min-[1500px]:self-auto flex-grow xl:flex-grow-0 w-0 xl:w-4/5 min-[1500px]:w-72 2xl:w-96 h-52 sm:h-64 xl:h-72 2xl:h-96"
             />
             <FeaturedImage
               delay={1300}
               intersected={intersected}
-              src={Hartville3}
+              src={ModernLandscapingImage3}
               className="w-0 xl:w-4/5 min-[1500px]:w-80 flex-grow xl:flex-grow-0 2xl:flex-grow sm:h-64 xl:h-72 min-[1500px]:h-96 2xl:h-128 hidden md:block"
             />
           </div>

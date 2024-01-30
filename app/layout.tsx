@@ -68,10 +68,10 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                   >
                     Featured projects
                   </Link>
-                  <FooterLink to="/featured-projects/hartville">
+                  <FooterLink to="/featured-projects/modern-landscaping">
                     Modern landscaping
                   </FooterLink>
-                  <FooterLink to="/featured-projects/tye-browns">
+                  <FooterLink to="/featured-projects/classic-landscaping">
                     Classic landscaping
                   </FooterLink>
                 </ul>

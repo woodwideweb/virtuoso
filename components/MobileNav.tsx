@@ -30,11 +30,14 @@ const MobileNav: React.FC<Props> = ({ open, setOpen }) => (
     <h3 className="font-medium text-black/40 text-lg mt-8 mb-4 ml-6">
       Featured Projects
     </h3>
-    <MobileNavLink setOpen={setOpen} to="/featured-projects/hartville">
-      Hartville
+    <MobileNavLink setOpen={setOpen} to="/featured-projects/modern-landscaping">
+      Modern Landscaping
     </MobileNavLink>
-    <MobileNavLink setOpen={setOpen} to="/featured-projects/tye-browns">
-      Tye Brown's
+    <MobileNavLink
+      setOpen={setOpen}
+      to="/featured-projects/classic-landscaping"
+    >
+      Classic Landscaping
     </MobileNavLink>
   </nav>
 );
