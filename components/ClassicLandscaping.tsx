@@ -8,6 +8,7 @@ import {
   IconWall,
   IconWreckingBall,
 } from "@tabler/icons-react";
+import Design from "@/public/featured-projects/classic-landscaping/design.jpg";
 import Finished1 from "@/public/featured-projects/classic-landscaping/finished-1.jpg";
 import Finished2 from "@/public/featured-projects/classic-landscaping/finished-2.jpg";
 import Finished3 from "@/public/featured-projects/classic-landscaping/finished-3.jpg";
@@ -42,7 +43,7 @@ const ClassicLandscaping: React.FC = () => (
       },
     ]}
     planParagraph={`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt earum quam excepturi labore consequatur praesentium possimus hic, voluptatum aliquid rerum, nobis reiciendis voluptatem temporibus, magni iure consequuntur corporis harum fugiat.`}
-    planImage={InProgress1}
+    planImage={Design}
     finishedProject={{
       first: {
         caption: `Clean, modern look`,

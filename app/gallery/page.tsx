@@ -37,6 +37,8 @@ import SlabStepsWithStrawImg from "@/public/gallery/slab-steps-with-straw.jpg";
 import StonePatioWithGrillImg from "@/public/gallery/stone-patio-with-grill.jpg";
 import WaterfallImg from "@/public/gallery/waterfall.jpg";
 import WoodenArchImg from "@/public/gallery/wooden-arch.jpg";
+import EvergreenByWalkwayImg from "@/public/gallery/evergreen-by-walkway.jpg";
+import JaggedWalkwayImg from "@/public/gallery/jagged-walkway.jpg";
 
 import ModernLandscaping1Img from "@/public/featured-projects/modern-landscaping/finished-1.jpg";
 import ModernLandscaping2Img from "@/public/featured-projects/modern-landscaping/finished-2.jpg";
@@ -158,6 +160,8 @@ const Gallery: React.FC = () => (
         <GalleryImage src={StonePatioWithGrillImg} city="TODO" year={9999} />
         <MediumImageVertical src={WaterfallImg} city="TODO" year={9999} />
         <GalleryImage src={WoodenArchImg} city="TODO" year={9999} />
+        <GalleryImage src={EvergreenByWalkwayImg} city="TODO" year={9999} />
+        <MediumImageHorizontal src={JaggedWalkwayImg} city="TODO" year={9999} />
       </div>
     </div>
   </div>
