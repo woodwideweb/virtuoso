@@ -7,6 +7,11 @@ import ClassicLandscapingImage2 from "@/public/featured-projects/classic-landsca
 import ClassicLandscapingImage3 from "@/public/featured-projects/classic-landscaping/finished-3.jpg";
 import FeaturedProgramPreview from "@/components/FeaturedProgramPreview";
 
+export const metadata = {
+  title: `Virtuoso Landscaping ~ Featured Projects`,
+  description: `Some featured projects from Virtuoso Landscaping.`,
+};
+
 const FeaturedProjects: React.FC = () => (
   <div className="px-4 sm:px-8 lg:px-12 2xl:px-16 py-8 lg:py-16 flex flex-col xl+:flex-row justify-center gap-8 2xl:gap-12">
     <FeaturedProgramPreview

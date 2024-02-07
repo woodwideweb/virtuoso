@@ -44,9 +44,9 @@ const Hero: React.FC = () => {
             !showHeading && `opacity-0 translate-y-4`,
           )}
         >
-          Landscaping the way
+          Landscaping as it
           <br />
-          it should be.
+          should be.
         </h1>
         <h3
           className={cx(

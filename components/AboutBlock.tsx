@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import cx from "classnames";
@@ -5,8 +7,8 @@ import { IconArrowRight } from "@tabler/icons-react";
 import type { StaticImageData } from "next/image";
 import Button from "./Button";
 import { montserrat } from "@/lib/fonts";
-import Finished1 from "@/public/featured-projects/modern-landscaping/finished-1.jpg";
-import Finished2 from "@/public/featured-projects/modern-landscaping/finished-2.jpg";
+import Finished1 from "@/public/featured-projects/classic-landscaping/finished-2.jpg";
+import Finished2 from "@/public/featured-projects/modern-landscaping/finished-3.jpg";
 import ElectricMower from "@/public/electric-mower.png";
 import ElectricTruck from "@/public/electric-truck.png";
 import PrimaryWave from "@/public/primary-wave.svg";

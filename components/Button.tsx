@@ -11,7 +11,11 @@ type Props = {
   icon?: TablerIcon;
   className?: string;
   children?: React.ReactNode;
-} & ({ type: "button"; onClick(): void } | { type: "link"; to: string });
+} & (
+  | { type: "button"; onClick(): void }
+  | { type: "link"; to: string }
+  | { type: "submit" }
+);
 
 const Button: React.FC<Props> = (props) => {
   const classes = cx(
@@ -22,10 +26,11 @@ const Button: React.FC<Props> = (props) => {
     props.size === `lg`
       ? `text-xl gap-2 px-8 py-5 rounded-3xl`
       : props.size === `sm`
-      ? `text-base gap-1 px-4 py-2 rounded-2xl`
-      : `text-lg gap-1.5 px-6 py-3 rounded-[20px]`,
+        ? `text-base gap-1 px-4 py-2 rounded-2xl`
+        : `text-lg gap-1.5 px-6 py-3 rounded-[20px]`,
     props.className,
   );
+
   if (props.type === `button`) {
     return (
       <button onClick={props.onClick} className={cx(classes)}>
@@ -38,6 +43,20 @@ const Button: React.FC<Props> = (props) => {
       </button>
     );
   }
+
+  if (props.type === `submit`) {
+    return (
+      <button type="submit" className={cx(classes)}>
+        <span>{props.children}</span>
+        {props.icon && (
+          <props.icon
+            size={props.size === `lg` ? 24 : props.size === `sm` ? 20 : 22}
+          />
+        )}
+      </button>
+    );
+  }
+
   return (
     <Link href={props.to} className={cx(classes, props.className)}>
       <span>{props.children}</span>

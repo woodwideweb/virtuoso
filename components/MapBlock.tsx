@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import cx from "classnames";
 import { IconMapPinFilled, IconSend } from "@tabler/icons-react";
+import { useForm } from "@formspree/react";
 import Button from "./Button";
 import TextInput from "./TextInput";
 import MapImage from "@/public/wadsworth-map.png";
@@ -9,6 +12,10 @@ import { montserrat } from "@/lib/fonts";
 import { useIntersectionObserver } from "@/lib/hooks";
 
 const MapBlock: React.FC = () => {
+  const [state, handleSubmit] = useForm(
+    process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_FORM_ID ?? ``,
+  );
+
   const { ref: pinRef, intersected: showPin } = useIntersectionObserver({
     threshold: 1,
     rootMargin: `0px`,
@@ -120,7 +127,7 @@ const MapBlock: React.FC = () => {
           )}
           size={80}
         />
-        <div
+        <form
           className={cx(
             `absolute w-full h-full left-0 top-0 transition-opacity duration-700 bg-amber-100 flex flex-col justify-center items-center gap-4 lg+:gap-8 p-12 rounded-l-[80px] lg:rounded-r-[80px]`,
             showContact
@@ -133,6 +140,7 @@ const MapBlock: React.FC = () => {
             backgroundPosition: `center`,
             backgroundAttachment: `fixed`,
           }}
+          onSubmit={handleSubmit}
         >
           <div className="flex flex-col lg+:flex-row gap-4 w-full 2xl:w-176">
             <TextInput
@@ -161,6 +169,13 @@ const MapBlock: React.FC = () => {
             className="w-full 2xl:w-176"
           />
           <TextInput
+            type="tel"
+            name="phone-number"
+            placeholder="me@example.com"
+            label="Phone number"
+            className="w-full 2xl:w-176 max-2xl:hidden"
+          />
+          <TextInput
             type="textarea"
             rows={6}
             name="message"
@@ -169,19 +184,36 @@ const MapBlock: React.FC = () => {
             required
             className="w-full 2xl:w-176"
           />
-          <div className="flex justify-end w-full 2xl:w-176">
-            <Button
-              type="button"
-              onClick={() => {}}
-              color="primary"
-              icon={IconSend}
-              size="lg"
-              className="w-52"
-            >
-              Send
-            </Button>
-          </div>
-        </div>
+          {state.succeeded && (
+            <div className="bg-primary-500/30 p-8 rounded-3xl flex justify-center items-cener">
+              <span className="text-lg text-primary-800 font-medium text-center">
+                We recieved your message! We'll get back to you soon.
+              </span>
+            </div>
+          )}
+          {state.errors && (
+            <div className="bg-red-500/20 p-8 rounded-3xl flex justify-center items-cener">
+              <span className="text-lg text-red-800 font-medium text-center">
+                Hmm, something went wrong. Please refresh the page and try
+                again.
+              </span>
+            </div>
+          )}
+          {!state.succeeded && !state.errors && (
+            <div className="flex justify-end w-full 2xl:w-176">
+              <Button
+                type="button"
+                onClick={() => {}}
+                color="primary"
+                icon={IconSend}
+                size="lg"
+                className="w-52"
+              >
+                Send
+              </Button>
+            </div>
+          )}
+        </form>
       </div>
     </div>
   );

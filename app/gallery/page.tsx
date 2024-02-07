@@ -38,6 +38,15 @@ import StonePatioWithGrillImg from "@/public/gallery/stone-patio-with-grill.jpg"
 import WaterfallImg from "@/public/gallery/waterfall.jpg";
 import WoodenArchImg from "@/public/gallery/wooden-arch.jpg";
 
+import ModernLandscaping1Img from "@/public/featured-projects/modern-landscaping/finished-1.jpg";
+import ModernLandscaping2Img from "@/public/featured-projects/modern-landscaping/finished-2.jpg";
+import ModernLandscaping3Img from "@/public/featured-projects/modern-landscaping/finished-3.jpg";
+
+export const metadata = {
+  title: `Virtuoso Landscaping ~ Gallery`,
+  description: `Images of some of our completed or in-progress projects.`,
+};
+
 const Gallery: React.FC = () => (
   <div className="flex flex-col">
     <ImageViewerModal />
@@ -121,6 +130,21 @@ const Gallery: React.FC = () => (
           year={9999}
         />
         <GalleryImage src={RedChairsAroundFirepitImg} city="TODO" year={2023} />
+        <MediumImageHorizontal
+          src={ModernLandscaping1Img}
+          city="Hartville"
+          year={2022}
+        />
+        <MediumImageHorizontal
+          src={ModernLandscaping2Img}
+          city="Hartville"
+          year={2022}
+        />
+        <GalleryImage
+          src={ModernLandscaping3Img}
+          city="Hartville"
+          year={2022}
+        />
         <MediumImageHorizontal
           src={RedChairsSideAngleImg}
           city="TODO"
