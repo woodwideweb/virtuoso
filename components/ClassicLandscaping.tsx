@@ -9,9 +9,9 @@ import {
   IconWreckingBall,
 } from "@tabler/icons-react";
 import Design from "@/public/featured-projects/classic-landscaping/design.jpg";
-import Finished1 from "@/public/featured-projects/classic-landscaping/finished-1.jpg";
-import Finished2 from "@/public/featured-projects/classic-landscaping/finished-2.jpg";
-import Finished3 from "@/public/featured-projects/classic-landscaping/finished-3.jpg";
+import Finished1 from "@/public/featured-projects/classic-landscaping/finished-4.jpg";
+import Finished2 from "@/public/featured-projects/classic-landscaping/finished-7.jpg";
+import Finished3 from "@/public/featured-projects/classic-landscaping/finished-6.jpg";
 import InProgress1 from "@/public/featured-projects/classic-landscaping/in-progress-1.jpg";
 import InProgress2 from "@/public/featured-projects/classic-landscaping/in-progress-2.jpg";
 import InProgress3 from "@/public/featured-projects/classic-landscaping/in-progress-3.jpg";
@@ -20,18 +20,18 @@ import FeaturedProjectTemplate from "@/components/FeaturedProjectTemplate";
 const ClassicLandscaping: React.FC = () => (
   <FeaturedProjectTemplate
     mainSplashPicture={Finished3}
-    projectTitle="TODO"
-    location="Fairlawn? Copley?"
+    projectTitle="Beautiful natural stone and custom woodwork"
+    location="Fairlawn, OH"
     when="July-September, 2023"
     scope={[
       { Icon: IconWreckingBall, title: `Demo existing patio and deck` },
       {
         Icon: IconWall,
-        title: `Rebuild patio and retaining wall using natural stone pavers`,
+        title: `Rebuild patio and retaining wall using Classicstone pavers and Choctaw wall stone`,
       },
       {
         Icon: IconHammer,
-        title: `Construct new deck according to updated design`,
+        title: `Construct new deck with a grand staircase and aluminum cable railing system`,
       },
       {
         Icon: IconFlame,
@@ -42,23 +42,23 @@ const ClassicLandscaping: React.FC = () => (
         title: `Create landscaping design and install plants and trees surrounding newly constructed outdoor features`,
       },
     ]}
-    planParagraph={`Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt earum quam excepturi labore consequatur praesentium possimus hic, voluptatum aliquid rerum, nobis reiciendis voluptatem temporibus, magni iure consequuntur corporis harum fugiat.`}
+    planParagraph={`This was a fun project that required several months of imagining, designing, collaborating, and constructing this stunning, multi-faceted outdoor living space. Keeping the budget in mind, we were able to repurpose many materials from demolition to construct a natural walkway from the driveway to the new patio. Additionally, we created a larger green space for the family to enjoy while achieving natural privacy from the busy street with our functional landscaping design.  We are thankful for the patience and endurance that is required by homeowners during such a long process.`}
     planImage={Design}
     finishedProject={{
       first: {
-        caption: `Clean, modern look`,
-        subCaption: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus doloribus modi architecto dolore voluptate magnam, id facilis natus possimus. Ea aliquam culpa error labore impedit consequatur minima, unde facere quidem.`,
-        image: Finished1,
+        caption: `Clean, classic look`,
+        subCaption: `Our team has worked with a variety of architectural styles and can create functional design that highlights the beauty of any home.`,
+        image: Finished3,
       },
       second: {
         caption: `Attention to detail`,
-        subCaption: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus doloribus modi architecto dolore voluptate magnam, id facilis natus possimus. Ea aliquam culpa error labore impedit consequatur minima, unde facere quidem.`,
+        subCaption: `Our managers spend the time before and during the season training our crews to have an eye for detail. We guarantee your project will be carried out with great care and expert oversight to ensure a finished product that will exceed your expectations.`,
         image: Finished2,
       },
       third: {
         caption: `Precision construction`,
-        subCaption: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus doloribus modi architecto dolore voluptate magnam, id facilis natus possimus. Ea aliquam culpa error labore impedit consequatur minima, unde facere quidem.`,
-        image: Finished3,
+        subCaption: `We don't take shortcuts; you can rest assured your desired hardscape will be constructed to code and without compromising aesthetic appeal.`,
+        image: Finished1,
       },
     }}
     inProgressImages={[InProgress1, InProgress2, InProgress3]}

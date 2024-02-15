@@ -103,7 +103,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
             alt={projectTitle}
             priority
             className={cx(
-              `w-11/12 max-w-7xl object-center object-cover fixed sepia-[30%] rounded-[60px] sm:rounded-[80px]`,
+              `w-11/12 max-w-7xl object-top object-cover fixed sepia-[30%] rounded-[60px] sm:rounded-[80px]`,
               mainSplashPictureAdjustments,
             )}
             style={{
@@ -116,24 +116,24 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
         <div className="mt-[420px] min-[1080px]:mt-[650px] relative max-w-7xl w-full">
           <h1
             className={cx(
-              `text-3xl xs:text-4xl sm:text-5xl 2xl:text-6xl font-bold text-center lg:text-left relative w-fit transition-colors duration-700 !leading-tight`,
+              `text-3xl xs:text-4xl sm:text-5xl 2xl:text-6xl font-bold text-center lg:text-left relative w-fit transition-colors duration-700 !leading-tight mt-4 sm:mt-0`,
               bgGreen ? `text-white` : `text-black`,
               montserrat,
             )}
           >
             <span className="relative">
               {width > 1024
-                ? projectTitle.split(``).map((letter, index) => (
+                ? projectTitle.split(` `).map((word, index) => (
                     <span
                       key={index}
                       className={cx(
-                        `transition-[opacity,transform] duration-700 inline-block`,
-                        index < shownLetters
+                        `transition-[opacity,transform] duration-700 inline-block mr-3`,
+                        index < shownLetters / 5
                           ? `opacity-100`
-                          : `opacity-0 scale-75 translate-y-4`,
+                          : `opacity-0 -translate-y-4 translate-x-4 -rotate-6`,
                       )}
                     >
-                      {letter.replace(` `, `\u00a0`)}
+                      {word}
                     </span>
                   ))
                 : projectTitle}

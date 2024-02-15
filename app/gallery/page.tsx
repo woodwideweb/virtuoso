@@ -18,11 +18,7 @@ import TieredWallByBarn2Img from "@/public/gallery/tiered-wall-by-barn-2.jpg";
 import RockyOutcropByPoolImg from "@/public/gallery/rocky-outcrop-by-pool.jpg";
 import PatioInGravel1Img from "@/public/gallery/patio-in-gravel-1.jpg";
 import StepsThroughWallImg from "@/public/gallery/steps-through-wall.jpg";
-import PatioInGravel2Img from "@/public/gallery/patio-in-gravel-2.jpg";
-import PatioInGravel3Img from "@/public/gallery/patio-in-gravel-3.jpg";
 import RaisedRoundPatio1Img from "@/public/gallery/raised-round-patio-1.jpg";
-import RaisedRoundPatio2Img from "@/public/gallery/raised-round-patio-2.jpg";
-import RaisedRoundPatio3Img from "@/public/gallery/raised-round-patio-3.jpg";
 import RaisedRoundPatio4Img from "@/public/gallery/raised-round-patio-4.jpg";
 import FlowerBedsSAroundHouseImg from "@/public/gallery/flower-beds-around-house.jpg";
 import GiganticNaturalPaverPatioImg from "@/public/gallery/gigantic-natural-paver-patio.jpg";
@@ -64,104 +60,145 @@ const Gallery: React.FC = () => (
     </div>
     <div className="flex justify-center items-center p-8 sm:p-12 md:p-20 bg-gradient-to-b bg-amber-100 rounded-[80px] my-8 lg:mx-12">
       <div className="flex-grow max-w-[1200px] grid grid-cols-2 md+:grid-cols-4 gap-4 lg:gap-8">
-        <BigImage src={PeanutePatioImg} city="Wadsworth" year={2021} />
+        <BigImage
+          src={RedChairsSideAngleImg}
+          city="Brecksville, OH"
+          year={2021}
+        />
         <MediumImageHorizontal
           src={SlabStepsInGravel1Img}
-          city="Wadsworth"
+          city="Wadsworth, OH"
           year={2022}
         />
-        <GalleryImage
-          src={SlabStepsInGravel2Img}
-          city="Wadsworth"
-          year={2022}
-        />
+        <GalleryImage src={WoodenArchImg} city="Kansas City, KS" year={2004} />
+
         <MediumImageVertical
-          src={NaturalPaversWithFirepit1Img}
-          city="Brecksville"
-          year={2021}
+          src={WaterfallImg}
+          city="Blue Springs, MO"
+          year={2005}
         />
         <GalleryImage
           src={NaturalPaversWithFirepit2Img}
-          city="Brecksville"
+          city="Brecksville, OH"
           year={2021}
         />
-        <BigImage src={TieredWallByBarn1Img} city="Medina" year={2022} />
-        <GalleryImage src={TieredWallByBarn2Img} city="Medina" year={2022} />
+        <BigImage src={TieredWallByBarn1Img} city="Medina, OH" year={2022} />
         <GalleryImage
-          src={RockyOutcropByPoolImg}
-          city="Hartville"
+          src={TieredWallByBarn2Img}
+          city="Medina, OH"
           year={2022}
         />
-        <BigImage src={PatioInGravel1Img} city="Akron" year={2023} />
+        <GalleryImage
+          src={RockyOutcropByPoolImg}
+          city="Hartville, OH"
+          year={2022}
+        />
+        <BigImage src={PatioInGravel1Img} city="Akron, OH" year={2023} />
         <MediumImageHorizontal
           src={StepsThroughWallImg}
-          city="Akron"
+          city="Akron, OH"
           year={2023}
         />
-        <GalleryImage src={PatioInGravel2Img} city="Akron" year={2023} />
-        <MediumImageVertical src={PatioInGravel3Img} city="Akron" year={2023} />
-        <GalleryImage src={RaisedRoundPatio1Img} city="Wadsworth" year={2023} />
-        <BigImage src={RaisedRoundPatio2Img} city="Wadsworth" year={2023} />
-        <GalleryImage src={RaisedRoundPatio3Img} city="Wadsworth" year={2023} />
-        <GalleryImage src={RaisedRoundPatio4Img} city="Wadsworth" year={2023} />
-        <BigImage src={FlowerBedsSAroundHouseImg} city="TODO" year={9999} />
+        <GalleryImage
+          src={RaisedRoundPatio1Img}
+          city="Wadsworth, OH"
+          year={2023}
+        />
+        <GalleryImage
+          src={RaisedRoundPatio4Img}
+          city="Wadsworth, OH"
+          year={2023}
+        />
+        <BigImage
+          src={FlowerBedsSAroundHouseImg}
+          city="Kansas City, MO"
+          year={2001}
+        />
         <MediumImageHorizontal
           src={GiganticNaturalPaverPatioImg}
-          city="TODO"
-          year={9999}
+          city="Blue Springs, MO"
+          year={2005}
         />
         <GalleryImage
           src={GiganticPatioWithFurnitureImg}
-          city="TODO"
-          year={9999}
+          city="Blue Springs, MO"
+          year={2005}
         />
         <MediumImageVertical
           src={GravelStreamWithWaterfallImg}
-          city="TODO"
-          year={9999}
+          city="Kansas City, MO"
+          year={2001}
         />
         <GalleryImage
           src={NaturalPatioWithRedChairsImg}
-          city="TODO"
-          year={9999}
+          city="Brecksville, OH"
+          year={2021}
         />
-        <BigImage src={RaisedBedWithBlackMulchImg} city="TODO" year={9999} />
+        <BigImage
+          src={RaisedBedWithBlackMulchImg}
+          city="Medina, OH"
+          year={2021}
+        />
         <GalleryImage
           src={RaisedPatioWithInsetStairImg}
-          city="TODO"
-          year={9999}
+          city="Hinkley, OH"
+          year={2022}
         />
-        <GalleryImage src={RedChairsAroundFirepitImg} city="TODO" year={2023} />
+        <GalleryImage
+          src={RedChairsAroundFirepitImg}
+          city="Brecksville, OH"
+          year={2021}
+        />
         <MediumImageHorizontal
           src={ModernLandscaping1Img}
-          city="Hartville"
+          city="Hartville, OH"
           year={2022}
         />
         <MediumImageHorizontal
           src={ModernLandscaping2Img}
-          city="Hartville"
+          city="Hartville, OH"
           year={2022}
         />
         <GalleryImage
           src={ModernLandscaping3Img}
-          city="Hartville"
+          city="Hartville, OH"
           year={2022}
         />
         <MediumImageHorizontal
-          src={RedChairsSideAngleImg}
-          city="TODO"
-          year={9999}
+          src={PeanutePatioImg}
+          city="Wadsworth, OH"
+          year={2021}
         />
         <MediumImageVertical
           src={SlabStepsWithStrawImg}
-          city="TODO"
-          year={9999}
+          city="Medina, OH"
+          year={2022}
         />
-        <GalleryImage src={StonePatioWithGrillImg} city="TODO" year={9999} />
-        <MediumImageVertical src={WaterfallImg} city="TODO" year={9999} />
-        <GalleryImage src={WoodenArchImg} city="TODO" year={9999} />
-        <GalleryImage src={EvergreenByWalkwayImg} city="TODO" year={9999} />
-        <MediumImageHorizontal src={JaggedWalkwayImg} city="TODO" year={9999} />
+        <GalleryImage
+          src={StonePatioWithGrillImg}
+          city="Overlandpark, KS"
+          year={2003}
+        />
+        <MediumImageVertical
+          src={NaturalPaversWithFirepit1Img}
+          city="Brecksville, OH"
+          year={2021}
+        />
+        <GalleryImage
+          src={SlabStepsInGravel2Img}
+          city="Wadsworth, OH"
+          year={2022}
+        />
+        <GalleryImage
+          src={EvergreenByWalkwayImg}
+          city="Hartville, OH"
+          year={2023}
+        />
+        <MediumImageHorizontal
+          src={JaggedWalkwayImg}
+          city="Hartville, OH"
+          year={2023}
+        />
       </div>
     </div>
   </div>

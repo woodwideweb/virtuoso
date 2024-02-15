@@ -45,7 +45,7 @@ const GalleryImage: React.FC<Props> = ({ src, alt, className, year, city }) => {
           {year}
         </span>
         <span className="font-medium text-xl text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-          {city}, OH
+          {city}
         </span>
       </div>
     </div>

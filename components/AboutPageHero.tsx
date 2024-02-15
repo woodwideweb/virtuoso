@@ -26,6 +26,7 @@ import { useScrollY } from "@/lib/hooks";
 
 const AboutPageHero: React.FC = () => {
   const scrollY = useScrollY();
+
   return (
     <section className="flex flex-col justify-center items-center p-8 xs:p-20 md:p-36 relative h-[calc(100vh-100px)] sm:h-[calc(100vh-128px)] overflow-hidden">
       <FloatingProfilePicture
@@ -168,10 +169,12 @@ const FloatingProfilePicture: React.FC<FloatingProfilePictureProps> = ({
 }) => {
   const scrollY = useScrollY();
   const [windowWidth, setWindowWidth] = useState(1025);
+  const [windowHeight, setWindowHeight] = useState(1025);
   const direction = className.includes(`left`) ? `left` : `right`;
 
   useEffect(() => {
     setWindowWidth(window.innerWidth);
+    setWindowHeight(window.innerHeight);
   }, []);
 
   return (
@@ -189,6 +192,7 @@ const FloatingProfilePicture: React.FC<FloatingProfilePictureProps> = ({
       }}
       className={cx(
         `rounded-full absolute object-center object-cover border border-primary-400 hidden sm:block`,
+        windowHeight < 940 && `!hidden`,
         className,
       )}
     />

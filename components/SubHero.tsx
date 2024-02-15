@@ -16,7 +16,7 @@ import { montserrat } from "@/lib/fonts";
 import { useIntersectionObserver } from "@/lib/hooks";
 import ModernLandscapingImage1 from "@/public/featured-projects/modern-landscaping/finished-1.jpg";
 import RaisedPatioWithInsetStairImg from "@/public/gallery/raised-patio-with-inset-stair.jpg";
-import StepsThroughWallImg from "@/public/gallery/steps-through-wall.jpg";
+import WaterfallImg from "@/public/gallery/waterfall.jpg";
 
 const SubHero: React.FC = () => {
   const { ref, intersected } = useIntersectionObserver(
@@ -65,7 +65,7 @@ const SubHero: React.FC = () => {
             <FeaturedImage
               delay={1300}
               intersected={intersected}
-              src={StepsThroughWallImg}
+              src={WaterfallImg}
               className="w-0 xl:w-4/5 min-[1500px]:w-80 flex-grow xl:flex-grow-0 2xl:flex-grow sm:h-64 xl:h-72 min-[1500px]:h-96 2xl:h-128 hidden md:block"
             />
           </div>

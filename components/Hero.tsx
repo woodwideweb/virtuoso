@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
             !showSubheading && `opacity-0 translate-y-4`,
           )}
         >
-          We are a team of family and friends who value honesty, communication
+          We are a team of family and friends who value honesty, communication,
           and attention to detail. If you are in need of a proficient grounds
           maintenance or landscape construction company that you can trust, you
           will find us to be refreshingly different in every way.

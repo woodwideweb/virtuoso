@@ -5,7 +5,7 @@ import ModernLandscapingImage3 from "@/public/featured-projects/modern-landscapi
 import ClassicLandscapingImage1 from "@/public/featured-projects/classic-landscaping/finished-1.jpg";
 import ClassicLandscapingImage2 from "@/public/featured-projects/classic-landscaping/finished-2.jpg";
 import ClassicLandscapingImage3 from "@/public/featured-projects/classic-landscaping/finished-3.jpg";
-import FeaturedProgramPreview from "@/components/FeaturedProgramPreview";
+import FeaturedProjectPreview from "@/components/FeaturedProjectPreview";
 
 export const metadata = {
   title: `Virtuoso Landscaping ~ Featured Projects`,
@@ -14,7 +14,7 @@ export const metadata = {
 
 const FeaturedProjects: React.FC = () => (
   <div className="px-4 sm:px-8 lg:px-12 2xl:px-16 py-8 lg:py-16 flex flex-col xl+:flex-row justify-center gap-8 2xl:gap-12">
-    <FeaturedProgramPreview
+    <FeaturedProjectPreview
       title="Modern landscaping"
       slug="modern-landscaping"
       description={`Completed in the summer of 2022, these distinctive retaining walls are built with the U-Cara retaining wall system.`}
@@ -25,7 +25,7 @@ const FeaturedProjects: React.FC = () => (
       ]}
       when={`July-August 2022`}
     />
-    <FeaturedProgramPreview
+    <FeaturedProjectPreview
       title={`Classic landscaping`}
       slug="classic-landscaping"
       description={`Check out this construction project completed in the fall of 2023, featuring a unique blend of natural stone hardscaping, quality woodwork and custom cedar accents.`}

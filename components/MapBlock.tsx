@@ -160,21 +160,23 @@ const MapBlock: React.FC = () => {
               className="flex-grow"
             />
           </div>
-          <TextInput
-            type="email"
-            name="email"
-            placeholder="me@example.com"
-            label="Email"
-            required
-            className="w-full 2xl:w-176"
-          />
-          <TextInput
-            type="tel"
-            name="phone-number"
-            placeholder="me@example.com"
-            label="Phone number"
-            className="w-full 2xl:w-176 max-2xl:hidden"
-          />
+          <div className="flex flex-col lg+:flex-row gap-4 w-full 2xl:w-176">
+            <TextInput
+              type="email"
+              name="email"
+              placeholder="me@example.com"
+              label="Email"
+              required
+              className="w-full 2xl:w-176"
+            />
+            <TextInput
+              type="tel"
+              name="phone-number"
+              placeholder="me@example.com"
+              label="Phone number"
+              className="w-full 2xl:w-176 hidden lg+:block"
+            />
+          </div>
           <TextInput
             type="textarea"
             rows={6}

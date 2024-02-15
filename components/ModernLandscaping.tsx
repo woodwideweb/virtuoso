@@ -23,7 +23,7 @@ import FeaturedProjectTemplate from "@/components/FeaturedProjectTemplate";
 const ModernLandscaping: React.FC = () => (
   <FeaturedProjectTemplate
     mainSplashPicture={Finished2}
-    mainSplashPictureAdjustments="![object-position:0px_-90px] []"
+    mainSplashPictureAdjustments="lg:![object-position:0px_-90px] []"
     projectTitle="Modern tiered retaining wall"
     location="Hartville, OH"
     when="June-July, 2022"
@@ -53,26 +53,27 @@ const ModernLandscaping: React.FC = () => (
         title: `Perform finish grade and install 2 acres of lawn`,
       },
     ]}
-    planParagraph={`Creating an effective plan for the landscaping and erosion control needs for this newly-built custom home presented our crew with a variety of challenges. The foremost concern was how to construct a highly functional retaining wall to address the severe slope along the front of the house while simultaneously complimenting the beautiful modern architecture. Our design team put their heads together to create a stunning yet simple tiered retaining wall system that incorporates both the color and style of the house. Here's how we put our ideas into motion over the course of three months.`}
+    planParagraph={`Creating an effective plan for the landscaping and retention needs for this newly-built custom home presented our crew with a variety of challenges. The foremost concern was how to construct a highly functional retaining wall to address the severe slope along the front of the house while simultaneously complimenting the beautiful modern architecture. Our design team put their heads together to create a stunning yet simple tiered retaining wall system that incorporates both the color and style of the house. Here's how we put our ideas into motion over the course of three months.`}
     planImage={Design1}
     inProgressImages={[Progress1, Progress2, Progress3, Progress4, Progress5]}
     finishedProject={{
       first: {
         caption: `Clean, modern look`,
-        subCaption: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus doloribus modi architecto dolore voluptate magnam, id facilis natus possimus. Ea aliquam culpa error labore impedit consequatur minima, unde facere quidem.`,
+        subCaption: `Our team has worked with a variety of architectural styles and can create functional design that highlights the beauty of any home.`,
         image: Finished2,
       },
       second: {
         caption: `Attention to detail`,
-        subCaption: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus doloribus modi architecto dolore voluptate magnam, id facilis natus possimus. Ea aliquam culpa error labore impedit consequatur minima, unde facere quidem.`,
+        subCaption: `Our managers spend the time before and during the season training our crews to have an eye for detail. We guarantee your project will be carried out with great care and expert oversight to ensure a finished product that will exceed your expectations.`,
         image: Finished1,
       },
       third: {
         caption: `Precision construction`,
-        subCaption: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus doloribus modi architecto dolore voluptate magnam, id facilis natus possimus. Ea aliquam culpa error labore impedit consequatur minima, unde facere quidem.`,
+        subCaption: `We don't take shortcuts; you can rest assured your desired hardscape will be constructed to code and without compromising aesthetic appeal.`,
         image: Finished3,
       },
     }}
   />
 );
+
 export default ModernLandscaping;

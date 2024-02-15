@@ -3,14 +3,14 @@
 import React from "react";
 import Image from "next/image";
 import cx from "classnames";
-import { IconArrowRight } from "@tabler/icons-react";
+import { IconArrowRight, IconLeaf } from "@tabler/icons-react";
 import type { StaticImageData } from "next/image";
 import Button from "./Button";
 import { montserrat } from "@/lib/fonts";
-import Finished1 from "@/public/featured-projects/classic-landscaping/finished-2.jpg";
-import Finished2 from "@/public/featured-projects/modern-landscaping/finished-3.jpg";
-import ElectricMower from "@/public/electric-mower.png";
-import ElectricTruck from "@/public/electric-truck.png";
+import Finished1 from "@/public/featured-projects/classic-landscaping/finished-8.jpg";
+import Finished2 from "@/public/featured-projects/modern-landscaping/finished-2.jpg";
+import ElectricEquipment1 from "@/public/electric-equipment.jpg";
+import ElectricEquipment2 from "@/public/electric-equipment-2.jpg";
 import PrimaryWave from "@/public/primary-wave.svg";
 import AmberWave from "@/public/amber-wave.svg";
 
@@ -38,12 +38,12 @@ const AboutBlock: React.FC = () => (
       </p>
       <div className="flex flex-col md:flex-row min-[1400px]:flex-col 2xl:flex-row mt-8 md:mt-12 gap-6 md:gap-8 2xl:gap-12">
         <FeaturedProject
-          href="#"
+          href="/featured-projects/modern-landscaping"
           src={Finished2}
           title={`Modern landscaping`}
         />
         <FeaturedProject
-          href="#"
+          href="/featured-projects/classic-landscaping"
           src={Finished1}
           title={`Classic landscaping`}
         />
@@ -60,11 +60,14 @@ const AboutBlock: React.FC = () => (
       >
         <h2
           className={cx(
-            `text-3xl xs:text-4xl md:text-5xl font-bold`,
+            `text-3xl xs:text-4xl md:text-5xl font-bold flex flex-wrap`,
             montserrat,
           )}
         >
-          Leaders in <span className="text-primary-800">green</span>
+          Leaders in{` `}
+          <span className="text-primary-800 flex items-center ml-3 gap-2">
+            green <IconLeaf className="" size={40} />
+          </span>
         </h2>
         <p className="text-black/60 text-lg md:text-xl mt-4 md:mt-6">
           If you see us around town, you'll quickly notice that green is not
@@ -81,14 +84,14 @@ const AboutBlock: React.FC = () => (
       </div>
       <div className="flex gap-6 md:gap-8 2xl:gap-12 min-[1400px]:flex-grow h-52 xs:h-64 sm:h-80 min-[1400px]:h-auto">
         <Image
-          className="rounded-3xl md:rounded-[60px] w-0 flex-grow md:min-w-[300px] object-cover object-center sepia-[50%] border-[0.5px] border-amber-500"
+          className="rounded-3xl md:rounded-[60px] w-0 flex-grow md:min-w-[300px] object-cover object-center border-[0.5px] border-amber-500"
           alt="todo"
-          src={ElectricMower}
+          src={ElectricEquipment1}
         />
         <Image
-          className="rounded-3xl md:rounded-[60px] w-0 flex-grow md:min-w-[300px] object-cover object-center sepia-[50%] border-[0.5px] border-amber-500"
+          className="rounded-3xl md:rounded-[60px] w-0 flex-grow md:min-w-[300px] object-cover object-center border-[0.5px] border-amber-500"
           alt="todo"
-          src={ElectricTruck}
+          src={ElectricEquipment2}
         />
       </div>
     </div>
