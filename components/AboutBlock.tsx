@@ -9,8 +9,7 @@ import Button from "./Button";
 import { montserrat } from "@/lib/fonts";
 import Finished1 from "@/public/featured-projects/classic-landscaping/finished-8.jpg";
 import Finished2 from "@/public/featured-projects/modern-landscaping/finished-2.jpg";
-import ElectricEquipment1 from "@/public/electric-equipment.jpg";
-import ElectricEquipment2 from "@/public/electric-equipment-2.jpg";
+import GroupGreenPhoto from "@/public/green-group.jpg";
 import PrimaryWave from "@/public/primary-wave.svg";
 import AmberWave from "@/public/amber-wave.svg";
 
@@ -49,7 +48,7 @@ const AboutBlock: React.FC = () => (
         />
       </div>
     </div>
-    <div className="flex-grow flex flex-col gap-6 md:gap-8 2xl:gap-12">
+    <div className="flex-grow flex flex-col lg:flex-row min-[1400px]:flex-col gap-6 md:gap-8 2xl:gap-12">
       <div
         className="p-8 md:p-12 2xl:p-16 rounded-3xl md:rounded-[60px] bg-primary-300"
         style={{
@@ -82,16 +81,11 @@ const AboutBlock: React.FC = () => (
           gas-powered engines while on your property.
         </p>
       </div>
-      <div className="flex gap-6 md:gap-8 2xl:gap-12 min-[1400px]:flex-grow h-52 xs:h-64 sm:h-80 min-[1400px]:h-auto">
+      <div>
         <Image
-          className="rounded-3xl md:rounded-[60px] w-0 flex-grow md:min-w-[300px] object-cover object-center border-[0.5px] border-amber-500"
-          alt="todo"
-          src={ElectricEquipment1}
-        />
-        <Image
-          className="rounded-3xl md:rounded-[60px] w-0 flex-grow md:min-w-[300px] object-cover object-center border-[0.5px] border-amber-500"
-          alt="todo"
-          src={ElectricEquipment2}
+          className="h-full min-[1400px]:h-80 object-cover min-[1400px]:[object-position:0px_-140px] rounded-3xl md:rounded-[60px]"
+          alt="Virtuoso Landscaping team holding electric equipment"
+          src={GroupGreenPhoto}
         />
       </div>
     </div>
