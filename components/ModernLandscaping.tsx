@@ -59,7 +59,7 @@ const ModernLandscaping: React.FC = () => (
     finishedProject={{
       first: {
         caption: `Clean, modern look`,
-        subCaption: `Our team has worked with a variety of architectural styles and can create functional design that highlights the beauty of any home.`,
+        subCaption: `Our team has worked with a variety of architectural styles and can create a functional design that highlights the beauty of any home.`,
         image: Finished2,
       },
       second: {

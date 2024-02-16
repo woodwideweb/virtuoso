@@ -47,7 +47,7 @@ const ClassicLandscaping: React.FC = () => (
     finishedProject={{
       first: {
         caption: `Clean, classic look`,
-        subCaption: `Our team has worked with a variety of architectural styles and can create functional design that highlights the beauty of any home.`,
+        subCaption: `Our team has worked with a variety of architectural styles and can create a functional design that highlights the beauty of any home.`,
         image: Finished3,
       },
       second: {
