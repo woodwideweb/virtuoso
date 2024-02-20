@@ -52,7 +52,7 @@ const About: NextPage = () => (
           blurb="Kristi wears several hats for Virtuoso in the field and in the office. Her time is often spent meeting with customers and writing proposals, but don't be surprised if you catch her mulching your flower beds or helping the construction crew finish your paver patio."
           src={KristiPhoto}
           imagePlacement="[object-position:0px_-10px]"
-          yearStarted={2014}
+          yearStarted={2016}
         />
         <StaffCard
           name="Austin Schlabach"
@@ -60,7 +60,7 @@ const About: NextPage = () => (
           blurb="Second only to its founder, Austin is the longest-standing member of Virtuoso Landscaping. Austin is the kind of loyal and do-it-right employee that most landscaping companies only dream of having; striping lawns is his first love."
           src={AustinPhoto}
           imagePlacement="[object-position:0px_-20px]"
-          yearStarted={2008}
+          yearStarted={2010}
         />
         <StaffCard
           name="Boaz Costa"
@@ -68,7 +68,7 @@ const About: NextPage = () => (
           blurb="His construction knowledge, problem-solving skills, and crew management abilities exceed many who are twice his age and make him an integral part of Virtuoso. Bo often has to be coerced to leave the jobsite when the sun goes down."
           src={BoPhoto}
           imagePlacement="[object-position:0px_-10px]"
-          yearStarted={2015}
+          yearStarted={2017}
         />
         <StaffCard
           name="Josué Rodriguez"
