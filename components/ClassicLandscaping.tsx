@@ -23,6 +23,7 @@ const ClassicLandscaping: React.FC = () => (
     projectTitle="Beautiful natural stone and custom woodwork"
     location="Fairlawn, OH"
     when="July-September, 2023"
+    quote="We are immensely thankful to have found Virtuoso Landscaping for the transformation of our backyard patio and deck. Rod and his team not only demonstrated remarkable skill in guiding us through the design process but also exhibited exceptional flexibility when unforeseeable challenges arose. Their transparency and willingness to suggest adjustments ensured that the project exceeded our expectations. From the initial meeting with Rod to the project's completion, our confidence in their abilities never wavered. We are truly grateful for their expertise, patience, and dedication, which resulted in a backyard beyond what we imagined. Thank you sincerely for an outstanding job."
     scope={[
       { Icon: IconWreckingBall, title: `Demo existing patio and deck` },
       {

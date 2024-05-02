@@ -3,7 +3,12 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import cx from "classnames";
-import { IconArrowRight, IconCalendar, IconMapPin } from "@tabler/icons-react";
+import {
+  IconArrowRight,
+  IconCalendar,
+  IconMapPin,
+  IconQuote,
+} from "@tabler/icons-react";
 import NextBgImage from "next-bg-image";
 import type { StaticImageData } from "next/image";
 import type { TablerIcon } from "@/lib/types";
@@ -28,6 +33,7 @@ interface Props {
   planParagraph: string;
   planImage: StaticImageData;
   inProgressImages: StaticImageData[];
+  quote?: string;
   finishedProject: {
     first: {
       caption: string;
@@ -58,6 +64,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
   planImage,
   inProgressImages,
   finishedProject,
+  quote,
 }) => {
   const scrollY = useScrollY();
   const [shownLetters, setShownLetters] = useState(0);
@@ -175,6 +182,26 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                 ))}
               </ul>
             </div>
+            {quote && (
+              <div className="mt-28 pb-20 flex flex-col items-center relative">
+                <IconQuote
+                  size={140}
+                  className="absolute text-white/10 xl:text-white/20 left-0 -top-12 rotate-180"
+                />
+                <IconQuote
+                  size={140}
+                  className="absolute text-white/10 xl:text-white/20 right-0 bottom-0"
+                />
+                <p
+                  className={cx(
+                    `text-xl md:text-2xl text-white font-medium text-center max-w-4xl`,
+                    montserrat,
+                  )}
+                >
+                  {quote}
+                </p>
+              </div>
+            )}
             <div className="flex flex-col lg+:flex-row items-start mt-16 lg+:mt-28 gap-16 relative">
               <div className="lg+:sticky top-20 flex-grow flex flex-col md+:flex-row lg+:block md+:items-center gap-12 w-full lg+:w-auto">
                 <div>

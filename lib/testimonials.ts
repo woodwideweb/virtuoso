@@ -5,6 +5,12 @@ const testimonials: Array<{
   date: string;
 }> = [
   {
+    customer: `Tye Brown`,
+    testimonial: `Rod and his team not only demonstrated <b>remarkable skill</b> in guiding us through the design process but also exhibited <b>exceptional flexibility</b> when unforeseeable challenges arose. Their transparency and willingness to suggest adjustments ensured that the project exceeded our expectations. ... We are truly grateful for their <b>expertise, patience, and dedication,</b> which resulted in a backyard <b>beyond what we imagined.</b> Thank you sincerely for an outstanding job.`,
+    stars: 5,
+    date: `May, 2024`,
+  },
+  {
     customer: `Bud Graske`,
     testimonial: `We were tremendously impressed with Virtuoso Landscaping starting with their first visit. They offered <b>excellent advice</b> on how to accomplish the project, but only after they asked enough questions to find out exactly what we wanted. ... My wife and I were tremendously impressed with the <b>energy and skill of the crew</b>. ... We would give them six stars if we could.`,
     stars: 5,
