@@ -13,7 +13,7 @@ import { useIntersectionObserver } from "@/lib/hooks";
 
 const MapBlock: React.FC = () => {
   const [state, handleSubmit] = useForm(
-    process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_FORM_ID ?? ``,
+    process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_FORM_ID ?? `placeholder`
   );
 
   const { ref: pinRef, intersected: showPin } = useIntersectionObserver({
@@ -28,7 +28,7 @@ const MapBlock: React.FC = () => {
     {
       threshold: 1,
       rootMargin: `0px`,
-    },
+    }
   );
 
   return (
@@ -38,13 +38,13 @@ const MapBlock: React.FC = () => {
           ref={pinRef}
           className={cx(
             `relative bg-amber-50 transition-opacity duration-300`,
-            !showPin && `opacity-0`,
+            !showPin && `opacity-0`
           )}
         >
           <h3
             className={cx(
               montserrat,
-              `text-2xl xs:text-3xl xl:text-4xl font-bold`,
+              `text-2xl xs:text-3xl xl:text-4xl font-bold`
             )}
           >
             Based in Wadsworth, OH
@@ -57,13 +57,13 @@ const MapBlock: React.FC = () => {
           ref={regionRef}
           className={cx(
             `relative bg-amber-50 transition-opacity duration-300`,
-            !showRegion && `opacity-0`,
+            !showRegion && `opacity-0`
           )}
         >
           <h3
             className={cx(
               montserrat,
-              `text-2xl xs:ttext-3xl xl:text-4xl font-bold`,
+              `text-2xl xs:ttext-3xl xl:text-4xl font-bold`
             )}
           >
             Serving the surrounding area
@@ -77,13 +77,13 @@ const MapBlock: React.FC = () => {
           ref={contactRef}
           className={cx(
             `relative bg-amber-50 transition-opacity duration-300`,
-            !showContact && `opacity-0`,
+            !showContact && `opacity-0`
           )}
         >
           <h3
             className={cx(
               montserrat,
-              `text-2xl xs:ttext-3xl xl:text-4xl font-bold`,
+              `text-2xl xs:ttext-3xl xl:text-4xl font-bold`
             )}
           >
             Reach out today to get a free quote for your project
@@ -115,7 +115,7 @@ const MapBlock: React.FC = () => {
             `rounded-[100%] transition-all duration-1000 absolute`,
             showRegion
               ? `h-[calc(100%-80px)] aspect-square bg-primary-500/10 border-primary-500/80 border-4`
-              : `w-0 h-0 bg-primary-500/70 border-primary-500`,
+              : `w-0 h-0 bg-primary-500/70 border-primary-500`
           )}
         />
         <IconMapPinFilled
@@ -123,7 +123,7 @@ const MapBlock: React.FC = () => {
             `text-primary-700 transition-all duration-300 relative ease-in`,
             showPin
               ? `opacity-100 -top-8`
-              : `opacity-0 -top-[calc((100vh-96px)/2)]`,
+              : `opacity-0 -top-[calc((100vh-96px)/2)]`
           )}
           size={80}
         />
@@ -132,7 +132,7 @@ const MapBlock: React.FC = () => {
             `absolute w-full h-full left-0 top-0 transition-opacity duration-700 bg-amber-100 flex flex-col justify-center items-center gap-4 lg+:gap-8 p-12 rounded-l-[80px] lg:rounded-r-[80px]`,
             showContact
               ? `opacity-100 pointer-events-auto`
-              : `opacity-0 pointer-events-none`,
+              : `opacity-0 pointer-events-none`
           )}
           style={{
             backgroundImage: `url(${AmberWave.src})`,
