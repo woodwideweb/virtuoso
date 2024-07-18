@@ -5,6 +5,9 @@ import ModernLandscapingImage3 from "@/public/featured-projects/modern-landscapi
 import ClassicLandscapingImage1 from "@/public/featured-projects/classic-landscaping/finished-1.jpg";
 import ClassicLandscapingImage2 from "@/public/featured-projects/classic-landscaping/finished-2.jpg";
 import ClassicLandscapingImage3 from "@/public/featured-projects/classic-landscaping/finished-3.jpg";
+import Vics1 from "@/public/featured-projects/vics/progress-1.jpg";
+import Vics2 from "@/public/featured-projects/vics/progress-2.jpg";
+import Vics3 from "@/public/featured-projects/vics/progress-3.jpg";
 import FeaturedProjectPreview from "@/components/FeaturedProjectPreview";
 
 export const metadata = {
@@ -34,6 +37,14 @@ const FeaturedProjects: React.FC = () => (
         ClassicLandscapingImage2,
         ClassicLandscapingImage3,
       ]}
+      when={`August-September 2023`}
+    />
+
+    <FeaturedProjectPreview
+      title={`Vics landscaping`}
+      slug="vics-landscaping"
+      description={`?????`}
+      images={[Vics1, Vics2, Vics3]}
       when={`August-September 2023`}
     />
   </div>

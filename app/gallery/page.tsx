@@ -52,7 +52,7 @@ const Gallery: React.FC = () => (
       <h1
         className={cx(
           `text-3xl xs:text-4xl sm:text-5xl text-black font-bold textcenter text-center`,
-          montserrat,
+          montserrat
         )}
       >
         Check out our work
@@ -83,11 +83,11 @@ const Gallery: React.FC = () => (
           year={2021}
         />
         <BigImage src={TieredWallByBarn1Img} city="Medina, OH" year={2022} />
-        <GalleryImage
+        {/* <GalleryImage
           src={TieredWallByBarn2Img}
           city="Medina, OH"
           year={2022}
-        />
+        /> */}
         <GalleryImage
           src={RockyOutcropByPoolImg}
           city="Hartville, OH"
@@ -194,11 +194,11 @@ const Gallery: React.FC = () => (
           city="Hartville, OH"
           year={2023}
         />
-        <MediumImageHorizontal
+        {/* <MediumImageHorizontal
           src={JaggedWalkwayImg}
           city="Hartville, OH"
           year={2023}
-        />
+        /> */}
       </div>
     </div>
   </div>
