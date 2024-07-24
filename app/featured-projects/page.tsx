@@ -2,7 +2,7 @@ import React from "react";
 import ModernLandscapingImage1 from "@/public/featured-projects/modern-landscaping/finished-1.jpg";
 import ModernLandscapingImage2 from "@/public/featured-projects/modern-landscaping/finished-2.jpg";
 import ModernLandscapingImage3 from "@/public/featured-projects/modern-landscaping/finished-3.jpg";
-import ClassicLandscapingImage1 from "@/public/featured-projects/classic-landscaping/finished-1.jpg";
+import ClassicLandscapingImage1 from "@/public/featured-projects/classic-landscaping/finished-9.jpg";
 import ClassicLandscapingImage2 from "@/public/featured-projects/classic-landscaping/finished-2.jpg";
 import ClassicLandscapingImage3 from "@/public/featured-projects/classic-landscaping/finished-3.jpg";
 import Vics1 from "@/public/featured-projects/natural-landscaping/progress-1.jpg";

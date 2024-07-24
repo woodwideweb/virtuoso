@@ -11,11 +11,13 @@ import {
 import Design from "@/public/featured-projects/classic-landscaping/design.jpg";
 import Finished1 from "@/public/featured-projects/classic-landscaping/finished-4.jpg";
 import Finished2 from "@/public/featured-projects/classic-landscaping/finished-7.jpg";
-import Finished3 from "@/public/featured-projects/classic-landscaping/finished-6.jpg";
+// import Finished3 from "@/public/featured-projects/classic-landscaping/finished-6.jpg";
+import Finished3 from "@/public/featured-projects/classic-landscaping/finished-9.jpg";
 import InProgress1 from "@/public/featured-projects/classic-landscaping/in-progress-1.jpg";
 import InProgress2 from "@/public/featured-projects/classic-landscaping/in-progress-2.jpg";
 import InProgress3 from "@/public/featured-projects/classic-landscaping/in-progress-3.jpg";
 import FeaturedProjectTemplate from "@/components/FeaturedProjectTemplate";
+// finished-5.jpg and finished-6.jpg could be deleted - reduce load time?
 
 const ClassicLandscaping: React.FC = () => (
   <FeaturedProjectTemplate
