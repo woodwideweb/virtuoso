@@ -5,9 +5,9 @@ import ModernLandscapingImage3 from "@/public/featured-projects/modern-landscapi
 import ClassicLandscapingImage1 from "@/public/featured-projects/classic-landscaping/finished-1.jpg";
 import ClassicLandscapingImage2 from "@/public/featured-projects/classic-landscaping/finished-2.jpg";
 import ClassicLandscapingImage3 from "@/public/featured-projects/classic-landscaping/finished-3.jpg";
-import Vics1 from "@/public/featured-projects/vics/progress-1.jpg";
-import Vics2 from "@/public/featured-projects/vics/progress-2.jpg";
-import Vics3 from "@/public/featured-projects/vics/progress-3.jpg";
+import Vics1 from "@/public/featured-projects/natural-landscaping/progress-1.jpg";
+import Vics2 from "@/public/featured-projects/natural-landscaping/progress-2.jpg";
+import Vics3 from "@/public/featured-projects/natural-landscaping/progress-3.jpg";
 import FeaturedProjectPreview from "@/components/FeaturedProjectPreview";
 
 export const metadata = {
@@ -41,11 +41,12 @@ const FeaturedProjects: React.FC = () => (
     />
 
     <FeaturedProjectPreview
-      title={`Vics landscaping`}
-      slug="vics-landscaping"
-      description={`?????`}
+      title={`Natural Landscaping`}
+      slug="natural-landscaping"
+      description={`For this two-tiered poolside patio, we blended the existing natural flagstone and boulders to compliment the Unilock wall stone and pavers to achieve a functional outdoor living area that highlights the beauty of this stunning log home.  
+      `}
       images={[Vics1, Vics2, Vics3]}
-      when={`August-September 2023`}
+      when={`March-April 2024`}
     />
   </div>
 );
