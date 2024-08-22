@@ -112,6 +112,13 @@ const SubHero: React.FC = () => {
                 <ul className="list-disc ml-4">
                   <li>Leaf removal</li>
                   <li>Snow removal</li>
+                  <li>
+                    <span className="font-bold">New!</span> Residential
+                    All-in-one package. <br />
+                    <Link href="flyer.pdf" className="underline">
+                      View flyer
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </ProjectTypeFeature>
@@ -163,7 +170,7 @@ const SubHero: React.FC = () => {
             <ProjectTypeFeature
               delay={1400}
               intersected={intersected}
-              title={`Commercial Snow Removal`}
+              title={`Snow Removal`}
               href="https://akronsnowmen.com"
               Icon={IconSnowflakeOff}
             >
