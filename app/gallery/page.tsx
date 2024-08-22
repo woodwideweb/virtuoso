@@ -7,8 +7,28 @@ import GalleryImage, {
 } from "@/components/GalleryImage";
 import { montserrat } from "@/lib/fonts";
 import ImageViewerModal from "@/components/ImageViewerModal";
+/* 
+        Images to use:
+        Wadsworth2024
+        hartville2024_2
+        hartville2024_1
+        kristis1
+        stairs
+        copley2024
+        vics-finished-1
+        vics-finished-3
+        */
 
 import PeanutePatioImg from "@/public/gallery/peanut-patio.jpg";
+import Kristis1 from "@/public/gallery/Kristis1.jpg";
+import Hartville2024_1 from "@/public/gallery/hartville2024_1.jpg";
+import Hartville2024_2 from "@/public/gallery/hartville2024_2.jpg";
+import Wadsworth2024 from "@/public/gallery/wadsworth2024.jpg";
+import Stairs from "@/public/gallery/stairs.jpg";
+import Copley2024 from "@/public/gallery/Copley2024.jpg";
+import Vics1 from "@/public/featured-projects/natural-landscaping/finished-1.jpg";
+import Vics3 from "@/public/featured-projects/natural-landscaping/finished-3.jpg";
+// import PeanutePatioImg from "@/public/gallery/peanut-patio.jpg";
 import SlabStepsInGravel1Img from "@/public/gallery/slab-steps-in-gravel-1.jpg";
 import SlabStepsInGravel2Img from "@/public/gallery/slab-steps-in-gravel-2.jpg";
 import NaturalPaversWithFirepit1Img from "@/public/gallery/natural-pavers-with-firepit-1.jpg";
@@ -197,15 +217,25 @@ const Gallery: React.FC = () => (
           city="Sharon, OH"
           year={2023}
         />
-
         {/* 
         Images to use:
-        Wadsworth2024
-        hartville2024_2
-        hartville2024_1
-        kristis1
-        stairs
+        Wadsworth2024 - used
+        hartville2024_2 - used
+        hartville2024_1 - used
+        kristis1 - used
+        stairs - used
+        copley2024 - used
+        vics-finished-1 - used
+        vics-finished-3 - used
         */}
+        <BigImage src={Kristis1} city="Sharon, OH" year={2023} />
+        <MediumImageHorizontal src={Stairs} city="Medina, OH" year={2023} />
+        <GalleryImage src={Hartville2024_2} city="Hartville, OH" year={2024} />
+        <MediumImageVertical src={Vics3} city="Rittman, OH" year={2024} />
+        <GalleryImage src={Copley2024} city="Copley, OH" year={2024} />
+        <BigImage src={Vics1} city="Rittman, OH" year={2024} />
+        <GalleryImage src={Hartville2024_1} city="Hartville, OH" year={2024} />
+        <GalleryImage src={Wadsworth2024} city="Wadsworth, OH" year={2024} />
       </div>
     </div>
   </div>
