@@ -35,6 +35,8 @@ import WaterfallImg from "@/public/gallery/waterfall.jpg";
 import WoodenArchImg from "@/public/gallery/wooden-arch.jpg";
 import EvergreenByWalkwayImg from "@/public/gallery/evergreen-by-walkway.jpg";
 import JaggedWalkwayImg from "@/public/gallery/jagged-walkway.jpg";
+import Ravenna2023Img from "@/public/gallery/ravenna2023.jpg";
+import Kristis2Img from "@/public/gallery/kristis2.jpg";
 
 import ModernLandscaping1Img from "@/public/featured-projects/modern-landscaping/finished-1.jpg";
 import ModernLandscaping2Img from "@/public/featured-projects/modern-landscaping/finished-2.jpg";
@@ -83,11 +85,7 @@ const Gallery: React.FC = () => (
           year={2021}
         />
         <BigImage src={TieredWallByBarn1Img} city="Medina, OH" year={2022} />
-        {/* <GalleryImage
-          src={TieredWallByBarn2Img}
-          city="Medina, OH"
-          year={2022}
-        /> */}
+        <GalleryImage src={Ravenna2023Img} city="Ravenna, OH" year={2023} />
         <GalleryImage
           src={RockyOutcropByPoolImg}
           city="Hartville, OH"
@@ -194,11 +192,20 @@ const Gallery: React.FC = () => (
           city="Hartville, OH"
           year={2023}
         />
-        {/* <MediumImageHorizontal
-          src={JaggedWalkwayImg}
-          city="Hartville, OH"
+        <MediumImageHorizontal
+          src={Kristis2Img}
+          city="Sharon, OH"
           year={2023}
-        /> */}
+        />
+
+        {/* 
+        Images to use:
+        Wadsworth2024
+        hartville2024_2
+        hartville2024_1
+        kristis1
+        stairs
+        */}
       </div>
     </div>
   </div>
