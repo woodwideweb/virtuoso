@@ -25,7 +25,7 @@ import Hartville2024_1 from "@/public/gallery/hartville2024_1.jpg";
 import Hartville2024_2 from "@/public/gallery/hartville2024_2.jpg";
 import Wadsworth2024 from "@/public/gallery/wadsworth2024.jpg";
 import Stairs from "@/public/gallery/stairs.jpg";
-import Copley2024 from "@/public/gallery/Copley2024.jpg";
+import Copley2024 from "@/public/gallery/copley2024.jpg";
 import Vics1 from "@/public/featured-projects/natural-landscaping/finished-1.jpg";
 import Vics3 from "@/public/featured-projects/natural-landscaping/finished-3.jpg";
 // import PeanutePatioImg from "@/public/gallery/peanut-patio.jpg";
