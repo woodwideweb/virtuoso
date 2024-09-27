@@ -53,7 +53,7 @@ const ModernLandscaping: React.FC = () => (
         title: `Plant assorted grasses, install decorative river rock, and place boulders to compliment the landscape`,
       },
     ]}
-    planParagraph={`Our favorite projects are the ones that challenge us the most, and this one fit the bill! Early on  we discovered that most of the material on site that we were hoping for us to repurpose during construction had been discontinued by the manufacturer.  So, we wouldn't be able to order more.  Putting our heads together, we found a way to blend some of the existing natural stone on the property to form a transition between new and old pavers, saving the customer thousands of dollars in stone and achieving a gorgeous finished product.  Take a look at how it all came together in early spring!`}
+    planParagraph={`Our favorite projects are the ones that challenge us the most, and this one fit the bill! Early on we discovered that most of the material on site that we were hoping to repurpose had been discontinued by the manufacturer. So, we wouldn't be able to order more. Putting our heads together, we found a way to blend some of the existing natural stone on the property to form a transition between new and old pavers, saving the customer thousands of dollars in stone and achieving a gorgeous finished product. Take a look at how it all came together in early spring!`}
     planImage={Finished3}
     inProgressImages={[Progress3, Progress1, Progress4, Progress5, Progress2]}
     // inProgressImages={[Progress2, Progress3, Progress4, Progress5]}

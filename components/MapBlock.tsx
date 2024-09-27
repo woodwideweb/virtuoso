@@ -90,7 +90,7 @@ const MapBlock: React.FC = () => {
           </h3>
           <p className="text-base xs:text-lg md:text-base lg:text-lg xl:text-xl text-black/60 max-w-xl mt-4 xl:mt-8">
             Simply fill out the contact form, click send, and one of our team
-            members will reach out to you within 24 hours.
+            members will reach out to you within 1 business day.
           </p>
           <Button
             type="link"
