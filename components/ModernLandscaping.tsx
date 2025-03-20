@@ -22,7 +22,7 @@ import FeaturedProjectTemplate from "@/components/FeaturedProjectTemplate";
 
 const ModernLandscaping: React.FC = () => (
   <FeaturedProjectTemplate
-    mainSplashPicture={Finished3}
+    mainSplashPicture={Finished2}
     mainSplashPictureAdjustments="lg:![object-position:0px_-90px] []"
     projectTitle="Modern tiered retaining wall"
     location="Hartville, OH"
