@@ -24,7 +24,7 @@ const SubHero: React.FC = () => {
       threshold: 1,
       rootMargin: `0px`,
     },
-    true,
+    true
   );
 
   const [showHeading, setShowHeading] = React.useState(false);
@@ -34,7 +34,7 @@ const SubHero: React.FC = () => {
     const headingTimeout = setTimeout(() => setShowHeading(intersected), 100);
     const subheadingTimeout = setTimeout(
       () => setShowSubheading(intersected),
-      300,
+      300
     );
     return () => {
       clearTimeout(headingTimeout);
@@ -75,7 +75,7 @@ const SubHero: React.FC = () => {
             className={cx(
               montserrat,
               `text-3xl xs:text-4xl md:text-5xl font-bold leading-[1.3em] transition-[transform,opacity] delay-300 duration-[700ms]`,
-              !showHeading && `translate-y-4 opacity-0`,
+              !showHeading && `translate-y-4 opacity-0`
             )}
           >
             What we do
@@ -83,7 +83,7 @@ const SubHero: React.FC = () => {
           <p
             className={cx(
               `text-lg md:text-xl mt-4 text-black/60 max-w-2xl transition-[transform,opacity] delay-300 duration-[700ms]`,
-              !showSubheading && `translate-y-4 opacity-0`,
+              !showSubheading && `translate-y-4 opacity-0`
             )}
             ref={ref}
           >
@@ -112,6 +112,13 @@ const SubHero: React.FC = () => {
                 <ul className="list-disc ml-4">
                   <li>Leaf removal</li>
                   <li>Snow removal</li>
+                  <li>
+                    <span className="font-bold">New!</span> Residential
+                    All-in-one package. <br />
+                    <Link href="flyer.pdf" className="underline">
+                      View flyer
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </ProjectTypeFeature>
@@ -163,7 +170,7 @@ const SubHero: React.FC = () => {
             <ProjectTypeFeature
               delay={1400}
               intersected={intersected}
-              title={`Commercial Snow Removal`}
+              title={`Snow Removal`}
               href="https://akronsnowmen.com"
               Icon={IconSnowflakeOff}
             >
@@ -171,17 +178,19 @@ const SubHero: React.FC = () => {
                 <ul className="list-disc ml-4">
                   <li>Plowing</li>
                   <li>Deicing</li>
-                  <li>Salt and brine* solutions</li>
+                  {/* Make this semantically correct! */}
+                  <li>Brine solutions*</li>
                 </ul>
                 <div
                   className={cx(
                     `flex justify-center items-center`,
-                    !intersected && `opacity-0`,
+                    !intersected && `opacity-0`
                   )}
                 >
+                  {/* Make this semantically correct! */}
                   <span className="max-w-xl text-center text-sm text-primary-800/70">
-                    * Environmentally friendly alternative that uses 1/3 the
-                    amount of salt and includes a non-corrosive additive
+                    * Environmentally friendly alternative to salt that uses 1/3
+                    the amount of salt and includes a non-corrosive additive
                     product.
                     {` `}
                     <Link href="https://akronsnowmen.com" className="underline">
@@ -301,7 +310,7 @@ const FeaturedImage: React.FC<FeaturedImageProps> = ({
     className={cx(
       `object-cover object-center rounded-[60px] xl:rounded-[80px] transition-[transform,opacity,filter] duration-[700ms]`,
       !intersected && `translate-y-4 grayscale`,
-      className,
+      className
     )}
   />
 );
@@ -326,7 +335,7 @@ const ProjectTypeFeature: React.FC<ProjectTypeFeatureProps> = ({
   <div
     className={cx(
       `bg-primary-50/60 p-6 sm:p-8 rounded-3xl overflow-hidden transition-[transform,opacity] duration-700 backdrop-blur-lg border-[0.5px] xl:border-none border-primary-300 flex flex-col`,
-      !intersected && `translate-y-4 opacity-0`,
+      !intersected && `translate-y-4 opacity-0`
     )}
     style={{ transitionDelay: `${delay}ms` }}
   >

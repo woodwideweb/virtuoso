@@ -8,15 +8,22 @@ import GalleryImage, {
 import { montserrat } from "@/lib/fonts";
 import ImageViewerModal from "@/components/ImageViewerModal";
 
+// the lower half (that I made) needs some work - I have the wrong orientations in some parts
 import PeanutePatioImg from "@/public/gallery/peanut-patio.jpg";
-import SlabStepsInGravel1Img from "@/public/gallery/slab-steps-in-gravel-1.jpg";
+import Kristis1 from "@/public/gallery/Kristis1.jpg";
+import Hartville2024_1 from "@/public/gallery/hartville2024_1.jpg";
+import Hartville2024_2 from "@/public/gallery/hartville2024_2.jpg";
+import Wadsworth2024 from "@/public/gallery/wadsworth2024.jpg";
+import Stairs from "@/public/gallery/stairs.jpg";
+import Copley2024 from "@/public/gallery/copley2024.jpg";
+import Vics1 from "@/public/featured-projects/natural-landscaping/finished-1.jpg";
+import Vics3 from "@/public/featured-projects/natural-landscaping/finished-3.jpg";
 import SlabStepsInGravel2Img from "@/public/gallery/slab-steps-in-gravel-2.jpg";
 import NaturalPaversWithFirepit1Img from "@/public/gallery/natural-pavers-with-firepit-1.jpg";
 import NaturalPaversWithFirepit2Img from "@/public/gallery/natural-pavers-with-firepit-2.jpg";
 import TieredWallByBarn1Img from "@/public/gallery/tiered-wall-by-barn-1.jpg";
-import TieredWallByBarn2Img from "@/public/gallery/tiered-wall-by-barn-2.jpg";
 import RockyOutcropByPoolImg from "@/public/gallery/rocky-outcrop-by-pool.jpg";
-import PatioInGravel1Img from "@/public/gallery/patio-in-gravel-1.jpg";
+import PatioInGravel2Img from "@/public/gallery/patio-in-gravel-2.jpg";
 import StepsThroughWallImg from "@/public/gallery/steps-through-wall.jpg";
 import RaisedRoundPatio1Img from "@/public/gallery/raised-round-patio-1.jpg";
 import RaisedRoundPatio4Img from "@/public/gallery/raised-round-patio-4.jpg";
@@ -34,7 +41,9 @@ import StonePatioWithGrillImg from "@/public/gallery/stone-patio-with-grill.jpg"
 import WaterfallImg from "@/public/gallery/waterfall.jpg";
 import WoodenArchImg from "@/public/gallery/wooden-arch.jpg";
 import EvergreenByWalkwayImg from "@/public/gallery/evergreen-by-walkway.jpg";
-import JaggedWalkwayImg from "@/public/gallery/jagged-walkway.jpg";
+import Ravenna2023Img from "@/public/gallery/ravenna2023.jpg";
+import Kristis2Img from "@/public/gallery/kristis2.jpg";
+import Frazee3Img from "@/public/gallery/Frazee3.jpg";
 
 import ModernLandscaping1Img from "@/public/featured-projects/modern-landscaping/finished-1.jpg";
 import ModernLandscaping2Img from "@/public/featured-projects/modern-landscaping/finished-2.jpg";
@@ -52,7 +61,7 @@ const Gallery: React.FC = () => (
       <h1
         className={cx(
           `text-3xl xs:text-4xl sm:text-5xl text-black font-bold textcenter text-center`,
-          montserrat,
+          montserrat
         )}
       >
         Check out our work
@@ -66,9 +75,10 @@ const Gallery: React.FC = () => (
           year={2021}
         />
         <MediumImageHorizontal
-          src={SlabStepsInGravel1Img}
-          city="Wadsworth, OH"
-          year={2022}
+          // src={SlabStepsInGravel1Img}
+          src={Frazee3Img}
+          city="Copley, OH"
+          year={2024}
         />
         <GalleryImage src={WoodenArchImg} city="Kansas City, KS" year={2004} />
 
@@ -77,23 +87,20 @@ const Gallery: React.FC = () => (
           city="Blue Springs, MO"
           year={2005}
         />
-        <GalleryImage
-          src={NaturalPaversWithFirepit2Img}
-          city="Brecksville, OH"
-          year={2021}
-        />
-        <BigImage src={TieredWallByBarn1Img} city="Medina, OH" year={2022} />
-        <GalleryImage
-          src={TieredWallByBarn2Img}
-          city="Medina, OH"
-          year={2022}
-        />
-        <GalleryImage
+        <GalleryImage src={Vics1} city="Rittman, OH" year={2024} />
+        <BigImage
           src={RockyOutcropByPoolImg}
           city="Hartville, OH"
           year={2022}
         />
-        <BigImage src={PatioInGravel1Img} city="Akron, OH" year={2023} />
+        <GalleryImage src={Ravenna2023Img} city="Ravenna, OH" year={2023} />
+        <GalleryImage
+          src={TieredWallByBarn1Img}
+          city="Medina, OH"
+          year={2022}
+        />
+        {/* very obviously the same project, but I can't crop the other picture to look nice */}
+        <BigImage src={PatioInGravel2Img} city="Akron, OH" year={2023} />
         <MediumImageHorizontal
           src={StepsThroughWallImg}
           city="Akron, OH"
@@ -109,10 +116,12 @@ const Gallery: React.FC = () => (
           city="Wadsworth, OH"
           year={2023}
         />
+        {/* can't decide which is better*/}
         <BigImage
-          src={FlowerBedsSAroundHouseImg}
-          city="Kansas City, MO"
-          year={2001}
+          src={RaisedPatioWithInsetStairImg}
+          // src={NaturalPatioWithRedChairsImg}
+          city="Hinkley, OH"
+          year={2022}
         />
         <MediumImageHorizontal
           src={GiganticNaturalPaverPatioImg}
@@ -129,8 +138,10 @@ const Gallery: React.FC = () => (
           city="Kansas City, MO"
           year={2001}
         />
+        {/* can't decide which is better*/}
         <GalleryImage
           src={NaturalPatioWithRedChairsImg}
+          // src={RaisedPatioWithInsetStairImg}
           city="Brecksville, OH"
           year={2021}
         />
@@ -140,9 +151,9 @@ const Gallery: React.FC = () => (
           year={2021}
         />
         <GalleryImage
-          src={RaisedPatioWithInsetStairImg}
-          city="Hinkley, OH"
-          year={2022}
+          src={FlowerBedsSAroundHouseImg}
+          city="Kansas City, MO"
+          year={2001}
         />
         <GalleryImage
           src={RedChairsAroundFirepitImg}
@@ -195,10 +206,35 @@ const Gallery: React.FC = () => (
           year={2023}
         />
         <MediumImageHorizontal
-          src={JaggedWalkwayImg}
-          city="Hartville, OH"
+          src={Kristis2Img}
+          city="Sharon, OH"
           year={2023}
         />
+        {/* 
+        Images to use:
+        Wadsworth2024 - used
+        hartville2024_2 - used
+        hartville2024_1 - used
+        kristis1 - used
+        stairs - used
+        copley2024 - used
+        vics-finished-1 - used
+        vics-finished-3 - used
+        */}
+        <BigImage src={Kristis1} city="Sharon, OH" year={2023} />
+        <MediumImageHorizontal src={Stairs} city="Medina, OH" year={2023} />
+        <GalleryImage src={Hartville2024_2} city="Hartville, OH" year={2024} />
+        <MediumImageVertical src={Vics3} city="Rittman, OH" year={2024} />
+        <GalleryImage src={Copley2024} city="Copley, OH" year={2024} />
+
+        <BigImage
+          src={NaturalPaversWithFirepit2Img}
+          city="Brecksville, OH"
+          year={2021}
+        />
+
+        <GalleryImage src={Hartville2024_1} city="Hartville, OH" year={2024} />
+        <GalleryImage src={Wadsworth2024} city="Wadsworth, OH" year={2024} />
       </div>
     </div>
   </div>

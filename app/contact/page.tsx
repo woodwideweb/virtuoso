@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
   title: `Virtuoso Landscaping | Contact Us`,
-  description: `Want to discuss your project or meet with us? Simply fill out the contact form, click send, and one of our team members will reach out to you within 24 hours.`,
+  description: `Want to discuss your project or meet with us? Simply fill out the contact form, click send, and one of our team members will reach out to you within 1 business day.`,
 };
 
 const Contact: React.FC = () => (
@@ -18,14 +18,14 @@ const Contact: React.FC = () => (
       <h1
         className={cx(
           montserrat,
-          `text-3xl xs:text-4xl xl:text-5xl font-bold text-center lg:text-left max-w-2xl mt-8`,
+          `text-3xl xs:text-4xl xl:text-5xl font-bold text-center lg:text-left max-w-2xl mt-8`
         )}
       >
         Want to discuss your project or meet with us?
       </h1>
       <p className="sm:text-lg xl:text-xl text-black/60 max-w-2xl mt-4 xl:mt-6 text-center lg:text-left">
         Simply fill out the contact form, click send, and one of our team
-        members will reach out to you within 24 hours.
+        members will reach out to you within 1 business day.
       </p>
     </div>
     <ContactForm />
