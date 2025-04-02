@@ -77,7 +77,7 @@ const Gallery: React.FC = () => (
         <MediumImageHorizontal
           // src={SlabStepsInGravel1Img}
           src={Frazee3Img}
-          city="?????, OH"
+          city="Copley, OH"
           year={2024}
         />
         <GalleryImage src={WoodenArchImg} city="Kansas City, KS" year={2004} />
