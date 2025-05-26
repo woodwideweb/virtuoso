@@ -14,9 +14,9 @@ import type { StaticImageData } from "next/image";
 import type { TablerIcon } from "@/lib/types";
 import { montserrat } from "@/lib/fonts";
 import { useIntersectionObserver } from "@/lib/hooks";
-import ModernLandscapingImage1 from "@/public/featured-projects/modern-landscaping/finished-1.jpg";
-import RaisedPatioWithInsetStairImg from "@/public/gallery/raised-patio-with-inset-stair.jpg";
-import WaterfallImg from "@/public/gallery/waterfall.jpg";
+import Pic1 from "@/public/featured-projects/modern-landscaping/finished-1.jpg";
+import Pic2 from "@/public/gallery/oh-sharon-2023.jpg";
+import Pic3 from "@/public/gallery/oh-wadsworth-2024.jpg";
 
 const SubHero: React.FC = () => {
   const { ref, intersected } = useIntersectionObserver(
@@ -24,7 +24,7 @@ const SubHero: React.FC = () => {
       threshold: 1,
       rootMargin: `0px`,
     },
-    true
+    true,
   );
 
   const [showHeading, setShowHeading] = React.useState(false);
@@ -34,7 +34,7 @@ const SubHero: React.FC = () => {
     const headingTimeout = setTimeout(() => setShowHeading(intersected), 100);
     const subheadingTimeout = setTimeout(
       () => setShowSubheading(intersected),
-      300
+      300,
     );
     return () => {
       clearTimeout(headingTimeout);
@@ -51,7 +51,7 @@ const SubHero: React.FC = () => {
             <FeaturedImage
               delay={900}
               intersected={intersected}
-              src={RaisedPatioWithInsetStairImg}
+              src={Pic2}
               className="flex-grow xl:flex-grow-0 w-0 xl:w-4/5 min-[1500px]:w-96 2xl:w-128 h-52 sm:h-64 xl:h-72 min-[1500px]:h-64 2xl:h-72"
             />
           </div>
@@ -59,13 +59,13 @@ const SubHero: React.FC = () => {
             <FeaturedImage
               delay={1100}
               intersected={intersected}
-              src={ModernLandscapingImage1}
+              src={Pic1}
               className="self-end min-[1500px]:self-auto flex-grow xl:flex-grow-0 w-0 xl:w-4/5 min-[1500px]:w-72 2xl:w-96 h-52 sm:h-64 xl:h-72 2xl:h-96"
             />
             <FeaturedImage
               delay={1300}
               intersected={intersected}
-              src={WaterfallImg}
+              src={Pic3}
               className="w-0 xl:w-4/5 min-[1500px]:w-80 flex-grow xl:flex-grow-0 2xl:flex-grow sm:h-64 xl:h-72 min-[1500px]:h-96 2xl:h-128 hidden md:block"
             />
           </div>
@@ -75,7 +75,7 @@ const SubHero: React.FC = () => {
             className={cx(
               montserrat,
               `text-3xl xs:text-4xl md:text-5xl font-bold leading-[1.3em] transition-[transform,opacity] delay-300 duration-[700ms]`,
-              !showHeading && `translate-y-4 opacity-0`
+              !showHeading && `translate-y-4 opacity-0`,
             )}
           >
             What we do
@@ -83,7 +83,7 @@ const SubHero: React.FC = () => {
           <p
             className={cx(
               `text-lg md:text-xl mt-4 text-black/60 max-w-2xl transition-[transform,opacity] delay-300 duration-[700ms]`,
-              !showSubheading && `translate-y-4 opacity-0`
+              !showSubheading && `translate-y-4 opacity-0`,
             )}
             ref={ref}
           >
@@ -184,7 +184,7 @@ const SubHero: React.FC = () => {
                 <div
                   className={cx(
                     `flex justify-center items-center`,
-                    !intersected && `opacity-0`
+                    !intersected && `opacity-0`,
                   )}
                 >
                   {/* Make this semantically correct! */}
@@ -310,7 +310,7 @@ const FeaturedImage: React.FC<FeaturedImageProps> = ({
     className={cx(
       `object-cover object-center rounded-[60px] xl:rounded-[80px] transition-[transform,opacity,filter] duration-[700ms]`,
       !intersected && `translate-y-4 grayscale`,
-      className
+      className,
     )}
   />
 );
@@ -335,7 +335,7 @@ const ProjectTypeFeature: React.FC<ProjectTypeFeatureProps> = ({
   <div
     className={cx(
       `bg-primary-50/60 p-6 sm:p-8 rounded-3xl overflow-hidden transition-[transform,opacity] duration-700 backdrop-blur-lg border-[0.5px] xl:border-none border-primary-300 flex flex-col`,
-      !intersected && `translate-y-4 opacity-0`
+      !intersected && `translate-y-4 opacity-0`,
     )}
     style={{ transitionDelay: `${delay}ms` }}
   >
