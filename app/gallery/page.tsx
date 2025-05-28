@@ -27,7 +27,7 @@ const Gallery: React.FC = async () => {
       };
     })
     .map(({ url, name }) => {
-      let [state, city, year] = name.split("-");
+      let [index, state, city, year] = name.split("-");
       return {
         url,
         state: state.toUpperCase(),
@@ -45,7 +45,7 @@ const Gallery: React.FC = async () => {
         <h1
           className={cx(
             `text-3xl xs:text-4xl sm:text-5xl text-black font-bold textcenter text-center`,
-            montserrat,
+            montserrat
           )}
         >
           Check out our work
