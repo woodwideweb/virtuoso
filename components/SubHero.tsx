@@ -14,9 +14,9 @@ import type { StaticImageData } from "next/image";
 import type { TablerIcon } from "@/lib/types";
 import { montserrat } from "@/lib/fonts";
 import { useIntersectionObserver } from "@/lib/hooks";
-import Pic1 from "@/public/featured-projects/modern-landscaping/finished-1.jpg";
-import Pic2 from "@/public/gallery/23-oh-sharon-2023.jpg";
-import Pic3 from "@/public/gallery/29-oh-wadsworth-2023.jpg";
+import Pic1 from "@/public/gallery/26-oh-hartville-2022-4032-3024.jpg";
+import Pic2 from "@/public/gallery/17-oh-hinckley-2022-3456-2304.jpg";
+import Pic3 from "@/public/gallery/19-mo-blue_springs-2005-1813-2584.jpg";
 
 const SubHero: React.FC = () => {
   const { ref, intersected } = useIntersectionObserver(

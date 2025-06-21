@@ -16,6 +16,8 @@ const Gallery: React.FC = async () => {
     state: string;
     city: string;
     year: number;
+    width: number;
+    height: number;
   }
 
   let imgUrls: Img[] = (await glob(["./public/gallery/*.jpg"]))
@@ -27,7 +29,7 @@ const Gallery: React.FC = async () => {
       };
     })
     .map(({ url, name }) => {
-      let [index, state, city, year] = name.split("-");
+      let [index, state, city, year, width, height] = name.split("-");
       return {
         url,
         state: state.toUpperCase(),
@@ -35,6 +37,8 @@ const Gallery: React.FC = async () => {
           return match.toUpperCase();
         }),
         year: Number(year),
+        width: Number(width),
+        height: Number(height),
       };
     });
 
@@ -57,8 +61,8 @@ const Gallery: React.FC = async () => {
             <GalleryImage
               src={{
                 src: img.url.replace("public", ""),
-                width: 100,
-                height: 100,
+                width: img.width,
+                height: img.height,
               }}
               className={(() => {
                 switch (index % 6) {
