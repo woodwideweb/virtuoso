@@ -41,7 +41,7 @@ const ImageViewerModal: React.FC = () => {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-8 scale-90"
             >
-              <Dialog.Panel className="rounded-[40px] relative flex border border-amber-50 mx-20 w-screen max-w-7xl h-3/4 overflow-hidden">
+              <Dialog.Panel className="rounded-[40px] relative flex flex-col-reverse md:flex-row border border-amber-50 mx-20 w-screen max-w-7xl h-3/4 overflow-hidden">
                 <div className="flex-grow">
                   <Image
                     src={state.imageViewerImage ?? ``}
