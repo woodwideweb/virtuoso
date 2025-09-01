@@ -4,6 +4,8 @@ import GalleryImage from "@/components/GalleryImage";
 import { montserrat } from "@/lib/fonts";
 import ImageViewerModal from "@/components/ImageViewerModal";
 import { glob } from "glob";
+import hartville from "@/public/oh-hartville-2022-4032-3024.jpg";
+import brecksville from "@/public/oh-brecksville-2022-3456-2304.jpg";
 
 export const metadata = {
   title: `Virtuoso Landscaping ~ Gallery`,
@@ -57,6 +59,28 @@ const Gallery: React.FC = async () => {
       </div>
       <div className="flex justify-center items-center p-8 sm:p-12 md:p-20 bg-gradient-to-b bg-amber-100 rounded-[80px] my-8 lg:mx-12">
         <div className="flex-grow max-w-[1200px] grid grid-cols-2 md+:grid-cols-4 gap-4 lg:gap-8">
+          <GalleryImage
+            src={{
+              src: brecksville.src,
+              width: 3456,
+              height: 2304,
+            }}
+            year={2022}
+            city={"Brecksville, OH"}
+            className="row-span-2 col-span-2"
+          />
+
+          <GalleryImage
+            src={{
+              src: hartville.src,
+              width: 4032,
+              height: 3024,
+            }}
+            year={2022}
+            city={"Hartville, OH"}
+            className="row-span-2 col-span-2"
+          />
+
           {imgUrls.map((img, index) => (
             <GalleryImage
               src={{

@@ -14,8 +14,9 @@ import type { StaticImageData } from "next/image";
 import type { TablerIcon } from "@/lib/types";
 import { montserrat } from "@/lib/fonts";
 import { useIntersectionObserver } from "@/lib/hooks";
-import Pic1 from "@/public/gallery/6-oh-hinckley-2022-3456-2304.jpg";
-import Pic2 from "@/public/gallery/7-oh-hartville-2022-4032-3024.jpg";
+import Pic1 from "@/public/gallery/25-oh-hinckley-2022-3456-2304.jpg";
+// import Pic2 from "@/public/gallery/7-oh-hartville-2022-4032-3024.jpg";
+import Pic2 from "@/public/oh-hartville-2022-4032-3024.jpg";
 import Pic3 from "@/public/waterfall.jpg";
 
 const SubHero: React.FC = () => {
