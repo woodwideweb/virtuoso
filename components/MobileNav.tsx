@@ -12,7 +12,7 @@ const MobileNav: React.FC<Props> = ({ open, setOpen }) => (
     onClick={(e) => e.stopPropagation()}
     className={cx(
       `bg-amber-100 rounded-r-[40px] p-6 w-72 shadow-2xl transition-transform duration-500 absolute h-screen left-0 z-50 flex flex-col`,
-      open ? `translate-x-0` : `-translate-x-80`,
+      open ? `translate-x-0` : `-translate-x-80`
     )}
   >
     <MobileNavLink setOpen={setOpen} to="/">
@@ -38,6 +38,12 @@ const MobileNav: React.FC<Props> = ({ open, setOpen }) => (
       to="/featured-projects/classic-landscaping"
     >
       Classic Landscaping
+    </MobileNavLink>
+    <MobileNavLink
+      setOpen={setOpen}
+      to="/featured-projects/natural-landscaping"
+    >
+      Natural Landscaping
     </MobileNavLink>
   </nav>
 );

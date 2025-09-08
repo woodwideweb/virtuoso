@@ -8,6 +8,7 @@ import {
   IconCalendar,
   IconMapPin,
   IconQuote,
+  IconChevronRight,
 } from "@tabler/icons-react";
 import NextBgImage from "next-bg-image";
 import type { StaticImageData } from "next/image";
@@ -73,7 +74,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
     {
       threshold: 1,
       rootMargin: `0px`,
-    },
+    }
   );
   const { intersected: intersectedSecondCaption, ref: secondCaptionRef } =
     useIntersectionObserver({
@@ -100,7 +101,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
     <div
       className={cx(
         `px-4 xs:px-8 sm:px-12 xl:px-20 py-12 transition-colors duration-700`,
-        bgGreen ? `bg-primary-800` : `bg-amber-50`,
+        bgGreen ? `bg-primary-800` : `bg-amber-50`
       )}
     >
       <div className="flex flex-col items-center">
@@ -111,7 +112,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
             priority
             className={cx(
               `w-11/12 max-w-7xl object-top object-cover fixed sepia-[30%] rounded-[60px] sm:rounded-[80px]`,
-              mainSplashPictureAdjustments,
+              mainSplashPictureAdjustments
             )}
             style={{
               height: `${(width >= 1080 ? 608 : 400) - scrollY / 4}px`,
@@ -125,7 +126,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
             className={cx(
               `text-3xl xs:text-4xl sm:text-5xl 2xl:text-6xl font-bold text-center lg:text-left relative w-fit transition-colors duration-700 !leading-tight mt-4 sm:mt-0`,
               bgGreen ? `text-white` : `text-black`,
-              montserrat,
+              montserrat
             )}
           >
             <span className="relative">
@@ -137,7 +138,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                         `transition-[opacity,transform] duration-700 inline-block mr-3`,
                         index < shownLetters / 5
                           ? `opacity-100`
-                          : `opacity-0 -translate-y-4 translate-x-4 -rotate-6`,
+                          : `opacity-0 -translate-y-4 translate-x-4 -rotate-6`
                       )}
                     >
                       {word}
@@ -195,7 +196,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                 <p
                   className={cx(
                     `text-xl md:text-2xl text-white font-medium text-center max-w-4xl`,
-                    montserrat,
+                    montserrat
                   )}
                 >
                   {quote}
@@ -208,7 +209,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                   <h2
                     className={cx(
                       montserrat,
-                      `text-4xl sm:text-5xl lg+:text-6xl font-bold text-white`,
+                      `text-4xl sm:text-5xl lg+:text-6xl font-bold text-white`
                     )}
                   >
                     Design and construction
@@ -221,6 +222,10 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                 </div>
               </div>
               <div className="relative">
+                <IconChevronRight
+                  size={40}
+                  className="text-primary-100 absolute right-0 top-[140px] z-20 md:hidden"
+                />
                 <div className="flex lg+:flex-col gap-8 flex-grow items-end overflow-scroll relative">
                   {inProgressImages.map((image) => (
                     <Image
@@ -245,7 +250,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                 `flex justify-center items-center h-screen transition-[width,border-radius] duration-700 relative overflow-hidden`,
                 overBgImage
                   ? `w-screen rounded-none`
-                  : `w-[1280px] rounded-[40px] sm:rounded-[80px] md:rounded-[120px]`,
+                  : `w-[1280px] rounded-[40px] sm:rounded-[80px] md:rounded-[120px]`
               )}
             >
               <Image
@@ -253,13 +258,13 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                   intersectedThirdCaption
                     ? finishedProject.third.image
                     : intersectedSecondCaption
-                      ? finishedProject.second.image
-                      : finishedProject.first.image
+                    ? finishedProject.second.image
+                    : finishedProject.first.image
                 }
                 alt="Modern landscaping project"
                 className={cx(
                   `w-full h-full absolute left-0 top-0 object-center object-cover transition-[filter] duration-700`,
-                  overBgImage ? `sepia-[50%]` : `sepia-[20%]`,
+                  overBgImage ? `sepia-[50%]` : `sepia-[20%]`
                 )}
               />
               <div
@@ -267,14 +272,14 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                   `w-full h-full bg-gradient-to-r from-black/80 via-black/70 to-black/40 lg:to-transparent absolute left-0 top-0 transition-[border-radius,opacity] duration-700`,
                   overBgImage
                     ? `rounded-none opacity-100`
-                    : `rounded-[120px] opacity-0`,
+                    : `rounded-[120px] opacity-0`
                 )}
               ></div>
             </div>
           </div>
           <div
             className={cx(
-              `flex justify-start relative px-8 sm:px-12 lg:px-20 mt-20`,
+              `flex justify-start relative px-8 sm:px-12 lg:px-20 mt-20`
             )}
           >
             <div className="max-w-3xl flex flex-col gap-[calc(100vh-160px)]">
@@ -282,7 +287,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                 <h3
                   className={cx(
                     `text-3xl xs:text-4xl lg:text-5xl text-white font-semibold`,
-                    montserrat,
+                    montserrat
                   )}
                 >
                   {finishedProject.first.caption}
@@ -295,7 +300,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                 <h3
                   className={cx(
                     `text-3xl xs:text-4xl lg:text-5xl text-white font-semibold`,
-                    montserrat,
+                    montserrat
                   )}
                 >
                   {finishedProject.second.caption}
@@ -308,7 +313,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
                 <h3
                   className={cx(
                     `text-3xl xs:text-4xl lg:text-5xl text-white font-semibold`,
-                    montserrat,
+                    montserrat
                   )}
                 >
                   {finishedProject.third.caption}
@@ -324,7 +329,7 @@ const FeaturedProjectTemplate: React.FC<Props> = ({
           <h2
             className={cx(
               montserrat,
-              `text-3xl xs:text-4xl md:text-5xl font-bold text-center !leading-tight`,
+              `text-3xl xs:text-4xl md:text-5xl font-bold text-center !leading-tight`
             )}
           >
             Want your landscape to look like this?
@@ -369,19 +374,19 @@ const PillBadge: React.FC<PillBadgeProps> = ({
       `flex items-center gap-2 backdrop-blur-md px-4 py-2 rounded-full transition-[opacity,transform,background-color] duration-700`,
       !show && `translate-y-4 opacity-0`,
       bgGreen ? `bg-primary-700` : `bg-amber-200/40`,
-      className,
+      className
     )}
   >
     <Icon
       className={cx(
         bgGreen ? `text-primary-100` : `text-amber-700`,
-        `transition-colors duration-700`,
+        `transition-colors duration-700`
       )}
     />
     <span
       className={cx(
         bgGreen ? `text-primary-200` : `text-amber-700/60`,
-        `font-medium transition-colors duration-700`,
+        `font-medium transition-colors duration-700`
       )}
     >
       {children}

@@ -28,7 +28,7 @@ const About: NextPage = () => (
       <h2
         className={cx(
           `text-3xl xs:text-4xl md:text-5xl font-semibold text-center`,
-          montserrat,
+          montserrat
         )}
       >
         Management and Administrative Staff
@@ -135,7 +135,7 @@ const StaffCard: React.FC<StaffCardProps> = ({
         alt={`Photo of ${name}`}
         className={cx(
           `w-36 h-36 rounded-full xs:rounded-2xl shrink-0 object-cover`,
-          imagePlacement,
+          imagePlacement
         )}
       />
       <div className="flex flex-col items-center xs:items-start">

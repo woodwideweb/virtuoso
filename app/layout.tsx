@@ -21,19 +21,19 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             `fixed left-0 top-0 w-screen h-screen bg-amber-50/70 z-50 transition-[opacity,backdrop-filter] duration-500`,
             sidebarOpen
               ? `opacity-100 backdrop-blur-md`
-              : `opacity-0 pointer-events-none`,
+              : `opacity-0 pointer-events-none`
           )}
         />
         <MobileNav open={sidebarOpen} setOpen={setSidebarOpen} />
         <ImageViewerStateProvider>
           <header
             className={cx(
-              `flex items-center justify-between top-0 w-full transition-[height,box-shadow] duration-500 py-2 sm:py-6 px-6 sm:px-8 bg-amber-50 relative z-40`,
+              `flex items-center justify-between top-0 w-full transition-[height,box-shadow] duration-500 py-2 sm:py-6 px-6 sm:px-8 bg-amber-50 relative z-40`
             )}
           >
             <Logo
               className={cx(
-                `transition-[margin-left,transform] duration-500 scale-[80%] sm:scale-100 -ml-8 sm:ml-0`,
+                `transition-[margin-left,transform] duration-500 scale-[80%] sm:scale-100 -ml-8 sm:ml-0`
               )}
             />
             <nav className="hidden lg:flex gap-1">
@@ -73,6 +73,9 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                   </FooterLink>
                   <FooterLink to="/featured-projects/classic-landscaping">
                     Classic landscaping
+                  </FooterLink>
+                  <FooterLink to="/featured-projects/natural-landscaping">
+                    Natural landscaping
                   </FooterLink>
                 </ul>
               </div>

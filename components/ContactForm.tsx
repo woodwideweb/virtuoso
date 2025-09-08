@@ -8,8 +8,9 @@ import TextInput from "./TextInput";
 import AmberWave from "@/public/amber-wave.svg";
 
 const ContactForm: React.FC = () => {
+  // apparently there needs to be something...
   const [state, handleSubmit] = useForm(
-    process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_FORM_ID ?? ``,
+    process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_FORM_ID ?? `placeholder`
   );
 
   return (
