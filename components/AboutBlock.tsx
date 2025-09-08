@@ -37,14 +37,9 @@ const AboutBlock: React.FC = () => (
       </p>
       <div className="flex flex-col md:flex-row min-[1400px]:flex-col 2xl:flex-row mt-8 md:mt-12 gap-6 md:gap-8 2xl:gap-12">
         <FeaturedProject
-          href="/featured-projects/modern-landscaping"
+          href="/featured-projects/"
           src={Finished2}
-          title={`Modern landscaping`}
-        />
-        <FeaturedProject
-          href="/featured-projects/classic-landscaping"
-          src={Finished1}
-          title={`Classic landscaping`}
+          title={`Featured projects`}
         />
       </div>
     </div>
@@ -60,7 +55,7 @@ const AboutBlock: React.FC = () => (
         <h2
           className={cx(
             `text-3xl xs:text-4xl md:text-5xl font-bold flex flex-wrap`,
-            montserrat,
+            montserrat
           )}
         >
           Leaders in{` `}
