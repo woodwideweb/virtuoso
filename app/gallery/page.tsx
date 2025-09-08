@@ -6,6 +6,7 @@ import ImageViewerModal from "@/components/ImageViewerModal";
 import { glob } from "glob";
 import hartville from "@/public/oh-hartville-2022-4032-3024.jpg";
 import brecksville from "@/public/oh-brecksville-2022-3456-2304.jpg";
+// trying to make a change so the silly github thing will redelopy...
 
 export const metadata = {
   title: `Virtuoso Landscaping ~ Gallery`,
