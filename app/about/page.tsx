@@ -9,9 +9,9 @@ import RodPhoto from "@/public/team/rod.jpg";
 import KristiPhoto from "@/public/team/kristi.jpg";
 import BoPhoto from "@/public/team/bo.jpg";
 import AmyPhoto from "@/public/team/amy.jpg";
-import VivianPhoto from "@/public/team/vivian.jpg";
 import JosuePhoto from "@/public/team/josue.jpg";
-import AustinPhoto from "@/public/team/austin.jpg";
+import JasenPhoto from "@/public/team/jasen-block.jpg";
+import IsabellaPhoto from "@/public/team/isabella-block.jpg";
 import JohnPhoto from "@/public/team/john.jpg";
 import AboutPageHero from "@/components/AboutPageHero";
 import AboutPageCTA from "@/components/AboutPageCTA";
@@ -55,12 +55,12 @@ const About: NextPage = () => (
           yearStarted={2016}
         />
         <StaffCard
-          name="Austin Schlabach"
-          title="Landscape Maintenance Manager"
-          blurb="Second only to its founder, Austin is the longest-standing member of Virtuoso Landscaping. Austin is the kind of loyal and do-it-right employee that most landscaping companies only dream of having; striping lawns is his first love."
-          src={AustinPhoto}
-          imagePlacement="[object-position:0px_-20px]"
-          yearStarted={2010}
+          name="Josué Rodriguez"
+          title="Operations Manager"
+          blurb="Josue is a favorite who is dearly loved amongst our crew. He's an expert in maintenance, project planning, and commercial account management, but can be found doing just about anything. Even after a long day of work, he always has a smile and a kind word for everyone."
+          src={JosuePhoto}
+          imagePlacement="[object-position:-30px_0px]"
+          yearStarted={2019}
         />
         <StaffCard
           name="Boaz Costa"
@@ -71,21 +71,23 @@ const About: NextPage = () => (
           yearStarted={2017}
         />
         <StaffCard
-          name="Josué Rodriguez"
-          title="Procurement and Sales"
-          blurb="Josue is a customer favorite who is dearly loved amongst our crew. He is our go-to guy for everything from bid writing to account audits, and he does it all from his office in the sunny mountains of Costa Rica."
-          src={JosuePhoto}
-          imagePlacement="[object-position:-20px_0px]"
+          name="Jasen Sargent"
+          title="Landscape Maintenance Manager"
+          blurb="Jasen grew up NYC where there's hardly a lawn to be found, and now he can stripe a lawn better than most midwesterners. He's usually found in the field managing the crew and keeping all our properties looking neat and tidy. "
+          src={JasenPhoto}
+          imagePlacement="[object-position:-10px_0px]"
+          yearStarted={2022}
+        />
+        {/* had to modify to get rid of the orphan */}
+        <StaffCard
+          name="Isabella Costa"
+          title="Assistant Manager"
+          blurb={`Being part of the family means that “Baya” has been a part of the business since the day she was born. Now she's more than just a morale booster: she's taken on lots of responsibilities related to managing residential accounts, bid writing, and all the little tasks that would fall through the cracks without her diligence.`}
+          src={IsabellaPhoto}
+          imagePlacement="[object-position:0px_0px]"
           yearStarted={2019}
         />
-        <StaffCard
-          name="John Weller"
-          title="Sales"
-          blurb={`"Grandpa" has been part of the family for a long time, but we're happy for him to have officially joined the team in 2023. His many years of experience working with waterways and drainage systems as a civil engineer make him a tremendous asset and point of contact for current and future customers.`}
-          src={JohnPhoto}
-          imagePlacement="[object-position:0px_0px]"
-          yearStarted={2023}
-        />
+
         <StaffCard
           name="Amy Horan"
           title="Administrative Assistant"
@@ -95,12 +97,12 @@ const About: NextPage = () => (
           yearStarted={2022}
         />
         <StaffCard
-          name="Vivian Appleton"
-          title="Assistant Landscape Manager"
-          blurb={`"Viv" started working with us at age 14 and has grown to be a confident and proficient landscaper, whose duties often include employee training, plant design and installation, as well as crew management and quality control on the job site. Good luck finding a gal around that works harder than her!`}
-          src={VivianPhoto}
-          imagePlacement="[object-position:0px_-10px]"
-          yearStarted={2019}
+          name="John Weller"
+          title="Assistant Manager"
+          blurb={`"Grandpa" has been part of the family for a long time, but we're happy for him to have officially joined the team in 2023. His many years of experience working with waterways and drainage systems as a civil engineer make him a tremendous asset in our hardscape construction projects.`}
+          src={JohnPhoto}
+          imagePlacement="[object-position:0px_0px]"
+          yearStarted={2023}
         />
       </div>
     </div>
