@@ -10,8 +10,8 @@ import KristiPhoto from "@/public/team/kristi.jpg";
 import BoPhoto from "@/public/team/bo.jpg";
 import AmyPhoto from "@/public/team/amy.jpg";
 import JosuePhoto from "@/public/team/josue.jpg";
-import JasenPhoto from "@/public/team/jasen-block.jpg";
-import IsabellaPhoto from "@/public/team/isabella-block.jpg";
+import JasenPhoto from "@/public/team/jasen-2.jpg";
+import IsabellaPhoto from "@/public/team/isabella-2.jpg";
 import JohnPhoto from "@/public/team/john.jpg";
 import AboutPageHero from "@/components/AboutPageHero";
 import AboutPageCTA from "@/components/AboutPageCTA";
@@ -57,7 +57,7 @@ const About: NextPage = () => (
         <StaffCard
           name="Josué Rodriguez"
           title="Operations Manager"
-          blurb="Josue is a favorite who is dearly loved amongst our crew. He's an expert in maintenance, project planning, and commercial account management, but can be found doing just about anything. Even after a long day of work, he always has a smile and a kind word for everyone."
+          blurb="Josue is dearly loved amongst customers, suppliers and crew alike. He's a skilled project planner, commercial account manager, and maintenance mechanic, who ends even the longest days of work with a smile and a kind word for everyone."
           src={JosuePhoto}
           imagePlacement="[object-position:-30px_0px]"
           yearStarted={2019}
@@ -73,18 +73,19 @@ const About: NextPage = () => (
         <StaffCard
           name="Jasen Sargent"
           title="Landscape Maintenance Manager"
-          blurb="Jasen grew up NYC where there's hardly a lawn to be found, and now he can stripe a lawn better than most midwesterners. He's usually found in the field managing the crew and keeping all our properties looking neat and tidy. "
+          blurb="He grew up in NYC where there's hardly a lawn to be found, and now he can stripe a lawn better than most midwesterners. You'll usually find him in the field managing the crew and ensuring each of our properties stays looking neat and tidy."
           src={JasenPhoto}
-          imagePlacement="[object-position:-10px_0px]"
+          // imagePlacement="[object-position:-10px_0px]"
+          imagePlacement=""
           yearStarted={2022}
         />
         {/* had to modify to get rid of the orphan */}
         <StaffCard
           name="Isabella Costa"
           title="Assistant Manager"
-          blurb={`Being part of the family means that “Baya” has been a part of the business since the day she was born. Now she's more than just a morale booster: she's taken on lots of responsibilities related to managing residential accounts, bid writing, and all the little tasks that would fall through the cracks without her diligence.`}
+          blurb={`“Baya” has been in the business since the day she was born, but now she's much more than the cute little girl in the backseat of her dad's pickup truck. She helps manage our residential maintenance accounts, writes project bids, and fulfills many other tasks behind the scenes that would otherwise fall through the cracks.`}
           src={IsabellaPhoto}
-          imagePlacement="[object-position:0px_0px]"
+          imagePlacement=""
           yearStarted={2019}
         />
 
@@ -98,8 +99,8 @@ const About: NextPage = () => (
         />
         <StaffCard
           name="John Weller"
-          title="Assistant Manager"
-          blurb={`"Grandpa" has been part of the family for a long time, but we're happy for him to have officially joined the team in 2023. His many years of experience working with waterways and drainage systems as a civil engineer make him a tremendous asset in our hardscape construction projects.`}
+          title="Sales"
+          blurb={`"Grandpa" has been part of the family for a long time, but we're happy for him to have officially joined the team in 2023. His many years of experience working with waterways and drainage systems as a civil engineer make him a tremendous asset and point of contact for current and future customers.`}
           src={JohnPhoto}
           imagePlacement="[object-position:0px_0px]"
           yearStarted={2023}
