@@ -118,6 +118,7 @@ const AboutPageHero: React.FC = () => {
         name="Winfield Henderson"
         className="left-0 lg:left-12 bottom-0 lg:bottom-16 ![object-position:0px_0px]"
       />
+
       <div className="flex flex-col items-center justify-center mb-[128px] relative">
         <div className="absolute w-[200%] h-[200%] [background:radial-gradient(#FEFBED_0%,#FEFBEDEE_30%,transparent_70%)] hidden sm:block" />
         <div className="bg-primary-300 w-20 h-20 rounded-full flex justify-center items-center relative">
@@ -126,7 +127,7 @@ const AboutPageHero: React.FC = () => {
         <h1
           className={cx(
             `text-5xl sm:text-6xl font-semibold mt-12 mb-8 relative`,
-            montserrat,
+            montserrat
           )}
         >
           About us
@@ -142,7 +143,7 @@ const AboutPageHero: React.FC = () => {
       <div
         className={cx(
           `absolute bottom-0 flex flex-col justify-center items-center transition-opacity duration-500`,
-          scrollY === 0 ? `opacity-100` : `opacity-0`,
+          scrollY === 0 ? `opacity-100` : `opacity-0`
         )}
       >
         <span className="uppercase text-black/20 text-sm">scroll</span>
@@ -193,7 +194,7 @@ const FloatingProfilePicture: React.FC<FloatingProfilePictureProps> = ({
       className={cx(
         `rounded-full absolute object-center object-cover border border-primary-400 hidden sm:block`,
         windowHeight < 940 && `!hidden`,
-        className,
+        className
       )}
     />
   );

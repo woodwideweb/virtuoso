@@ -23,6 +23,7 @@ export const metadata = {
 
 const About: NextPage = () => (
   <div className="flex flex-col">
+    {/* make a faded out picture as the hero background */}
     <AboutPageHero />
     <div className="flex flex-col items-center m-4 xs:m-8 sm:m-12 lg:m-20">
       <h2
@@ -89,22 +90,17 @@ const About: NextPage = () => (
           yearStarted={2019}
         />
 
-        <StaffCard
-          name="Amy Horan"
-          title="Administrative Assistant"
-          blurb="Amy's gentle spirit and willingness to do anything needed for the crew and our customers make her a tremendous asset both in the office and beyond. She works hard behind the scenes to keep us organized and efficient."
-          src={AmyPhoto}
-          imagePlacement="[object-position:0px_-10px]"
-          yearStarted={2022}
-        />
-        <StaffCard
-          name="John Weller"
-          title="Sales"
-          blurb={`"Grandpa" has been part of the family for a long time, but we're happy for him to have officially joined the team in 2023. His many years of experience working with waterways and drainage systems as a civil engineer make him a tremendous asset and point of contact for current and future customers.`}
-          src={JohnPhoto}
-          imagePlacement="[object-position:0px_0px]"
-          yearStarted={2023}
-        />
+        <div className="lg:col-span-2 lg:flex lg:justify-center">
+          <StaffCard
+            name="Amy Horan"
+            title="Administrative Assistant"
+            blurb="Amy's gentle spirit and willingness to do anything needed for the crew and our customers make her a tremendous asset both in the office and beyond. She works hard behind the scenes to keep us organized and efficient."
+            src={AmyPhoto}
+            imagePlacement="[object-position:0px_-10px]"
+            className="lg:w-1/2 lg:h-[300px] xl:h-[260px]"
+            yearStarted={2022}
+          />
+        </div>
       </div>
     </div>
     <AboutPageCTA />
@@ -120,6 +116,7 @@ interface StaffCardProps {
   src: StaticImageData;
   imagePlacement: string;
   yearStarted: number;
+  className?: string;
 }
 
 const StaffCard: React.FC<StaffCardProps> = ({
@@ -129,10 +126,13 @@ const StaffCard: React.FC<StaffCardProps> = ({
   src,
   imagePlacement,
   yearStarted,
+  className,
 }) => {
   const timeWithVirtuoso = new Date().getFullYear() - yearStarted;
   return (
-    <div className="bg-amber-100 p-4 rounded-3xl flex flex-col xs:flex-row items-center gap-4 xs:gap-6">
+    <div
+      className={`bg-amber-100 p-4 rounded-3xl flex flex-col xs:flex-row items-center gap-4 xs:gap-6 ${className}`}
+    >
       <Image
         src={src}
         alt={`Photo of ${name}`}
