@@ -21,11 +21,17 @@ import WinPhoto from "@/public/team/win.jpg";
 import RichPhoto from "@/public/team/rich.jpg";
 import AustinPhoto from "@/public/team/austin.jpg";
 import JohnPhoto from "@/public/team/john.jpg";
+import GroupPhoto from "@/public/team/group.jpg";
 import { montserrat } from "@/lib/fonts";
 import { useScrollY } from "@/lib/hooks";
 
 const AboutPageHero: React.FC = () => {
   const scrollY = useScrollY();
+  const [windowHeight, setWindowHeight] = useState(1025);
+
+  useEffect(() => {
+    setWindowHeight(window.innerHeight);
+  }, []);
 
   return (
     <section className="flex flex-col justify-center items-center p-8 xs:p-20 md:p-36 relative h-[calc(100vh-100px)] sm:h-[calc(100vh-128px)] overflow-hidden">
@@ -118,8 +124,39 @@ const AboutPageHero: React.FC = () => {
         name="Winfield Henderson"
         className="left-0 lg:left-12 bottom-0 lg:bottom-16 ![object-position:0px_0px]"
       />
-      <div className="flex flex-col items-center justify-center mb-[128px] relative">
-        <div className="absolute w-[200%] h-[200%] [background:radial-gradient(#FEFBED_0%,#FEFBEDEE_30%,transparent_70%)] hidden sm:block" />
+
+      <div
+        className={cx(
+          windowHeight < 940 &&
+            `hidden md:block w-11/12 h-[95%] max-w-7xl -z-10 object-cover absolute sepia-[30%] rounded-[60px] sm:rounded-[80px]`,
+          windowHeight >= 940 && "!hidden"
+        )}
+      >
+        <Image
+          src={GroupPhoto}
+          alt=""
+          priority
+          className={cx(
+            windowHeight < 940 &&
+              `object-topx h-full w-full object-cover sepia-[30%] rounded-[60px] sm:rounded-[80px]`,
+            windowHeight >= 940 && "!hidden"
+          )}
+        />
+        <div className="absolute w-full h-full bg-black/40 rounded-[60px] sm:rounded-[80px] top-0"></div>
+      </div>
+      <div
+        className={cx(
+          "flex flex-col items-center justify-center mb-[128px] relative"
+        )}
+      >
+        <div
+          className={cx(
+            "absolute w-[200%] h-[200%] hidden sm:block",
+            windowHeight >= 940 &&
+              "[background:radial-gradient(#FEFBED_0%,#FEFBEDEE_30%,transparent_70%)]"
+          )}
+        />
+        {/* bg-gradient-to-r from-black/80 via-black/70 to-black/40 */}
         <div className="bg-primary-300 w-20 h-20 rounded-full flex justify-center items-center relative">
           <IconPlant size={40} className="text-primary-800" />
         </div>
@@ -127,11 +164,17 @@ const AboutPageHero: React.FC = () => {
           className={cx(
             `text-5xl sm:text-6xl font-semibold mt-12 mb-8 relative`,
             montserrat,
+            windowHeight < 940 && "md:text-white"
           )}
         >
           About us
         </h1>
-        <p className="max-w-3xl text-xl sm:text-2xl text-black/60 text-center relative">
+        <p
+          className={cx(
+            "max-w-3xl text-xl sm:text-2xl text-black/60 text-center relative",
+            windowHeight < 940 && "md:text-white"
+          )}
+        >
           Since the beginning, our goal has remained the same: honor the Lord in
           all we do by seeking to offer fair prices, maintain honest and clear
           communication, and provide high-quality work to all of our customers.
@@ -142,7 +185,7 @@ const AboutPageHero: React.FC = () => {
       <div
         className={cx(
           `absolute bottom-0 flex flex-col justify-center items-center transition-opacity duration-500`,
-          scrollY === 0 ? `opacity-100` : `opacity-0`,
+          scrollY === 0 ? `opacity-100` : `opacity-0`
         )}
       >
         <span className="uppercase text-black/20 text-sm">scroll</span>
@@ -193,7 +236,7 @@ const FloatingProfilePicture: React.FC<FloatingProfilePictureProps> = ({
       className={cx(
         `rounded-full absolute object-center object-cover border border-primary-400 hidden sm:block`,
         windowHeight < 940 && `!hidden`,
-        className,
+        className
       )}
     />
   );

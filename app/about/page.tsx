@@ -9,9 +9,9 @@ import RodPhoto from "@/public/team/rod.jpg";
 import KristiPhoto from "@/public/team/kristi.jpg";
 import BoPhoto from "@/public/team/bo.jpg";
 import AmyPhoto from "@/public/team/amy.jpg";
-import VivianPhoto from "@/public/team/vivian.jpg";
 import JosuePhoto from "@/public/team/josue.jpg";
-import AustinPhoto from "@/public/team/austin.jpg";
+import JasenPhoto from "@/public/team/jasen-2.jpg";
+import IsabellaPhoto from "@/public/team/isabella-2.jpg";
 import JohnPhoto from "@/public/team/john.jpg";
 import AboutPageHero from "@/components/AboutPageHero";
 import AboutPageCTA from "@/components/AboutPageCTA";
@@ -23,6 +23,7 @@ export const metadata = {
 
 const About: NextPage = () => (
   <div className="flex flex-col">
+    {/* make a faded out picture as the hero background */}
     <AboutPageHero />
     <div className="flex flex-col items-center m-4 xs:m-8 sm:m-12 lg:m-20">
       <h2
@@ -55,12 +56,12 @@ const About: NextPage = () => (
           yearStarted={2016}
         />
         <StaffCard
-          name="Austin Schlabach"
-          title="Landscape Maintenance Manager"
-          blurb="Second only to its founder, Austin is the longest-standing member of Virtuoso Landscaping. Austin is the kind of loyal and do-it-right employee that most landscaping companies only dream of having; striping lawns is his first love."
-          src={AustinPhoto}
-          imagePlacement="[object-position:0px_-20px]"
-          yearStarted={2010}
+          name="Josué Rodriguez"
+          title="Operations Manager"
+          blurb="Josue is dearly loved amongst customers, suppliers and crew alike. He's a skilled project planner, commercial account manager, and maintenance mechanic, who ends even the longest days of work with a smile and a kind word for everyone."
+          src={JosuePhoto}
+          imagePlacement="[object-position:-30px_0px]"
+          yearStarted={2019}
         />
         <StaffCard
           name="Boaz Costa"
@@ -71,37 +72,35 @@ const About: NextPage = () => (
           yearStarted={2017}
         />
         <StaffCard
-          name="Josué Rodriguez"
-          title="Procurement and Sales"
-          blurb="Josue is a customer favorite who is dearly loved amongst our crew. He is our go-to guy for everything from bid writing to account audits, and he does it all from his office in the sunny mountains of Costa Rica."
-          src={JosuePhoto}
-          imagePlacement="[object-position:-20px_0px]"
-          yearStarted={2019}
-        />
-        <StaffCard
-          name="John Weller"
-          title="Sales"
-          blurb={`"Grandpa" has been part of the family for a long time, but we're happy for him to have officially joined the team in 2023. His many years of experience working with waterways and drainage systems as a civil engineer make him a tremendous asset and point of contact for current and future customers.`}
-          src={JohnPhoto}
-          imagePlacement="[object-position:0px_0px]"
-          yearStarted={2023}
-        />
-        <StaffCard
-          name="Amy Horan"
-          title="Administrative Assistant"
-          blurb="Amy's gentle spirit and willingness to do anything needed for the crew and our customers make her a tremendous asset both in the office and beyond. She works hard behind the scenes to keep us organized and efficient."
-          src={AmyPhoto}
-          imagePlacement="[object-position:0px_-10px]"
+          name="Jasen Sargent"
+          title="Landscape Maintenance Manager"
+          blurb="He grew up in NYC where there's hardly a lawn to be found, and now he can stripe a lawn better than most midwesterners. You'll usually find him in the field managing the crew and ensuring each of our properties stays looking neat and tidy."
+          src={JasenPhoto}
+          // imagePlacement="[object-position:-10px_0px]"
+          imagePlacement=""
           yearStarted={2022}
         />
+        {/* had to modify to get rid of the orphan */}
         <StaffCard
-          name="Vivian Appleton"
-          title="Assistant Landscape Manager"
-          blurb={`"Viv" started working with us at age 14 and has grown to be a confident and proficient landscaper, whose duties often include employee training, plant design and installation, as well as crew management and quality control on the job site. Good luck finding a gal around that works harder than her!`}
-          src={VivianPhoto}
-          imagePlacement="[object-position:0px_-10px]"
+          name="Isabella Costa"
+          title="Assistant Manager"
+          blurb={`“Baya” has been in the business since the day she was born, but now she's much more than the cute little girl in the backseat of her dad's pickup truck. She helps manage our residential maintenance accounts, writes project bids, and fulfills many other tasks behind the scenes that would otherwise fall through the cracks.`}
+          src={IsabellaPhoto}
+          imagePlacement=""
           yearStarted={2019}
         />
+
+        <div className="lg:col-span-2 lg:flex lg:justify-center">
+          <StaffCard
+            name="Amy Horan"
+            title="Administrative Assistant"
+            blurb="Amy's gentle spirit and willingness to do anything needed for the crew and our customers make her a tremendous asset both in the office and beyond. She works hard behind the scenes to keep us organized and efficient."
+            src={AmyPhoto}
+            imagePlacement="[object-position:0px_-10px]"
+            className="lg:w-1/2 lg:h-[300px] xl:h-[260px]"
+            yearStarted={2022}
+          />
+        </div>
       </div>
     </div>
     <AboutPageCTA />
@@ -117,6 +116,7 @@ interface StaffCardProps {
   src: StaticImageData;
   imagePlacement: string;
   yearStarted: number;
+  className?: string;
 }
 
 const StaffCard: React.FC<StaffCardProps> = ({
@@ -126,10 +126,13 @@ const StaffCard: React.FC<StaffCardProps> = ({
   src,
   imagePlacement,
   yearStarted,
+  className,
 }) => {
   const timeWithVirtuoso = new Date().getFullYear() - yearStarted;
   return (
-    <div className="bg-amber-100 p-4 rounded-3xl flex flex-col xs:flex-row items-center gap-4 xs:gap-6">
+    <div
+      className={`bg-amber-100 p-4 rounded-3xl flex flex-col xs:flex-row items-center gap-4 xs:gap-6 ${className}`}
+    >
       <Image
         src={src}
         alt={`Photo of ${name}`}
