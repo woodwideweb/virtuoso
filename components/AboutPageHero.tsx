@@ -128,7 +128,7 @@ const AboutPageHero: React.FC = () => {
       <div
         className={cx(
           windowHeight < 940 &&
-            `w-11/12 h-full max-w-7xl -z-10 object-cover absolute sepia-[30%] rounded-[60px] sm:rounded-[80px]`,
+            `hidden md:block w-11/12 h-[95%] max-w-7xl -z-10 object-cover absolute sepia-[30%] rounded-[60px] sm:rounded-[80px]`,
           windowHeight >= 940 && "!hidden"
         )}
       >
@@ -164,7 +164,7 @@ const AboutPageHero: React.FC = () => {
           className={cx(
             `text-5xl sm:text-6xl font-semibold mt-12 mb-8 relative`,
             montserrat,
-            windowHeight < 940 && "text-white"
+            windowHeight < 940 && "md:text-white"
           )}
         >
           About us
@@ -172,7 +172,7 @@ const AboutPageHero: React.FC = () => {
         <p
           className={cx(
             "max-w-3xl text-xl sm:text-2xl text-black/60 text-center relative",
-            windowHeight < 940 && "text-white"
+            windowHeight < 940 && "md:text-white"
           )}
         >
           Since the beginning, our goal has remained the same: honor the Lord in
