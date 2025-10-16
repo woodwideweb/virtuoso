@@ -128,7 +128,7 @@ const AboutPageHero: React.FC = () => {
       <div
         className={cx(
           windowHeight < 940 &&
-            `w-11/12 h-5/6 max-w-7xl -z-10 object-topx object-cover fixedx absolute sepia-[30%] rounded-[60px] sm:rounded-[80px]`,
+            `w-11/12 h-full max-w-7xl -z-10 object-cover absolute sepia-[30%] rounded-[60px] sm:rounded-[80px]`,
           windowHeight >= 940 && "!hidden"
         )}
       >
